@@ -1,118 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 2000 1700">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: url(#gradient1);
-      }
+<?xml version="1.0" encoding="utf-8"?>
 
-      .cls-2 {
-        fill: url(#gradient2);
-      }
-
-      .cls-3 {
-        fill: url(#gradient3);
-      }
-      
-      .glow {
-        filter: url(#glow-filter);
-      }
-      
-      .pulse {
-        animation: pulse 2s ease-in-out infinite;
-      }
-      
-      @keyframes pulse {
-        0%, 100% { opacity: 0.4; }
-        50% { opacity: 1; }
-      }
-      
-      @keyframes shimmer {
-        0% { transform: translateX(-200%); }
-        100% { transform: translateX(200%); }
-      }
-      
-      .shimmer {
-        animation: shimmer 3s ease-in-out infinite;
-      }
-    </style>
-    
-    <!-- 发光滤镜 -->
-    <filter id="glow-filter" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
-      <feMerge> 
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    
-    <!-- 动态渐变 -->
-    <linearGradient id="gradient1" x1="531.58" y1="-4.02" x2="531.58" y2="1661.41" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#070606">
-        <animate attributeName="stop-color" values="#070606;#5a5a5a;#070606" dur="1.8s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset=".37" stop-color="#1b1b1b">
-        <animate attributeName="stop-color" values="#1b1b1b;#888888;#1b1b1b" dur="1.8s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="1" stop-color="#3b3b3b">
-        <animate attributeName="stop-color" values="#3b3b3b;#cccccc;#3b3b3b" dur="1.8s" repeatCount="indefinite"/>
-      </stop>
-    </linearGradient>
-    
-    <linearGradient id="gradient2" x1="1000" y1="-4.02" x2="1000" y2="1661.41" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#070606">
-        <animate attributeName="stop-color" values="#070606;#5a5a5a;#070606" dur="1.8s" repeatCount="indefinite" begin="0.6s"/>
-      </stop>
-      <stop offset=".37" stop-color="#1b1b1b">
-        <animate attributeName="stop-color" values="#1b1b1b;#888888;#1b1b1b" dur="1.8s" repeatCount="indefinite" begin="0.6s"/>
-      </stop>
-      <stop offset="1" stop-color="#3b3b3b">
-        <animate attributeName="stop-color" values="#3b3b3b;#cccccc;#3b3b3b" dur="1.8s" repeatCount="indefinite" begin="0.6s"/>
-      </stop>
-    </linearGradient>
-    
-    <linearGradient id="gradient3" x1="1462.04" y1="-4.02" x2="1462.04" y2="1661.41" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#070606">
-        <animate attributeName="stop-color" values="#070606;#5a5a5a;#070606" dur="1.8s" repeatCount="indefinite" begin="1.2s"/>
-      </stop>
-      <stop offset=".37" stop-color="#1b1b1b">
-        <animate attributeName="stop-color" values="#1b1b1b;#888888;#1b1b1b" dur="1.8s" repeatCount="indefinite" begin="1.2s"/>
-      </stop>
-      <stop offset="1" stop-color="#3b3b3b">
-        <animate attributeName="stop-color" values="#3b3b3b;#cccccc;#3b3b3b" dur="1.8s" repeatCount="indefinite" begin="1.2s"/>
-      </stop>
-    </linearGradient>
-    
-    <!-- 光晕渐变 -->
-    <radialGradient id="glow-gradient" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
-      <stop offset="70%" stop-color="#888888" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </radialGradient>
-    
-    <!-- 闪光效果 -->
-    <linearGradient id="shine-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="45%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.8"/>
-      <stop offset="55%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-    
-    <!-- 裁切路径 -->
-    <clipPath id="shape-clip">
-      <polygon points="1008.73 0 827.29 251.03 54.43 251.03 235.74 0 1008.73 0"/>
-      <polygon points="1937.79 1449.1 1756.47 1700 986.3 1700 1167.48 1449.1 1937.79 1449.1"/>
-      <polygon points="2000 0 771.98 1700 0 1700 1228.02 0 2000 0"/>
-    </clipPath>
-  </defs>
-  
-  <g class="glow breathe">
-    <g class="pulse wave-effect">
-      <!-- 主要几何形状 -->
-      <polygon class="cls-1" points="1008.73 0 827.29 251.03 54.43 251.03 235.74 0 1008.73 0"/>
-      <polygon class="cls-3" points="1937.79 1449.1 1756.47 1700 986.3 1700 1167.48 1449.1 1937.79 1449.1"/>
-      <polygon class="cls-2" points="2000 0 771.98 1700 0 1700 1228.02 0 2000 0"/>
-    </g>
-  </g>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 width="800px" height="800px" viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
+<g>
+	<g>
+		<path d="M18.787,69.824c-3.299,0-6.398-1.283-8.729-3.615l-4.268-4.266c-2.332-2.332-3.615-5.432-3.615-8.729
+			c0-3.299,1.283-6.398,3.615-8.729L44.486,5.791c2.332-2.331,5.432-3.615,8.729-3.615s6.396,1.284,8.729,3.615l4.266,4.268
+			c2.332,2.331,3.615,5.431,3.615,8.728s-1.283,6.396-3.615,8.728L27.514,66.209C25.184,68.541,22.084,69.824,18.787,69.824z
+			 M53.215,6.175c-2.229,0-4.324,0.868-5.9,2.443L8.619,47.314c-1.576,1.576-2.443,3.67-2.443,5.9c0,2.229,0.867,4.324,2.443,5.9
+			l4.268,4.266c1.576,1.576,3.67,2.443,5.9,2.443c2.229,0,4.322-0.867,5.898-2.443l38.695-38.696
+			c1.576-1.576,2.443-3.671,2.443-5.899s-0.867-4.323-2.443-5.899l-4.266-4.268C57.539,7.043,55.443,6.175,53.215,6.175z"/>
+	</g>
+	<g>
+		<path d="M49.971,34.679c-0.258,0-0.516-0.099-0.711-0.297L38.51,23.507c-0.389-0.393-0.385-1.026,0.008-1.414
+			c0.395-0.39,1.027-0.386,1.414,0.008l10.75,10.875c0.389,0.393,0.385,1.026-0.008,1.414
+			C50.479,34.583,50.225,34.679,49.971,34.679z"/>
+	</g>
+	<g>
+		<path d="M32.971,51.68c-0.258,0-0.516-0.1-0.711-0.297L21.51,40.508c-0.389-0.393-0.385-1.027,0.008-1.414
+			c0.395-0.391,1.027-0.387,1.414,0.008l10.75,10.875c0.389,0.393,0.385,1.025-0.008,1.414C33.479,51.584,33.225,51.68,32.971,51.68
+			z"/>
+	</g>
+	<circle cx="35.783" cy="43.617" r="1.313"/>
+	<circle cx="42.783" cy="35.617" r="1.313"/>
+	<circle cx="28.783" cy="36.617" r="1.313"/>
+	<circle cx="35.783" cy="28.617" r="1.313"/>
+</g>
 </svg>

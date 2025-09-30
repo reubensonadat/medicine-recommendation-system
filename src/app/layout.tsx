@@ -14,21 +14,44 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  // Updated Title (Browser Tab)
+  title: "SymptomMed - Modern Next.js Project Scaffold", 
+
+  // Updated Description (SEO) - Removed AI references
+  description: "A comprehensive modern Next.js scaffold built with TypeScript, Tailwind CSS, and shadcn/ui. Created by Reubenson Adat.",
+  
+  // Updated Keywords - Removed AI references
+  keywords: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "React", "Web Development"],
+  
+  // Updated Author
+  authors: [{ name: "Reubenson Adat" }],
+  
+  // --- OPEN GRAPH CONFIGURATION (Link Preview) ---
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    // Updated Title for the Link Preview
+    title: "SymptomMed - Project Scaffold", 
+    
+    // Updated Description for the Link Preview - Removed AI references
+    description: "Modern web development project built with React and Next.js.",
+    
+    // Kept original URL (Update this if the URL changes!)
     url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    
+    // Updated Site Name
+    siteName: "SymptomMed",
     type: "website",
+    // NOTE: You should add an 'images' array here if you want a custom image in the link preview
   },
+  
+  // --- TWITTER CARD CONFIGURATION ---
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    // Updated Title for Twitter Card
+    title: "SymptomMed - Project Scaffold",
+    
+    // Updated Description for Twitter Card - Removed AI references
+    description: "Modern web development project built with React and Next.js.",
+    // NOTE: You should add an 'images' property here for the Twitter Card image
   },
 };
 
