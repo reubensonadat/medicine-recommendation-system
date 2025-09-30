@@ -1,25 +1,14 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Checkbox } from "@/components/ui/checkbox"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
-import { Label } from "@/components/ui/label"
+import { Checkbox } from "@/components/ui/checkbox"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Slider } from "@/components/ui/slider"
-import { Filter, Search, X, ChevronDown, ChevronUp } from "lucide-react"
-
-interface MedicineFilters {
-  category?: string
-  drugClass?: string
-  prescriptionOnly?: boolean
-  controlledOnly?: boolean
-  search?: string
-  minEffectiveness?: number
-  maxPrice?: number
-  symptoms?: string[]
-}
+import { Filter, X, Search } from "lucide-react"
 
 interface MedicineData {
   id: string
@@ -46,362 +35,304 @@ interface MedicineData {
   }>
 }
 
-interface Symptom {
-  id: string
-  name: string
-  description?: string
+interface CategoryInfo {
+  category: string
+  count: number
+  drugClasses: string[]
+}
+
+interface FilterOptions {
+  categories: CategoryInfo[]
+  drugClasses: string[]
+  totalMedicines: number
+}
+
+interface MedicineFilters {
   category?: string
-  severity?: string
+  drugClass?: string
+  prescriptionOnly?: boolean
+  controlledOnly?: boolean
+  search?: string
+  minEffectiveness?: number
+  maxPrice?: string
+  symptoms?: string[]
 }
 
 interface MedicineFilterProps {
   filters: MedicineFilters
   onFiltersChange: (filters: MedicineFilters) => void
   onClearFilters: () => void
-  symptoms: Symptom[]
-  medicines: MedicineData[]
+  symptoms?: Array<{ id: string; name: string }>
+  medicines?: MedicineData[]
 }
 
-export default function MedicineFilter({
-  filters,
-  onFiltersChange,
+export default function MedicineFilter({ 
+  filters, 
+  onFiltersChange, 
   onClearFilters,
-  symptoms,
-  medicines
+  symptoms = [],
+  medicines = []
 }: MedicineFilterProps) {
-  const [expandedSections, setExpandedSections] = useState({
-    categories: true,
-    drugClasses: true,
-    price: true,
-    effectiveness: true,
-    symptoms: true,
-    prescription: true
+  const [filterOptions, setFilterOptions] = useState<FilterOptions>({
+    categories: [],
+    drugClasses: [],
+    totalMedicines: 0
   })
+  const [isLoading, setIsLoading] = useState(true)
 
-  // Extract unique categories and drug classes from medicines
-  const categories = [...new Set(medicines.map(m => m.category).filter(Boolean))]
-  const drugClasses = [...new Set(medicines.map(m => m.drugClass).filter(Boolean))]
-
-  // Extract price range
-  const extractPrice = (priceStr: string | undefined): number => {
-    if (!priceStr) return 50 // Default price
-    const match = priceStr.match(/(\d+)/)
-    return match ? parseInt(match[1]) : 50
-  }
-
-  const maxPriceValue = Math.max(...medicines.map(m => extractPrice(m.priceRange)))
-  const [priceRange, setPriceRange] = useState([0, maxPriceValue])
-
-  const toggleSection = (section: keyof typeof expandedSections) => {
-    setExpandedSections(prev => ({
-      ...prev,
-      [section]: !prev[section]
-    }))
-  }
-
-  const handleCategoryChange = (category: string, checked: boolean) => {
-    if (checked) {
-      onFiltersChange({ ...filters, category })
-    } else if (filters.category === category) {
-      onFiltersChange({ ...filters, category: undefined })
-    }
-  }
-
-  const handleDrugClassChange = (drugClass: string, checked: boolean) => {
-    if (checked) {
-      onFiltersChange({ ...filters, drugClass })
-    } else if (filters.drugClass === drugClass) {
-      onFiltersChange({ ...filters, drugClass: undefined })
-    }
-  }
-
-  const handleSymptomChange = (symptomId: string, checked: boolean) => {
-    const currentSymptoms = filters.symptoms || []
-    if (checked) {
-      onFiltersChange({ ...filters, symptoms: [...currentSymptoms, symptomId] })
-    } else {
-      onFiltersChange({
-        ...filters,
-        symptoms: currentSymptoms.filter(id => id !== symptomId)
+  useEffect(() => {
+    // Calculate filter options from local medicines data
+    const calculateFilterOptions = () => {
+      if (!medicines || medicines.length === 0) {
+        console.log("MedicineFilter: No medicines data provided")
+        return
+      }
+      
+      console.log("MedicineFilter: Processing", medicines.length, "medicines")
+      
+      const categoriesMap = new Map<string, { count: number; drugClasses: Set<string> }>()
+      const allDrugClasses = new Set<string>()
+      
+      medicines.forEach(medicine => {
+        if (medicine.category) {
+          const category = categoriesMap.get(medicine.category) || 
+            { count: 0, drugClasses: new Set<string>() }
+          category.count++
+          if (medicine.drugClass) {
+            category.drugClasses.add(medicine.drugClass)
+            allDrugClasses.add(medicine.drugClass)
+          }
+          categoriesMap.set(medicine.category, category)
+        }
       })
+      
+      const categories: CategoryInfo[] = Array.from(categoriesMap.entries()).map(([category, data]) => ({
+        category,
+        count: data.count,
+        drugClasses: Array.from(data.drugClasses)
+      }))
+      
+      console.log("MedicineFilter: Found categories", categories.map(c => c.category))
+      
+      setFilterOptions({
+        categories: categories.sort((a, b) => a.category.localeCompare(b.category)),
+        drugClasses: Array.from(allDrugClasses).sort(),
+        totalMedicines: medicines.length
+      })
+      setIsLoading(false)
     }
+    
+    calculateFilterOptions()
+  }, [medicines])
+
+  const handleFilterChange = (key: keyof MedicineFilters, value: any) => {
+    onFiltersChange({
+      ...filters,
+      [key]: value
+    })
   }
 
-  const handlePriceRangeChange = (value: number[]) => {
-    setPriceRange(value)
-    onFiltersChange({ ...filters, maxPrice: value[1] })
+  const handleSymptomToggle = (symptomId: string) => {
+    const currentSymptoms = filters.symptoms || []
+    const newSymptoms = currentSymptoms.includes(symptomId)
+      ? currentSymptoms.filter(id => id !== symptomId)
+      : [...currentSymptoms, symptomId]
+    
+    handleFilterChange('symptoms', newSymptoms)
   }
 
-  const handleEffectivenessChange = (value: number[]) => {
-    onFiltersChange({ ...filters, minEffectiveness: value[0] })
+  const getActiveFiltersCount = () => {
+    return Object.values(filters).filter(value => 
+      value !== undefined && value !== '' && value !== false && 
+      (Array.isArray(value) ? value.length > 0 : true)
+    ).length
   }
 
-  const hasActiveFilters = Object.values(filters).some(value => 
-    value !== undefined && value !== false && (Array.isArray(value) ? value.length > 0 : true)
-  )
+  if (isLoading) {
+    return (
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center space-x-2">
+            <Filter className="h-5 w-5" />
+            <span>Filter Medicines</span>
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            <div className="h-8 bg-gray-200 rounded animate-pulse"></div>
+            <div className="h-8 bg-gray-200 rounded animate-pulse"></div>
+            <div className="h-8 bg-gray-200 rounded animate-pulse"></div>
+          </div>
+        </CardContent>
+      </Card>
+    )
+  }
 
   return (
     <Card>
       <CardHeader>
         <div className="flex items-center justify-between">
-          <CardTitle className="flex items-center">
-            <Filter className="h-5 w-5 mr-2" />
-            Filter Medicines
+          <CardTitle className="flex items-center space-x-2">
+            <Filter className="h-5 w-5" />
+            <span>Filter Medicines</span>
+            {getActiveFiltersCount() > 0 && (
+              <Badge variant="secondary" className="ml-2">
+                {getActiveFiltersCount()} active
+              </Badge>
+            )}
           </CardTitle>
-          {hasActiveFilters && (
-            <Button variant="outline" size="sm" onClick={onClearFilters}>
-              <X className="h-4 w-4 mr-1" />
+          {getActiveFiltersCount() > 0 && (
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              onClick={onClearFilters}
+              className="text-red-600 hover:text-red-800"
+            >
+              <X className="w-4 h-4 mr-1" />
               Clear All
             </Button>
           )}
         </div>
-        <CardDescription>
-          Narrow down your search to find the right medicine
-        </CardDescription>
       </CardHeader>
-      <CardContent className="space-y-4">
-        {/* Search */}
-        <div>
-          <Label htmlFor="search" className="text-sm font-medium">Search</Label>
-          <div className="relative mt-1">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-            <Input
-              id="search"
-              placeholder="Search by name or description..."
-              value={filters.search || ""}
-              onChange={(e) => onFiltersChange({ ...filters, search: e.target.value })}
-              className="pl-10"
+        <CardContent className="space-y-4 md:space-y-6">
+          {/* Search */}
+          <div>
+            <label className="text-sm font-medium mb-2 block">Search</label>
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <Input
+                placeholder="Search medicines..."
+                value={filters.search || ''}
+                onChange={(e) => handleFilterChange('search', e.target.value)}
+                className="pl-10"
+              />
+            </div>
+          </div>
+
+          {/* Category Filter */}
+          <div>
+            <label className="text-sm font-medium mb-2 block">Category</label>
+            <Select
+              value={filters.category || 'all'}
+              onValueChange={(value) => handleFilterChange('category', value === 'all' ? undefined : value)}
+            >
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Select category" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Categories</SelectItem>
+                {filterOptions.categories.map((cat) => (
+                  <SelectItem key={cat.category} value={cat.category}>
+                    {cat.category} ({cat.count})
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          {/* Drug Class Filter */}
+          {filters.category && (
+            <div>
+              <label className="text-sm font-medium mb-2 block">Drug Class</label>
+              <Select
+                value={filters.drugClass || 'all'}
+                onValueChange={(value) => handleFilterChange('drugClass', value === 'all' ? undefined : value)}
+              >
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select drug class" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All Drug Classes</SelectItem>
+                  {filterOptions.categories
+                    .find(cat => cat.category === filters.category)
+                    ?.drugClasses.map((drugClass) => (
+                      <SelectItem key={drugClass} value={drugClass}>
+                        {drugClass}
+                      </SelectItem>
+                    ))}
+                </SelectContent>
+              </Select>
+            </div>
+          )}
+
+          {/* Effectiveness Slider */}
+          <div>
+            <label className="text-sm font-medium mb-2 block">
+              Minimum Effectiveness: {filters.minEffectiveness || 0}/10
+            </label>
+            <Slider
+              value={[filters.minEffectiveness || 0]}
+              onValueChange={(value) => handleFilterChange('minEffectiveness', value[0])}
+              max={10}
+              min={0}
+              step={1}
+              className="w-full"
             />
           </div>
-        </div>
 
-        {/* Categories */}
-        <div>
-          <Button
-            variant="ghost"
-            className="w-full justify-between p-0 h-auto font-medium"
-            onClick={() => toggleSection("categories")}
-          >
-            Categories
-            {expandedSections.categories ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-          </Button>
-          {expandedSections.categories && (
-            <div className="mt-2 space-y-2">
-              {categories.map(category => (
-                category !== undefined ? (
-                  <div key={category} className="flex items-center space-x-2">
-                    <Checkbox
-                      id={`category-${category}`}
-                      checked={filters.category === category}
-                      onCheckedChange={(checked) => handleCategoryChange(category, checked as boolean)}
-                    />
-                    <Label htmlFor={`category-${category}`} className="text-sm">
-                      {category}
-                    </Label>
-                  </div>
-                ) : null
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Drug Classes */}
-        <div>
-          <Button
-            variant="ghost"
-            className="w-full justify-between p-0 h-auto font-medium"
-            onClick={() => toggleSection("drugClasses")}
-          >
-            Drug Classes
-            {expandedSections.drugClasses ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-          </Button>
-          {expandedSections.drugClasses && (
-            <div className="mt-2 space-y-2">
-              {drugClasses.filter((dc): dc is string => dc !== undefined).map(drugClass => (
-                    <div key={drugClass} className="flex items-center space-x-2">
-                      <Checkbox
-                        id={`drugClass-${drugClass}`}
-                        checked={filters.drugClass === drugClass}
-                        onCheckedChange={(checked) => handleDrugClassChange(drugClass, checked as boolean)}
-                      />
-                      <Label htmlFor={`drugClass-${drugClass}`} className="text-sm">
-                        {drugClass}
-                      </Label>
-                    </div>
-                  ))}
-            </div>
-          )}
-        </div>
-
-        {/* Price Range */}
-        <div>
-          <Button
-            variant="ghost"
-            className="w-full justify-between p-0 h-auto font-medium"
-            onClick={() => toggleSection("price")}
-          >
-            Price Range (GHS)
-            {expandedSections.price ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-          </Button>
-          {expandedSections.price && (
-            <div className="mt-2">
-              <div className="flex justify-between text-sm text-gray-600 mb-2">
-                <span>0</span>
-                <span>{priceRange[1]}</span>
-              </div>
-              <Slider
-                value={priceRange}
-                onValueChange={handlePriceRangeChange}
-                max={maxPriceValue}
-                step={1}
-                className="mt-2"
-              />
-            </div>
-          )}
-        </div>
-
-        {/* Effectiveness */}
-        <div>
-          <Button
-            variant="ghost"
-            className="w-full justify-between p-0 h-auto font-medium"
-            onClick={() => toggleSection("effectiveness")}
-          >
-            Minimum Effectiveness
-            {expandedSections.effectiveness ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-          </Button>
-          {expandedSections.effectiveness && (
-            <div className="mt-2">
-              <div className="flex justify-between text-sm text-gray-600 mb-2">
-                <span>1</span>
-                <span>{filters.minEffectiveness || 5}</span>
-                <span>10</span>
-              </div>
-              <Slider
-                value={[filters.minEffectiveness || 5]}
-                onValueChange={handleEffectivenessChange}
-                min={1}
-                max={10}
-                step={1}
-                className="mt-2"
-              />
-            </div>
-          )}
-        </div>
-
-        {/* Symptoms */}
-        <div>
-          <Button
-            variant="ghost"
-            className="w-full justify-between p-0 h-auto font-medium"
-            onClick={() => toggleSection("symptoms")}
-          >
-            Symptoms
-            {expandedSections.symptoms ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-          </Button>
-          {expandedSections.symptoms && (
-            <div className="mt-2 max-h-40 overflow-y-auto space-y-2">
-              {symptoms.slice(0, 10).map(symptom => (
-                <div key={symptom.id} className="flex items-center space-x-2">
-                  <Checkbox
-                    id={`symptom-${symptom.id}`}
-                    checked={filters.symptoms?.includes(symptom.id) || false}
-                    onCheckedChange={(checked) => handleSymptomChange(symptom.id, checked as boolean)}
-                  />
-                  <Label htmlFor={`symptom-${symptom.id}`} className="text-sm">
-                    {symptom.name}
-                  </Label>
-                </div>
-              ))}
-              {symptoms.length > 10 && (
-                <p className="text-xs text-gray-500 italic">
-                  Showing first 10 symptoms. Use search for more specific filtering.
-                </p>
-              )}
-            </div>
-          )}
-        </div>
-
-        {/* Prescription and Controlled */}
-        <div>
-          <Button
-            variant="ghost"
-            className="w-full justify-between p-0 h-auto font-medium"
-            onClick={() => toggleSection("prescription")}
-          >
-            Special Requirements
-            {expandedSections.prescription ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-          </Button>
-          {expandedSections.prescription && (
-            <div className="mt-2 space-y-2">
+          {/* Prescription Filter */}
+          <div className="space-y-3">
+            <label className="text-sm font-medium">Prescription Status</label>
+            <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Checkbox
                   id="prescription-only"
                   checked={filters.prescriptionOnly || false}
-                  onCheckedChange={(checked) => onFiltersChange({ ...filters, prescriptionOnly: checked as boolean })}
+                  onCheckedChange={(checked) => 
+                    handleFilterChange('prescriptionOnly', checked as boolean)
+                  }
                 />
-                <Label htmlFor="prescription-only" className="text-sm">
+                <label htmlFor="prescription-only" className="text-sm">
                   Prescription Only
-                </Label>
+                </label>
               </div>
               <div className="flex items-center space-x-2">
                 <Checkbox
                   id="controlled-only"
                   checked={filters.controlledOnly || false}
-                  onCheckedChange={(checked) => onFiltersChange({ ...filters, controlledOnly: checked as boolean })}
+                  onCheckedChange={(checked) => 
+                    handleFilterChange('controlledOnly', checked as boolean)
+                  }
                 />
-                <Label htmlFor="controlled-only" className="text-sm">
+                <label htmlFor="controlled-only" className="text-sm">
                   Controlled Substances Only
-                </Label>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          {/* Symptoms Filter */}
+          {symptoms.length > 0 && (
+            <div>
+              <label className="text-sm font-medium mb-2 block">Filter by Symptoms</label>
+              <div className="space-y-2 max-h-32 overflow-y-auto">
+                {symptoms.map((symptom) => (
+                  <div key={symptom.id} className="flex items-center space-x-2">
+                    <Checkbox
+                      id={`symptom-${symptom.id}`}
+                      checked={(filters.symptoms || []).includes(symptom.id)}
+                      onCheckedChange={() => handleSymptomToggle(symptom.id)}
+                    />
+                    <label htmlFor={`symptom-${symptom.id}`} className="text-sm">
+                      {symptom.name}
+                    </label>
+                  </div>
+                ))}
               </div>
             </div>
           )}
-        </div>
 
-        {/* Active Filters Display */}
-        {hasActiveFilters && (
-          <div className="pt-2 border-t">
-            <p className="text-sm font-medium mb-2">Active Filters:</p>
-            <div className="flex flex-wrap gap-1">
-              {filters.category && (
-                <Badge variant="secondary" className="text-xs">
-                  Category: {filters.category}
-                </Badge>
-              )}
-              {filters.drugClass && (
-                <Badge variant="secondary" className="text-xs">
-                  Class: {filters.drugClass}
-                </Badge>
-              )}
-              {filters.maxPrice && (
-                <Badge variant="secondary" className="text-xs">
-                  Max Price: GHS {filters.maxPrice}
-                </Badge>
-              )}
-              {filters.minEffectiveness && (
-                <Badge variant="secondary" className="text-xs">
-                  Min Effectiveness: {filters.minEffectiveness}/10
-                </Badge>
-              )}
-              {filters.prescriptionOnly && (
-                <Badge variant="secondary" className="text-xs">
-                  Prescription Only
-                </Badge>
-              )}
-              {filters.controlledOnly && (
-                <Badge variant="secondary" className="text-xs">
-                  Controlled Only
-                </Badge>
-              )}
-              {filters.symptoms && filters.symptoms.length > 0 && (
-                <Badge variant="secondary" className="text-xs">
-                  {filters.symptoms.length} Symptom{filters.symptoms.length > 1 ? 's' : ''}
-                </Badge>
-              )}
-            </div>
+          {/* Price Filter */}
+          <div>
+            <label className="text-sm font-medium mb-2 block">Maximum Price (GHS)</label>
+            <Input
+              type="number"
+              placeholder="e.g., 50"
+              value={filters.maxPrice || ''}
+              onChange={(e) => handleFilterChange('maxPrice', e.target.value || undefined)}
+            />
           </div>
-        )}
-      </CardContent>
+        </CardContent>
     </Card>
   )
 }

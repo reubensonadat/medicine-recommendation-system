@@ -1,0 +1,85 @@
+{
+  "id": "medXXX",
+  "brandName": "Medicine Brand Name",
+  "genericName": "Generic Name",
+  "description": "Brief description of the medicine",
+  "usage": "Primary use and purpose",
+  "dosageAdult": "Adult dosage instructions",
+  "dosageChild": "Child dosage instructions",
+  "dosageElderly": "Elderly dosage instructions",
+  "sideEffects": "Possible side effects",
+  "warnings": "Important safety warnings",
+  "priceRange": "GHS X-Y",
+  "category": "Medicine Category",
+  "drugClass": "Drug Class",
+  "prescription": false,
+  "controlled": false,
+  "symptomMappings": [
+    {
+      "symptomId": "symptom-id",
+      "effectivenessScore": 8,
+      "isPrimary": true,
+      "evidenceLevel": "Strong",
+      "notes": "Effectiveness notes"
+    }
+  ]
+}
+
+/*
+=== MEDICINE TEMPLATE USAGE GUIDE ===
+
+📋 REQUIRED FIELDS:
+- id: Unique identifier (e.g., "med121", "med122")
+- brandName: Commercial brand name (e.g., "Panadol")
+- genericName: Generic/chemical name (e.g., "Paracetamol")
+- description: Brief description of the medicine
+- usage: Primary use and purpose
+- symptomMappings: Array of symptom mappings (see below)
+
+📝 RECOMMENDED FIELDS:
+- dosageAdult: Adult dosage instructions
+- dosageChild: Child dosage instructions
+- dosageElderly: Elderly dosage instructions
+- sideEffects: Possible side effects
+- warnings: Important safety warnings
+- priceRange: Price range in GHS (e.g., "GHS 5-15")
+- category: Medicine category (see MEDICINE_ADDITION_GUIDE.md for list)
+- drugClass: Drug class (see MEDICINE_ADDITION_GUIDE.md for list)
+- prescription: true/false (requires prescription?)
+- controlled: true/false (controlled substance?)
+
+🔗 SYMPTOM MAPPINGS:
+Each mapping must include:
+- symptomId: MUST match an ID from /public/symptoms.json
+- effectivenessScore: 1-10 (1=poor, 10=excellent)
+- isPrimary: true/false (primary use for this medicine?)
+- evidenceLevel: "Strong", "Moderate", "Weak", or "Theoretical"
+- notes: Additional effectiveness notes
+
+📋 EXAMPLE SYMPTOM MAPPING:
+{
+  "symptomId": "fever",
+  "effectivenessScore": 9,
+  "isPrimary": true,
+  "evidenceLevel": "Strong",
+  "notes": "First-line treatment for fever"
+}
+
+🏷️ CATEGORIES (choose one):
+"Allergy", "Antibiotic", "Antimalarial", "Antiparasitic", "Anxiety",
+"Cardiovascular", "Cold & Allergy", "Cough & Cold", "Diabetes", "Digestive",
+"Herbal", "Pain Relief", "Respiratory", "Supplement", "Vitamin"
+
+💊 DRUG CLASSES (examples):
+"Analgesic", "Antihistamine", "NSAID", "Antibiotic", "Antimalarial",
+"Bronchodilator", "Decongestant", "Diuretic", "Expectorant", etc.
+
+✅ VALIDATION:
+After adding your medicine, run: npm run validate-data
+
+📚 SEE ALSO:
+- MEDICINE_ADDITION_GUIDE.md for complete instructions
+- /public/symptoms.json for available symptoms
+- /public/medicines.json for existing examples
+
+*/

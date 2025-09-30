@@ -8,47 +8,21 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Heart, Pill, Stethoscope, AlertTriangle, Star, ArrowRight, Search, Plus, Filter, Grid } from "lucide-react"
+import { Heart, Pill, Stethoscope, AlertTriangle, Star, ArrowRight, Search, Plus, Filter, Grid, Share2, Menu, X } from "lucide-react"
 import MedicineFilter from "@/components/MedicineFilter"
 import MedicineGrid from "@/components/MedicineGrid"
 import { useRouter } from "next/navigation"
 
-// Inside the component
-const router = useRouter()
-
 // Frontend-only medicine data will be loaded from JSON
+// Symptoms will be loaded from symptoms.json
 
-const commonSymptoms = [
-  { id: "cough", name: "Cough", description: "Dry or productive cough", category: "Respiratory", severity: "Moderate" },
-  { id: "fever", name: "Fever", description: "Elevated body temperature above 38°C", category: "Systemic", severity: "Moderate" },
-  { id: "headache", name: "Headache", description: "Pain in head or neck region", category: "Neurological", severity: "Mild" },
-  { id: "sore-throat", name: "Sore Throat", description: "Pain or irritation in throat", category: "Respiratory", severity: "Mild" },
-  { id: "runny-nose", name: "Runny Nose", description: "Nasal discharge or congestion", category: "Respiratory", severity: "Mild" },
-  { id: "body-aches", name: "Body Aches", description: "Muscle or joint pain", category: "Musculoskeletal", severity: "Moderate" },
-  { id: "shortness-breath", name: "Shortness of Breath", description: "Difficulty breathing or breathlessness", category: "Respiratory", severity: "Severe" },
-  { id: "wheezing", name: "Wheezing", description: "High-pitched whistling sound when breathing", category: "Respiratory", severity: "Moderate" },
-  { id: "chest-pain", name: "Chest Pain", description: "Pain or discomfort in chest area", category: "Cardiovascular", severity: "Severe" },
-  { id: "nausea", name: "Nausea", description: "Feeling sick to stomach", category: "Gastrointestinal", severity: "Mild" },
-  { id: "vomiting", name: "Vomiting", description: "Forceful expulsion of stomach contents", category: "Gastrointestinal", severity: "Moderate" },
-  { id: "diarrhea", name: "Diarrhea", description: "Frequent loose or liquid bowel movements", category: "Gastrointestinal", severity: "Moderate" },
-  { id: "abdominal-pain", name: "Abdominal Pain", description: "Pain in stomach area", category: "Gastrointestinal", severity: "Moderate" },
-  { id: "fatigue", name: "Fatigue", description: "Feeling tired or exhausted", category: "Systemic", severity: "Mild" },
-  { id: "chills", name: "Chills", description: "Feeling cold with shivering", category: "Systemic", severity: "Moderate" },
-  { id: "sneezing", name: "Sneezing", description: "Involuntary expulsion of air from nose", category: "Respiratory", severity: "Mild" },
-  { id: "itchy-eyes", name: "Itchy Eyes", description: "Itching sensation in eyes", category: "Ocular", severity: "Mild" },
-  { id: "skin-rash", name: "Skin Rash", description: "Redness or irritation of skin", category: "Dermatological", severity: "Mild" },
-  { id: "dizziness", name: "Dizziness", description: "Feeling lightheaded or unsteady", category: "Neurological", severity: "Moderate" },
-  { id: "joint-pain", name: "Joint Pain", description: "Pain in joints", category: "Musculoskeletal", severity: "Moderate" },
-  { id: "muscle-pain", name: "Muscle Pain", description: "Pain in muscles", category: "Musculoskeletal", severity: "Moderate" },
-  { id: "back-pain", name: "Back Pain", description: "Pain in back area", category: "Musculoskeletal", severity: "Moderate" },
-  { id: "difficulty-sleeping", name: "Difficulty Sleeping", description: "Trouble falling or staying asleep", category: "Neurological", severity: "Mild" },
-  { id: "anxiety", name: "Anxiety", description: "Feeling of worry or nervousness", category: "Psychological", severity: "Moderate" },
-  { id: "high-blood-pressure", name: "High Blood Pressure", description: "Elevated blood pressure readings", category: "Cardiovascular", severity: "Severe" },
-  { id: "frequent-urination", name: "Frequent Urination", description: "Needing to urinate more often than usual", category: "Renal", severity: "Mild" },
-  { id: "excessive-thirst", name: "Excessive Thirst", description: "Increased thirst and fluid intake", category: "Systemic", severity: "Moderate" },
-  { id: "weight-loss", name: "Unexplained Weight Loss", description: "Losing weight without trying", category: "Systemic", severity: "Moderate" },
-  { id: "blurred-vision", name: "Blurred Vision", description: "Unclear or fuzzy vision", category: "Ocular", severity: "Moderate" }
-]
+interface SymptomData {
+  id: string
+  name: string
+  description: string
+  category: string
+  severity: string
+}
 
 interface MedicineData {
   id: string
@@ -119,7 +93,7 @@ interface MedicineFilters {
   controlledOnly?: boolean
   search?: string
   minEffectiveness?: number
-  maxPrice?: number
+  maxPrice?: string
   symptoms?: string[]
 }
 
@@ -166,6 +140,7 @@ export default function Home() {
   }
 
   const [selectedSymptoms, setSelectedSymptoms] = useState<SelectedSymptomWithSeverity[]>([])
+  const [symptoms, setSymptoms] = useState<SymptomData[]>([])
   const [customSymptoms, setCustomSymptoms] = useState<string[]>([])
   const [customSymptomInput, setCustomSymptomInput] = useState("")
   const [isLoading, setIsLoading] = useState(false)
@@ -176,28 +151,66 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState("recommendations")
   const [filters, setFilters] = useState<MedicineFilters>({})
   const [severityFilter, setSeverityFilter] = useState<string>("All")
+  const [symptomSearchTerm, setSymptomSearchTerm] = useState<string>("")
   const [isMounted, setIsMounted] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  // Load medicines data from JSON file
+  // Load medicines and symptoms data from JSON files
   useEffect(() => {
-    const loadMedicinesData = async () => {
+    const loadData = async () => {
       try {
-        console.log("Home: Loading medicines data...")
-        const response = await fetch('/medicines.json')
-        const data = await response.json()
-        console.log("Home: Loaded", data.medicines.length, "medicines")
-        setAllMedicines(data.medicines)
+        console.log("Home: Loading data...")
+        
+        // Load medicines
+        const medicinesResponse = await fetch('/medicines.json')
+        const medicinesData = await medicinesResponse.json()
+        console.log("Home: Loaded", medicinesData.medicines.length, "medicines")
+        setAllMedicines(medicinesData.medicines)
+        
+        // Load symptoms
+        const symptomsResponse = await fetch('/symptoms.json')
+        const symptomsData = await symptomsResponse.json()
+        console.log("Home: Loaded", symptomsData.symptoms.length, "symptoms")
+        setSymptoms(symptomsData.symptoms)
+        
+        setIsMounted(true)
       } catch (error) {
-        console.error('Home: Error loading medicines data:', error)
+        console.error('Home: Error loading data:', error)
       }
     }
     
-    loadMedicinesData()
-    setIsMounted(true)
+    loadData()
   }, [])
 
+  // Close mobile menu when window is resized to desktop size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 640 && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [isMobileMenuOpen])
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const header = document.querySelector('header')
+      if (header && !header.contains(event.target as Node) && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+      return () => document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isMobileMenuOpen])
+
   const handleSymptomToggle = (symptomId: string) => {
-    const symptom = commonSymptoms.find(s => s.id === symptomId)
+    const symptom = symptoms.find(s => s.id === symptomId)
     if (!symptom) return
 
     setSelectedSymptoms(prev => {
@@ -251,6 +264,62 @@ export default function Home() {
     setCustomSymptoms(prev => prev.filter(s => s !== symptom))
   }
 
+  const handleSaveFavorites = () => {
+    if (selectedSymptoms.length === 0 && customSymptoms.length === 0) {
+      alert('Please select symptoms first to save your favorites')
+      return
+    }
+    
+    const favoriteData = {
+      symptoms: selectedSymptoms,
+      customSymptoms: customSymptoms,
+      timestamp: new Date().toISOString()
+    }
+    
+    // Get existing favorites or initialize empty array
+    const existingFavorites = JSON.parse(localStorage.getItem('symptommed-favorites') || '[]')
+    
+    // Add new favorite
+    existingFavorites.push(favoriteData)
+    
+    // Save back to localStorage
+    localStorage.setItem('symptommed-favorites', JSON.stringify(existingFavorites))
+    
+    alert('Symptoms saved to favorites!')
+  }
+
+  const handleShare = async () => {
+    if (selectedSymptoms.length === 0 && customSymptoms.length === 0) {
+      alert('Please select symptoms first to share')
+      return
+    }
+    
+    const symptomNames = [
+      ...selectedSymptoms.map(s => symptoms.find(sym => sym.id === s.id)?.name),
+      ...customSymptoms
+    ].filter(Boolean)
+    
+    const shareText = `I'm checking symptoms on SymptomMed Ghana: ${symptomNames.join(', ')}`
+    
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'SymptomMed Ghana',
+          text: shareText,
+          url: window.location.href
+        })
+      } catch (error) {
+        // Fallback to copying to clipboard
+        await navigator.clipboard.writeText(shareText)
+        alert('Symptom information copied to clipboard!')
+      }
+    } else {
+      // Fallback to copying to clipboard
+      await navigator.clipboard.writeText(shareText)
+      alert('Symptom information copied to clipboard!')
+    }
+  }
+
   const handleFindMedicines = async () => {
     if (selectedSymptoms.length === 0 && customSymptoms.length === 0) {
       console.log("No symptoms selected, returning early")
@@ -280,7 +349,7 @@ export default function Home() {
         if (relevantMappings.length > 0) {
           // Create symptom matches with full symptom details
           const symptomMatches = relevantMappings.map(mapping => {
-            const symptom = commonSymptoms.find(s => s.id === mapping.symptomId)
+            const symptom = symptoms.find(s => s.id === mapping.symptomId)
             return {
               symptom: {
                 id: mapping.symptomId,
@@ -454,14 +523,28 @@ export default function Home() {
   }
 
   const handleMedicineClick = (medicine: any) => {
-  router.push(`/medicine/${medicine.id}`)
+    router.push(`/medicine/${medicine.id}`)
   }
 
   const getFilteredSymptoms = () => {
-    if (severityFilter === "All") {
-      return commonSymptoms
+    let filtered = symptoms
+    
+    // Apply severity filter
+    if (severityFilter !== "All") {
+      filtered = filtered.filter(symptom => symptom.severity === severityFilter)
     }
-    return commonSymptoms.filter(symptom => symptom.severity === severityFilter)
+    
+    // Apply search filter
+    if (symptomSearchTerm.trim()) {
+      const searchLower = symptomSearchTerm.toLowerCase()
+      filtered = filtered.filter(symptom => 
+        symptom.name.toLowerCase().includes(searchLower) ||
+        symptom.description.toLowerCase().includes(searchLower) ||
+        symptom.category.toLowerCase().includes(searchLower)
+      )
+    }
+    
+    return filtered
   }
 
   const getEffectivenessStars = (score: number) => {
@@ -502,34 +585,95 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-white shadow-sm border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
           <div className="flex items-center justify-between">
+            {/* Logo */}
             <div className="flex items-center space-x-2 sm:space-x-3">
               <Pill className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />
-              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">SymptomMed Ghana</h1>
+              <h1 className="text-lg sm:text-2xl font-bold text-gray-900">SymptomMed Ghana</h1>
             </div>
-            <div className="flex items-center space-x-2 sm:space-x-4">
-              <Button variant="outline" size="sm" className="text-xs sm:text-sm">Sign In</Button>
-              <Button size="sm" className="text-xs sm:text-sm">Create Account</Button>
+
+            {/* Desktop Navigation */}
+            <div className="hidden sm:flex items-center space-x-2 sm:space-x-4">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="text-xs sm:text-sm"
+                onClick={handleSaveFavorites}
+              >
+                <Heart className="w-4 h-4 mr-1" />
+                Save Favorites
+              </Button>
+              <Button 
+                size="sm" 
+                className="text-xs sm:text-sm"
+                onClick={handleShare}
+              >
+                <Share2 className="w-4 h-4 mr-1" />
+                Share
+              </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <Button
+              variant="ghost"
+              size="sm"
+              className="sm:hidden"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+            </Button>
+          </div>
+
+          {/* Mobile Navigation Menu */}
+          <div className={`sm:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'mt-4 pt-4 border-t border-gray-200 max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+            <div className="flex flex-col space-y-3">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="w-full justify-start text-xs"
+                onClick={() => {
+                  handleSaveFavorites()
+                  setIsMobileMenuOpen(false)
+                }}
+              >
+                <Heart className="w-4 h-4 mr-2" />
+                Save Favorites
+              </Button>
+              <Button 
+                size="sm" 
+                className="w-full justify-start text-xs"
+                onClick={() => {
+                  handleShare()
+                  setIsMobileMenuOpen(false)
+                }}
+              >
+                <Share2 className="w-4 h-4 mr-2" />
+                Share Symptoms
+              </Button>
             </div>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+        <div className="text-center mb-6 sm:mb-8 lg:mb-12">
+          <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-3 lg:mb-4">
             What symptoms are you experiencing?
           </h2>
-          <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-xl text-gray-600 max-w-2xl mx-auto">
             Get personalized over-the-counter medicine recommendations based on your symptoms. 
             Always consult a healthcare professional for medical advice.
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 xl:gap-8">
           {/* Symptom Selection */}
           <div className="flex-1">
             <Card>
@@ -543,6 +687,20 @@ export default function Home() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
+                {/* Search Symptoms */}
+                <div className="mb-4">
+                  <label className="text-sm font-medium mb-2 block">Search Symptoms</label>
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                    <Input
+                      placeholder="Search symptoms by name, description, or category..."
+                      value={symptomSearchTerm}
+                      onChange={(e) => setSymptomSearchTerm(e.target.value)}
+                      className="pl-10 h-10 sm:h-9 text-sm"
+                    />
+                  </div>
+                </div>
+                
                 {/* Severity Filter */}
                 <div className="mb-4">
                   <label className="text-sm font-medium mb-2 block">Filter by Severity</label>
@@ -582,7 +740,7 @@ export default function Home() {
                               {symptom.severity}
                             </Badge>
                           </div>
-                          <p className="text-xs text-gray-500 mb-2">{symptom.description}</p>
+                          <p className="text-xs text-gray-500 mb-2 leading-relaxed">{symptom.description}</p>
                           <Badge variant="secondary" className={`text-xs ${getCategoryColor(symptom.category)}`}>
                             {symptom.category}
                           </Badge>
@@ -620,7 +778,7 @@ export default function Home() {
                       placeholder="Enter any other symptom..."
                       value={customSymptomInput}
                       onChange={(e) => setCustomSymptomInput(e.target.value)}
-                      className="flex-1"
+                      className="flex-1 h-10 sm:h-9 text-sm"
                       onKeyPress={(e) => {
                         if (e.key === 'Enter') {
                           handleAddCustomSymptom()
@@ -631,7 +789,7 @@ export default function Home() {
                       variant="outline" 
                       onClick={handleAddCustomSymptom}
                       disabled={!customSymptomInput.trim()}
-                      className="w-full sm:w-auto"
+                      className="w-full sm:w-auto h-10 sm:h-9"
                     >
                       <Plus className="w-4 h-4" />
                     </Button>
@@ -661,7 +819,7 @@ export default function Home() {
           </div>
 
           {/* Selected Symptoms & Action */}
-          <div className="w-full lg:w-80 space-y-6">
+          <div className="w-full lg:w-80 space-y-4 lg:space-y-6">
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
@@ -683,7 +841,7 @@ export default function Home() {
                           <p className="text-sm font-medium mb-2">Common Symptoms:</p>
                           <div className="flex flex-wrap gap-2">
                             {selectedSymptoms.map((selectedSymptom) => {
-                              const symptom = commonSymptoms.find(s => s.id === selectedSymptom.id)
+                              const symptom = symptoms.find(s => s.id === selectedSymptom.id)
                               return (
                                 <Badge key={selectedSymptom.id} variant="secondary" className="flex items-center space-x-1">
                                   <span>{getSeverityIcon(selectedSymptom.severity)}</span>
@@ -727,7 +885,7 @@ export default function Home() {
                   <Button 
                     onClick={handleFindMedicines}
                     disabled={(selectedSymptoms.length === 0 && customSymptoms.length === 0) || isLoading}
-                    className="w-full mt-4"
+                    className="w-full mt-4 h-11 sm:h-10 transition-all duration-200 hover:shadow-md"
                     size="lg"
                   >
                     {isLoading ? "Finding Medicines..." : "Find Medicines"}
@@ -774,17 +932,23 @@ export default function Home() {
         )}
 
         {/* Tabs for Recommendations and Browse All Medicines */}
-        <div className="mt-8 sm:mt-12">
+        <div className="mt-6 lg:mt-8">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto">
-              <TabsTrigger value="recommendations" className="flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm">
+            <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto h-auto p-1 bg-gray-100 rounded-lg">
+              <TabsTrigger 
+                value="recommendations" 
+                className="flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm py-2 sm:py-2.5 px-3 sm:px-4 data-[state=active]:bg-white data-[state=active]:shadow-sm transition-all duration-200"
+              >
                 <Stethoscope className="w-3 h-3 sm:w-4 sm:h-4" />
                 <span>Recommendations</span>
                 {recommendations.length > 0 && (
                   <Badge variant="secondary" className="text-xs">{recommendations.length}</Badge>
                 )}
               </TabsTrigger>
-              <TabsTrigger value="browse" className="flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm">
+              <TabsTrigger 
+                value="browse" 
+                className="flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm py-2 sm:py-2.5 px-3 sm:px-4 data-[state=active]:bg-white data-[state=active]:shadow-sm transition-all duration-200"
+              >
                 <Grid className="w-3 h-3 sm:w-4 sm:h-4" />
                 <span>Browse All</span>
               </TabsTrigger>
@@ -815,7 +979,7 @@ export default function Home() {
                       filters={filters}
                       onFiltersChange={handleFiltersChange}
                       onClearFilters={handleClearFilters}
-                      symptoms={commonSymptoms}
+                      symptoms={symptoms}
                       medicines={allMedicines}
                     />
                   ) : (
@@ -838,7 +1002,7 @@ export default function Home() {
                       
                       // Get symptom names from mappings
                       const symptomNames = med.symptomMappings.map(mapping => {
-                        const symptom = commonSymptoms.find(s => s.id === mapping.symptomId);
+                        const symptom = symptoms.find(s => s.id === mapping.symptomId);
                         return symptom?.name || mapping.symptomId;
                       });
                       

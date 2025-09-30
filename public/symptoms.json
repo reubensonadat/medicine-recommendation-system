@@ -1,0 +1,207 @@
+{
+  "symptoms": [
+    {
+      "id": "cough",
+      "name": "Cough",
+      "description": "Dry or productive cough",
+      "category": "Respiratory",
+      "severity": "Moderate"
+    },
+    {
+      "id": "fever",
+      "name": "Fever",
+      "description": "Elevated body temperature above 38°C",
+      "category": "Systemic",
+      "severity": "Moderate"
+    },
+    {
+      "id": "headache",
+      "name": "Headache",
+      "description": "Pain in head or neck region",
+      "category": "Neurological",
+      "severity": "Mild"
+    },
+    {
+      "id": "sore-throat",
+      "name": "Sore Throat",
+      "description": "Pain or irritation in throat",
+      "category": "Respiratory",
+      "severity": "Mild"
+    },
+    {
+      "id": "runny-nose",
+      "name": "Runny Nose",
+      "description": "Nasal discharge or congestion",
+      "category": "Respiratory",
+      "severity": "Mild"
+    },
+    {
+      "id": "body-aches",
+      "name": "Body Aches",
+      "description": "Muscle or joint pain",
+      "category": "Musculoskeletal",
+      "severity": "Moderate"
+    },
+    {
+      "id": "shortness-breath",
+      "name": "Shortness of Breath",
+      "description": "Difficulty breathing or breathlessness",
+      "category": "Respiratory",
+      "severity": "Severe"
+    },
+    {
+      "id": "wheezing",
+      "name": "Wheezing",
+      "description": "High-pitched whistling sound when breathing",
+      "category": "Respiratory",
+      "severity": "Moderate"
+    },
+    {
+      "id": "chest-pain",
+      "name": "Chest Pain",
+      "description": "Pain or discomfort in chest area",
+      "category": "Cardiovascular",
+      "severity": "Severe"
+    },
+    {
+      "id": "nausea",
+      "name": "Nausea",
+      "description": "Feeling sick to stomach",
+      "category": "Gastrointestinal",
+      "severity": "Mild"
+    },
+    {
+      "id": "vomiting",
+      "name": "Vomiting",
+      "description": "Forceful expulsion of stomach contents",
+      "category": "Gastrointestinal",
+      "severity": "Moderate"
+    },
+    {
+      "id": "diarrhea",
+      "name": "Diarrhea",
+      "description": "Frequent loose or liquid bowel movements",
+      "category": "Gastrointestinal",
+      "severity": "Moderate"
+    },
+    {
+      "id": "abdominal-pain",
+      "name": "Abdominal Pain",
+      "description": "Pain in stomach area",
+      "category": "Gastrointestinal",
+      "severity": "Moderate"
+    },
+    {
+      "id": "fatigue",
+      "name": "Fatigue",
+      "description": "Feeling tired or exhausted",
+      "category": "Systemic",
+      "severity": "Mild"
+    },
+    {
+      "id": "chills",
+      "name": "Chills",
+      "description": "Feeling cold with shivering",
+      "category": "Systemic",
+      "severity": "Moderate"
+    },
+    {
+      "id": "sneezing",
+      "name": "Sneezing",
+      "description": "Involuntary expulsion of air from nose",
+      "category": "Respiratory",
+      "severity": "Mild"
+    },
+    {
+      "id": "itchy-eyes",
+      "name": "Itchy Eyes",
+      "description": "Itching sensation in eyes",
+      "category": "Ocular",
+      "severity": "Mild"
+    },
+    {
+      "id": "skin-rash",
+      "name": "Skin Rash",
+      "description": "Redness or irritation of skin",
+      "category": "Dermatological",
+      "severity": "Mild"
+    },
+    {
+      "id": "dizziness",
+      "name": "Dizziness",
+      "description": "Feeling lightheaded or unsteady",
+      "category": "Neurological",
+      "severity": "Moderate"
+    },
+    {
+      "id": "joint-pain",
+      "name": "Joint Pain",
+      "description": "Pain in joints",
+      "category": "Musculoskeletal",
+      "severity": "Moderate"
+    },
+    {
+      "id": "muscle-pain",
+      "name": "Muscle Pain",
+      "description": "Pain in muscles",
+      "category": "Musculoskeletal",
+      "severity": "Moderate"
+    },
+    {
+      "id": "back-pain",
+      "name": "Back Pain",
+      "description": "Pain in back area",
+      "category": "Musculoskeletal",
+      "severity": "Moderate"
+    },
+    {
+      "id": "difficulty-sleeping",
+      "name": "Difficulty Sleeping",
+      "description": "Trouble falling or staying asleep",
+      "category": "Neurological",
+      "severity": "Mild"
+    },
+    {
+      "id": "anxiety",
+      "name": "Anxiety",
+      "description": "Feeling of worry or nervousness",
+      "category": "Psychological",
+      "severity": "Moderate"
+    },
+    {
+      "id": "high-blood-pressure",
+      "name": "High Blood Pressure",
+      "description": "Elevated blood pressure readings",
+      "category": "Cardiovascular",
+      "severity": "Severe"
+    },
+    {
+      "id": "frequent-urination",
+      "name": "Frequent Urination",
+      "description": "Needing to urinate more often than usual",
+      "category": "Renal",
+      "severity": "Mild"
+    },
+    {
+      "id": "excessive-thirst",
+      "name": "Excessive Thirst",
+      "description": "Increased thirst and fluid intake",
+      "category": "Systemic",
+      "severity": "Moderate"
+    },
+    {
+      "id": "weight-loss",
+      "name": "Unexplained Weight Loss",
+      "description": "Losing weight without trying",
+      "category": "Systemic",
+      "severity": "Moderate"
+    },
+    {
+      "id": "blurred-vision",
+      "name": "Blurred Vision",
+      "description": "Unclear or fuzzy vision",
+      "category": "Ocular",
+      "severity": "Moderate"
+    }
+  ]
+}
