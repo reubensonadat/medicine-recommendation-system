@@ -103,6 +103,8 @@ interface SelectedSymptomWithSeverity {
 }
 
 export default function Home() {
+  const router = useRouter()
+  
   // Helper functions for recommendation system
   const getPriceScore = (priceRange: string | undefined): number => {
     if (!priceRange) return 5 // Default score
