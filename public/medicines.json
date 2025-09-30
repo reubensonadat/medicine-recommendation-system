@@ -3476,6 +3476,5206 @@
           "notes": "May help with sleep onset"
         }
       ]
+    },
+    {
+      "id": "med121",
+      "brandName": "Artesunate",
+      "genericName": "Artesunate",
+      "description": "Antimalarial medication for severe malaria",
+      "usage": "For treatment of severe malaria",
+      "dosageAdult": "2.4mg/kg IV/IM at 0, 12, 24 hours, then once daily",
+      "dosageChild": "3mg/kg at 0, 12, 24 hours, then once daily",
+      "dosageElderly": "Same as adult with monitoring",
+      "sideEffects": "Dizziness, nausea, vomiting, neutropenia",
+      "warnings": "Must be followed by full course of oral antimalarial. Monitor for neurotoxicity.",
+      "priceRange": "GHS 45-70",
+      "category": "Antimalarial",
+      "drugClass": "Artemisinin Derivative",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 10,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "First-line for severe malaria"
+        }
+      ]
+    },
+    {
+      "id": "med122",
+      "brandName": "Dihydroartemisinin-Piperaquine",
+      "genericName": "Dihydroartemisinin-Piperaquine",
+      "description": "Antimalarial combination therapy",
+      "usage": "For treatment of uncomplicated malaria",
+      "dosageAdult": "Based on weight, once daily for 3 days",
+      "dosageChild": "Based on weight, once daily for 3 days",
+      "dosageElderly": "Same as adult with monitoring",
+      "sideEffects": "Headache, dizziness, nausea, palpitations",
+      "warnings": "Take with food. Monitor for cardiac effects.",
+      "priceRange": "GHS 35-55",
+      "category": "Antimalarial",
+      "drugClass": "Artemisinin Combination",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective alternative malaria treatment"
+        }
+      ]
+    },
+    {
+      "id": "med123",
+      "brandName": "Pyrimethamine-Sulfadoxine",
+      "genericName": "Pyrimethamine-Sulfadoxine",
+      "description": "Antimalarial combination therapy",
+      "usage": "For treatment of uncomplicated malaria",
+      "dosageAdult": "3 tablets as single dose",
+      "dosageChild": "Based on weight as single dose",
+      "dosageElderly": "Same as adult with caution",
+      "sideEffects": "Nausea, vomiting, rash, photosensitivity",
+      "warnings": "Not recommended in first trimester of pregnancy. Check for resistance.",
+      "priceRange": "GHS 15-25",
+      "category": "Antimalarial",
+      "drugClass": "Antifolate Combination",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Alternative when ACTs unavailable"
+        }
+      ]
+    },
+    {
+      "id": "med124",
+      "brandName": "Primaquine",
+      "genericName": "Primaquine",
+      "description": "Antimalarial for relapse prevention",
+      "usage": "For radical cure of P. vivax and P. ovale malaria",
+      "dosageAdult": "15mg daily for 14 days",
+      "dosageChild": "0.5mg/kg daily for 14 days",
+      "dosageElderly": "Same as adult with monitoring",
+      "sideEffects": "Abdominal pain, hemolysis in G6PD deficiency",
+      "warnings": "Test for G6PD deficiency before use. Not for pregnant women.",
+      "priceRange": "GHS 20-35",
+      "category": "Antimalarial",
+      "drugClass": "8-Aminoquinoline",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Prevents malaria relapse"
+        }
+      ]
+    },
+    {
+      "id": "med125",
+      "brandName": "Doxycycline Prophylaxis",
+      "genericName": "Doxycycline",
+      "description": "Antimalarial prophylaxis",
+      "usage": "For malaria prevention in travelers",
+      "dosageAdult": "100mg daily starting 1-2 days before travel",
+      "dosageChild": "Not recommended for children under 8",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Photosensitivity, nausea, esophageal irritation",
+      "warnings": "Take with plenty of water. Use sunscreen. Not for long-term use.",
+      "priceRange": "GHS 25-40",
+      "category": "Antimalarial",
+      "drugClass": "Tetracycline",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for malaria prevention"
+        }
+      ]
+    },
+    {
+      "id": "med126",
+      "brandName": "Atovaquone-Proguanil",
+      "genericName": "Atovaquone-Proguanil",
+      "description": "Antimalarial for prevention and treatment",
+      "usage": "For malaria prevention and treatment",
+      "dosageAdult": "1 tablet daily for prevention, 4 tablets daily for 3 days for treatment",
+      "dosageChild": "Based on weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Abdominal pain, headache, nausea",
+      "warnings": "Take with food or milky drink. Expensive option.",
+      "priceRange": "GHS 80-120",
+      "category": "Antimalarial",
+      "drugClass": "Antimalarial Combination",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Premium malaria option"
+        }
+      ]
+    },
+    {
+      "id": "med127",
+      "brandName": "Amodiaquine",
+      "genericName": "Amodiaquine",
+      "description": "Antimalarial medication",
+      "usage": "For treatment of uncomplicated malaria",
+      "dosageAdult": "10mg/kg daily for 3 days",
+      "dosageChild": "10mg/kg daily for 3 days",
+      "dosageElderly": "Same as adult with monitoring",
+      "sideEffects": "Nausea, vomiting, abdominal pain, hepatotoxicity",
+      "warnings": "Monitor liver function. Not for long-term use.",
+      "priceRange": "GHS 15-25",
+      "category": "Antimalarial",
+      "drugClass": "4-Aminoquinoline",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Alternative antimalarial"
+        }
+      ]
+    },
+    {
+      "id": "med128",
+      "brandName": "Halofantrine",
+      "genericName": "Halofantrine",
+      "description": "Antimalarial for treatment failures",
+      "usage": "For treatment of multidrug-resistant malaria",
+      "dosageAdult": "8mg/kg every 6 hours for 3 doses",
+      "dosageChild": "8mg/kg every 6 hours for 3 doses",
+      "dosageElderly": "Same as adult with cardiac monitoring",
+      "sideEffects": "Abdominal pain, diarrhea, cardiotoxicity",
+      "warnings": "Cardiac monitoring required. Not for patients with heart conditions.",
+      "priceRange": "GHS 40-60",
+      "category": "Antimalarial",
+      "drugClass": "Phenanthrene-methanol",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For resistant malaria"
+        }
+      ]
+    },
+    {
+      "id": "med129",
+      "brandName": "Pentamidine",
+      "genericName": "Pentamidine Isethionate",
+      "description": "Antiprotozoal for trypanosomiasis",
+      "usage": "For treatment of African sleeping sickness",
+      "dosageAdult": "4mg/kg IV/IM daily or every other day for 7-10 doses",
+      "dosageChild": "4mg/kg IV/IM daily or every other day",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Nephrotoxicity, hypotension, hypoglycemia",
+      "warnings": "Hospital use only. Requires monitoring.",
+      "priceRange": "GHS 150-250",
+      "category": "Antiparasitic",
+      "drugClass": "Antiprotozoal",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Essential for sleeping sickness"
+        }
+      ]
+    },
+    {
+      "id": "med130",
+      "brandName": "Suramin",
+      "genericName": "Suramin Sodium",
+      "description": "Antiprotozoal for early-stage trypanosomiasis",
+      "usage": "For treatment of early-stage African sleeping sickness",
+      "dosageAdult": "Test dose 100mg IV, then 20mg/kg IV on days 1, 3, 7, 14, 21",
+      "dosageChild": "Based on weight with same schedule",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Nephrotoxicity, neuropathy, adrenal insufficiency",
+      "warnings": "Hospital use only. Requires monitoring.",
+      "priceRange": "GHS 200-300",
+      "category": "Antiparasitic",
+      "drugClass": "Antiprotozoal",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For early-stage sleeping sickness"
+        }
+      ]
+    },
+    {
+      "id": "med131",
+      "brandName": "Melarsoprol",
+      "genericName": "Melarsoprol",
+      "description": "Arsenical for late-stage trypanosomiasis",
+      "usage": "For treatment of late-stage African sleeping sickness",
+      "dosageAdult": "2.0-3.6mg/kg IV daily for 3 days, repeat after 7 days",
+      "dosageChild": "Based on weight with same schedule",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Reactive encephalopathy, fever, hypertension",
+      "warnings": "Highly toxic. Hospital use only. Requires steroids.",
+      "priceRange": "GHS 250-400",
+      "category": "Antiparasitic",
+      "drugClass": "Arsenical",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For late-stage sleeping sickness"
+        }
+      ]
+    },
+    {
+      "id": "med132",
+      "brandName": "Eflornithine",
+      "genericName": "Eflornithine",
+      "description": "Antiprotozoal for late-stage trypanosomiasis",
+      "usage": "For treatment of late-stage African sleeping sickness",
+      "dosageAdult": "100mg/kg IV every 6 hours for 14 days",
+      "dosageChild": "Based on weight with same schedule",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Diarrhea, anemia, seizures, hearing loss",
+      "warnings": "Hospital use only. Requires monitoring.",
+      "priceRange": "GHS 300-500",
+      "category": "Antiparasitic",
+      "drugClass": "Antiprotozoal",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Alternative for late-stage sleeping sickness"
+        }
+      ]
+    },
+    {
+      "id": "med133",
+      "brandName": "Nifurtimox",
+      "genericName": "Nifurtimox",
+      "description": "Antiprotozoal for Chagas disease",
+      "usage": "For treatment of Chagas disease",
+      "dosageAdult": "8-10mg/kg daily in divided doses for 60-90 days",
+      "dosageChild": "10-15mg/kg daily in divided doses for 60-90 days",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Anorexia, weight loss, neuropathy, psychosis",
+      "warnings": "Monitor for side effects. Not for pregnant women.",
+      "priceRange": "GHS 200-350",
+      "category": "Antiparasitic",
+      "drugClass": "Nitrofuran",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For Chagas disease"
+        }
+      ]
+    },
+    {
+      "id": "med134",
+      "brandName": "Benznidazole",
+      "genericName": "Benznidazole",
+      "description": "Antiprotozoal for Chagas disease",
+      "usage": "For treatment of acute Chagas disease",
+      "dosageAdult": "5-7mg/kg daily in divided doses for 60 days",
+      "dosageChild": "5-10mg/kg daily in divided doses for 60 days",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Dermatitis, peripheral neuropathy, bone marrow suppression",
+      "warnings": "Monitor blood counts. Not for pregnant women.",
+      "priceRange": "GHS 250-400",
+      "category": "Antiparasitic",
+      "drugClass": "Nitroimidazole",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Alternative for Chagas disease"
+        }
+      ]
+    },
+    {
+      "id": "med135",
+      "brandName": "Praziquantel",
+      "genericName": "Praziquantel",
+      "description": "Antihelminthic for schistosomiasis",
+      "usage": "For treatment of schistosomiasis and other trematode infections",
+      "dosageAdult": "40mg/kg in divided doses for 1 day",
+      "dosageChild": "40mg/kg in divided doses for 1 day",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Dizziness, headache, abdominal pain, drowsiness",
+      "warnings": "Take with food. May cause dizziness.",
+      "priceRange": "GHS 15-25",
+      "category": "Antiparasitic",
+      "drugClass": "Antihelminthic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Essential for schistosomiasis"
+        }
+      ]
+    },
+    {
+      "id": "med136",
+      "brandName": "Oxamniquine",
+      "genericName": "Oxamniquine",
+      "description": "Antihelminthic for schistosomiasis",
+      "usage": "For treatment of S. mansoni infection",
+      "dosageAdult": "15mg/kg in divided doses for 1 day",
+      "dosageChild": "20mg/kg in divided doses for 1 day",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Dizziness, drowsiness, orange-red urine, seizures",
+      "warnings": "May cause seizures. Avoid driving.",
+      "priceRange": "GHS 20-35",
+      "category": "Antiparasitic",
+      "drugClass": "Antihelminthic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Alternative for schistosomiasis"
+        }
+      ]
+    },
+    {
+      "id": "med137",
+      "brandName": "Diethylcarbamazine",
+      "genericName": "Diethylcarbamazine",
+      "description": "Antifilarial medication",
+      "usage": "For treatment of lymphatic filariasis",
+      "dosageAdult": "6mg/kg daily for 12 days",
+      "dosageChild": "6mg/kg daily for 12 days",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Fever, headache, nausea, joint pain",
+      "warnings": "May cause severe inflammatory reactions. Use with antihistamines.",
+      "priceRange": "GHS 15-25",
+      "category": "Antiparasitic",
+      "drugClass": "Antifilarial",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For filariasis"
+        }
+      ]
+    },
+    {
+      "id": "med138",
+      "brandName": "Ivermectin-Albendazole",
+      "genericName": "Ivermectin-Albendazole",
+      "description": "Combination antiparasitic",
+      "usage": "For mass treatment of lymphatic filariasis",
+      "dosageAdult": "Ivermectin 200mcg/kg + Albendazole 400mg single dose",
+      "dosageChild": "Ivermectin 200mcg/kg + Albendazole 400mg single dose",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Fever, headache, dizziness, abdominal pain",
+      "warnings": "May cause severe inflammatory reactions. Use with antihistamines.",
+      "priceRange": "GHS 20-35",
+      "category": "Antiparasitic",
+      "drugClass": "Combination Antiparasitic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For mass filariasis treatment"
+        }
+      ]
+    },
+    {
+      "id": "med139",
+      "brandName": "Niclosamide",
+      "genericName": "Niclosamide",
+      "description": "Antihelminthic for tapeworm infections",
+      "usage": "For treatment of tapeworm infections",
+      "dosageAdult": "2g as single dose after light meal",
+      "dosageChild": "1g as single dose after light meal",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Abdominal discomfort, nausea, lightheadedness",
+      "warnings": "Chew tablets thoroughly. Take with water.",
+      "priceRange": "GHS 15-25",
+      "category": "Antiparasitic",
+      "drugClass": "Antihelminthic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For tapeworm infections"
+        }
+      ]
+    },
+    {
+      "id": "med140",
+      "brandName": "Thiabendazole",
+      "genericName": "Thiabendazole",
+      "description": "Broad-spectrum antihelminthic",
+      "usage": "For treatment of strongyloidiasis and other helminth infections",
+      "dosageAdult": "25mg/kg twice daily for 2 days",
+      "dosageChild": "25mg/kg twice daily for 2 days",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Nausea, vomiting, dizziness, liver toxicity",
+      "warnings": "Monitor liver function. Take with food.",
+      "priceRange": "GHS 20-35",
+      "category": "Antiparasitic",
+      "drugClass": "Benzimidazole",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For strongyloidiasis"
+        }
+      ]
+    },
+    {
+      "id": "med141",
+      "brandName": "Zidovudine",
+      "genericName": "Zidovudine (AZT)",
+      "description": "Nucleoside reverse transcriptase inhibitor",
+      "usage": "For HIV treatment and prevention of mother-to-child transmission",
+      "dosageAdult": "300mg twice daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Anemia, neutropenia, nausea, myopathy",
+      "warnings": "Monitor blood counts. May cause bone marrow suppression.",
+      "priceRange": "GHS 50-80",
+      "category": "HIV",
+      "drugClass": "NRTI",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Improves HIV-related fatigue"
+        }
+      ]
+    },
+    {
+      "id": "med142",
+      "brandName": "Lamivudine",
+      "genericName": "Lamivudine (3TC)",
+      "description": "Nucleoside reverse transcriptase inhibitor",
+      "usage": "For HIV treatment and hepatitis B",
+      "dosageAdult": "300mg once daily or 150mg twice daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, nausea, fatigue, pancreatitis",
+      "warnings": "Monitor for pancreatitis. May cause lactic acidosis.",
+      "priceRange": "GHS 40-70",
+      "category": "HIV",
+      "drugClass": "NRTI",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Part of HIV combination therapy"
+        }
+      ]
+    },
+    {
+      "id": "med143",
+      "brandName": "Efavirenz",
+      "genericName": "Efavirenz",
+      "description": "Non-nucleoside reverse transcriptase inhibitor",
+      "usage": "For HIV treatment",
+      "dosageAdult": "600mg once daily at bedtime",
+      "dosageChild": "Based on weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Dizziness, vivid dreams, rash, psychiatric effects",
+      "warnings": "May cause psychiatric symptoms. Avoid in pregnancy.",
+      "priceRange": "GHS 60-90",
+      "category": "HIV",
+      "drugClass": "NNRTI",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Part of HIV combination therapy"
+        }
+      ]
+    },
+    {
+      "id": "med144",
+      "brandName": "Nevirapine",
+      "genericName": "Nevirapine",
+      "description": "Non-nucleoside reverse transcriptase inhibitor",
+      "usage": "For HIV treatment and prevention of mother-to-child transmission",
+      "dosageAdult": "200mg once daily for 14 days, then 200mg twice daily",
+      "dosageChild": "Based on weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rash, hepatotoxicity, fever",
+      "warnings": "Monitor liver function. May cause severe rash.",
+      "priceRange": "GHS 50-80",
+      "category": "HIV",
+      "drugClass": "NNRTI",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Part of HIV combination therapy"
+        }
+      ]
+    },
+    {
+      "id": "med145",
+      "brandName": "Tenofovir",
+      "genericName": "Tenofovir Disoproxil Fumarate",
+      "description": "Nucleotide reverse transcriptase inhibitor",
+      "usage": "For HIV treatment and hepatitis B",
+      "dosageAdult": "300mg once daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Nephrotoxicity, bone density loss, nausea",
+      "warnings": "Monitor kidney function. May cause bone loss.",
+      "priceRange": "GHS 60-90",
+      "category": "HIV",
+      "drugClass": "NRTI",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Part of HIV combination therapy"
+        }
+      ]
+    },
+    {
+      "id": "med146",
+      "brandName": "Emtricitabine",
+      "genericName": "Emtricitabine",
+      "description": "Nucleoside reverse transcriptase inhibitor",
+      "usage": "For HIV treatment and PrEP",
+      "dosageAdult": "200mg once daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, nausea, diarrhea, skin discoloration",
+      "warnings": "Monitor kidney function. May cause lactic acidosis.",
+      "priceRange": "GHS 70-100",
+      "category": "HIV",
+      "drugClass": "NRTI",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Part of HIV combination therapy"
+        }
+      ]
+    },
+    {
+      "id": "med147",
+      "brandName": "Abacavir",
+      "genericName": "Abacavir",
+      "description": "Nucleoside reverse transcriptase inhibitor",
+      "usage": "For HIV treatment",
+      "dosageAdult": "600mg once daily or 300mg twice daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Hypersensitivity reaction, nausea, fatigue",
+      "warnings": "Test for HLA-B*5701 before use. Hypersensitivity can be fatal.",
+      "priceRange": "GHS 80-120",
+      "category": "HIV",
+      "drugClass": "NRTI",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Part of HIV combination therapy"
+        }
+      ]
+    },
+    {
+      "id": "med148",
+      "brandName": "Lopinavir-Ritonavir",
+      "genericName": "Lopinavir-Ritonavir",
+      "description": "Protease inhibitor combination",
+      "usage": "For HIV treatment",
+      "dosageAdult": "400/100mg twice daily or 800/200mg once daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Diarrhea, nausea, lipid abnormalities, hyperglycemia",
+      "warnings": "Many drug interactions. Monitor lipids and glucose.",
+      "priceRange": "GHS 100-150",
+      "category": "HIV",
+      "drugClass": "Protease Inhibitor",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Part of HIV combination therapy"
+        }
+      ]
+    },
+    {
+      "id": "med149",
+      "brandName": "Atazanavir",
+      "genericName": "Atazanavir",
+      "description": "Protease inhibitor",
+      "usage": "For HIV treatment",
+      "dosageAdult": "300mg with ritonavir 100mg once daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Jaundice, rash, nausea, kidney stones",
+      "warnings": "May cause jaundice. Take with food.",
+      "priceRange": "GHS 90-140",
+      "category": "HIV",
+      "drugClass": "Protease Inhibitor",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Part of HIV combination therapy"
+        }
+      ]
+    },
+    {
+      "id": "med150",
+      "brandName": "Darunavir",
+      "genericName": "Darunavir",
+      "description": "Protease inhibitor",
+      "usage": "For HIV treatment",
+      "dosageAdult": "800mg with ritonavir 100mg once daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Diarrhea, nausea, rash, lipid abnormalities",
+      "warnings": "Many drug interactions. Take with food.",
+      "priceRange": "GHS 120-180",
+      "category": "HIV",
+      "drugClass": "Protease Inhibitor",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Part of HIV combination therapy"
+        }
+      ]
+    },
+    {
+      "id": "med151",
+      "brandName": "Raltegravir",
+      "genericName": "Raltegravir",
+      "description": "Integrase inhibitor",
+      "usage": "For HIV treatment",
+      "dosageAdult": "400mg twice daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, nausea, diarrhea, insomnia",
+      "warnings": "Monitor for liver toxicity. May cause depression.",
+      "priceRange": "GHS 150-220",
+      "category": "HIV",
+      "drugClass": "Integrase Inhibitor",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Part of HIV combination therapy"
+        }
+      ]
+    },
+    {
+      "id": "med152",
+      "brandName": "Dolutegravir",
+      "genericName": "Dolutegravir",
+      "description": "Integrase inhibitor",
+      "usage": "For HIV treatment",
+      "dosageAdult": "50mg once daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Insomnia, headache, weight gain, hypersensitivity",
+      "warnings": "Not for use in first trimester of pregnancy. Monitor for hypersensitivity.",
+      "priceRange": "GHS 120-180",
+      "category": "HIV",
+      "drugClass": "Integrase Inhibitor",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Preferred first-line HIV treatment"
+        }
+      ]
+    },
+    {
+      "id": "med153",
+      "brandName": "Maraviroc",
+      "genericName": "Maraviroc",
+      "description": "CCR5 antagonist",
+      "usage": "For HIV treatment",
+      "dosageAdult": "300mg twice daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Cough, fever, rash, hepatotoxicity",
+      "warnings": "Requires tropism test. Monitor liver function.",
+      "priceRange": "GHS 150-220",
+      "category": "HIV",
+      "drugClass": "Entry Inhibitor",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For specific HIV strains"
+        }
+      ]
+    },
+    {
+      "id": "med154",
+      "brandName": "Enfuvirtide",
+      "genericName": "Enfuvirtide",
+      "description": "Fusion inhibitor",
+      "usage": "For HIV treatment",
+      "dosageAdult": "90mg subcutaneously twice daily",
+      "dosageChild": "2mg/kg subcutaneously twice daily",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Injection site reactions, hypersensitivity, neuropathy",
+      "warnings": "Injection site reactions common. Monitor for hypersensitivity.",
+      "priceRange": "GHS 300-500",
+      "category": "HIV",
+      "drugClass": "Fusion Inhibitor",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For treatment-experienced patients"
+        }
+      ]
+    },
+    {
+      "id": "med155",
+      "brandName": "Hydroxyurea",
+      "genericName": "Hydroxyurea",
+      "description": "Antineoplastic for sickle cell disease",
+      "usage": "For sickle cell disease and certain cancers",
+      "dosageAdult": "15-35mg/kg once daily",
+      "dosageChild": "15-30mg/kg once daily",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Myelosuppression, nausea, skin ulcers, teratogenicity",
+      "warnings": "Monitor blood counts. Use contraception. Handle with care.",
+      "priceRange": "GHS 40-70",
+      "category": "Sickle Cell",
+      "drugClass": "Antineoplastic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "body-aches",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Reduces sickle cell crises"
+        }
+      ]
+    },
+    {
+      "id": "med156",
+      "brandName": "L-Glutamine",
+      "genericName": "L-Glutamine",
+      "description": "Amino acid for sickle cell disease",
+      "usage": "For reduction of sickle cell crises",
+      "dosageAdult": "0.3g/kg twice daily",
+      "dosageChild": "0.3g/kg twice daily",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Constipation, nausea, abdominal pain",
+      "warnings": "Generally well tolerated. May interact with some medications.",
+      "priceRange": "GHS 80-120",
+      "category": "Sickle Cell",
+      "drugClass": "Amino Acid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "body-aches",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Reduces sickle cell complications"
+        }
+      ]
+    },
+    {
+      "id": "med157",
+      "brandName": "Voxelotor",
+      "genericName": "Voxelotor",
+      "description": "Hemoglobin S polymerization inhibitor",
+      "usage": "For sickle cell disease",
+      "dosageAdult": "1500mg once daily",
+      "dosageChild": "Based on weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, diarrhea, nausea, rash",
+      "warnings": "Monitor hemoglobin levels. May cause drug interactions.",
+      "priceRange": "GHS 200-300",
+      "category": "Sickle Cell",
+      "drugClass": "Hemoglobin Modifier",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "body-aches",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Reduces sickle cell complications"
+        }
+      ]
+    },
+    {
+      "id": "med158",
+      "brandName": "Crizanlizumab",
+      "genericName": "Crizanlizumab",
+      "description": "P-selectin inhibitor",
+      "usage": "For sickle cell disease",
+      "dosageAdult": "5mg/kg IV on day 1, day 15, then every 4 weeks",
+      "dosageChild": "Based on weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, joint pain, nausea, back pain",
+      "warnings": "Infusion reactions possible. Monitor during infusion.",
+      "priceRange": "GHS 500-800",
+      "category": "Sickle Cell",
+      "drugClass": "Monoclonal Antibody",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "body-aches",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Reduces sickle cell crises"
+        }
+      ]
+    },
+    {
+      "id": "med159",
+      "brandName": "L-Arginine",
+      "genericName": "L-Arginine",
+      "description": "Amino acid for sickle cell disease",
+      "usage": "For sickle cell disease complications",
+      "dosageAdult": "0.1-0.3g/kg three times daily",
+      "dosageChild": "Based on weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Nausea, diarrhea, abdominal pain",
+      "warnings": "May interact with some medications. Monitor blood pressure.",
+      "priceRange": "GHS 60-90",
+      "category": "Sickle Cell",
+      "drugClass": "Amino Acid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "body-aches",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "May help with sickle cell pain"
+        }
+      ]
+    },
+    {
+      "id": "med160",
+      "brandName": "Zinc Acetate",
+      "genericName": "Zinc Acetate",
+      "description": "Zinc supplement for sickle cell disease",
+      "usage": "For sickle cell disease complications",
+      "dosageAdult": "220mg three times daily",
+      "dosageChild": "Based on weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Nausea, metallic taste, stomach upset",
+      "warnings": "May interfere with copper absorption. Take with food.",
+      "priceRange": "GHS 30-50",
+      "category": "Sickle Cell",
+      "drugClass": "Mineral Supplement",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "body-aches",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "May reduce sickle cell complications"
+        }
+      ]
+    },
+    {
+      "id": "med161",
+      "brandName": "Folic Acid",
+      "genericName": "Folic Acid",
+      "description": "Vitamin supplement for sickle cell disease",
+      "usage": "For sickle cell disease and pregnancy",
+      "dosageAdult": "1-5mg daily",
+      "dosageChild": "Based on age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may mask B12 deficiency",
+      "warnings": "Generally safe. May mask B12 deficiency.",
+      "priceRange": "GHS 10-20",
+      "category": "Sickle Cell",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with anemia in sickle cell"
+        }
+      ]
+    },
+    {
+      "id": "med162",
+      "brandName": "Vitamin D",
+      "genericName": "Vitamin D3",
+      "description": "Vitamin supplement for bone health",
+      "usage": "For vitamin D deficiency and bone health",
+      "dosageAdult": "800-2000 IU daily",
+      "dosageChild": "400-1000 IU daily",
+      "dosageElderly": "800-2000 IU daily",
+      "sideEffects": "Rare, may cause hypercalcemia at high doses",
+      "warnings": "Monitor calcium levels at high doses.",
+      "priceRange": "GHS 15-30",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with bone and muscle health"
+        }
+      ]
+    },
+    {
+      "id": "med163",
+      "brandName": "Vitamin B12",
+      "genericName": "Cyanocobalamin",
+      "description": "Vitamin supplement for anemia",
+      "usage": "For vitamin B12 deficiency and anemia",
+      "dosageAdult": "1000mcg monthly injection or 500-2000mcg daily oral",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause itching or rash",
+      "warnings": "Generally safe. Monitor response.",
+      "priceRange": "GHS 20-40",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Essential for anemia treatment"
+        }
+      ]
+    },
+    {
+      "id": "med164",
+      "brandName": "Vitamin A",
+      "genericName": "Retinol",
+      "description": "Vitamin supplement for vision and immunity",
+      "usage": "For vitamin A deficiency and immune support",
+      "dosageAdult": "25,000 IU daily for deficiency, 5000 IU daily for prevention",
+      "dosageChild": "Based on age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, liver toxicity at high doses",
+      "warnings": "Toxic in high doses. Don't exceed recommended amount.",
+      "priceRange": "GHS 15-25",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with immune function"
+        }
+      ]
+    },
+    {
+      "id": "med165",
+      "brandName": "Vitamin E",
+      "genericName": "Tocopherol",
+      "description": "Antioxidant vitamin supplement",
+      "usage": "For antioxidant support and skin health",
+      "dosageAdult": "100-400 IU daily",
+      "dosageChild": "Based on age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may increase bleeding risk at high doses",
+      "warnings": "May increase bleeding risk. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-35",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "May help with skin health"
+        }
+      ]
+    },
+    {
+      "id": "med166",
+      "brandName": "Vitamin K",
+      "genericName": "Phytonadione",
+      "description": "Vitamin for blood clotting",
+      "usage": "For vitamin K deficiency and bleeding disorders",
+      "dosageAdult": "2.5-10mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause flushing or rash",
+      "warnings": "Generally safe. Monitor response.",
+      "priceRange": "GHS 15-25",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Helps with blood clotting"
+        }
+      ]
+    },
+    {
+      "id": "med167",
+      "brandName": "Vitamin B Complex",
+      "genericName": "B-Complex Vitamins",
+      "description": "Multiple B vitamins supplement",
+      "usage": "For general health and energy",
+      "dosageAdult": "1 tablet daily",
+      "dosageChild": "Children's formulation available",
+      "dosageElderly": "1 tablet daily",
+      "sideEffects": "Rare, mild stomach upset",
+      "warnings": "Generally safe. May cause urine discoloration.",
+      "priceRange": "GHS 20-35",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with energy metabolism"
+        }
+      ]
+    },
+    {
+      "id": "med168",
+      "brandName": "Biotin",
+      "genericName": "Biotin",
+      "description": "Vitamin B7 for hair and nail health",
+      "usage": "For hair, skin, and nail health",
+      "dosageAdult": "30-100mcg daily",
+      "dosageChild": "Based on age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause acne",
+      "warnings": "Generally safe. May interfere with lab tests.",
+      "priceRange": "GHS 25-40",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "May help with skin health"
+        }
+      ]
+    },
+    {
+      "id": "med169",
+      "brandName": "Pantothenic Acid",
+      "genericName": "Vitamin B5",
+      "description": "Vitamin for energy metabolism",
+      "usage": "For general health and energy",
+      "dosageAdult": "5mg daily",
+      "dosageChild": "Based on age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause diarrhea",
+      "warnings": "Generally safe.",
+      "priceRange": "GHS 20-35",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Helps with energy metabolism"
+        }
+      ]
+    },
+    {
+      "id": "med170",
+      "brandName": "Thiamine",
+      "genericName": "Vitamin B1",
+      "description": "Vitamin for nerve function",
+      "usage": "For thiamine deficiency and nerve health",
+      "dosageAdult": "50-100mg daily",
+      "dosageChild": "Based on age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause upset stomach",
+      "warnings": "Generally safe.",
+      "priceRange": "GHS 15-25",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Essential for energy metabolism"
+        }
+      ]
+    },
+    {
+      "id": "med171",
+      "brandName": "Riboflavin",
+      "genericName": "Vitamin B2",
+      "description": "Vitamin for energy metabolism",
+      "usage": "For riboflavin deficiency and general health",
+      "dosageAdult": "1.3-1.6mg daily",
+      "dosageChild": "Based on age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause urine discoloration",
+      "warnings": "Generally safe. May cause bright yellow urine.",
+      "priceRange": "GHS 15-25",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Helps with energy metabolism"
+        }
+      ]
+    },
+    {
+      "id": "med172",
+      "brandName": "Niacin",
+      "genericName": "Niacin (Vitamin B3)",
+      "description": "Vitamin for cholesterol and general health",
+      "usage": "For niacin deficiency and cholesterol management",
+      "dosageAdult": "14-16mg daily for deficiency, 500-2000mg for cholesterol",
+      "dosageChild": "Based on age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Flushing, itching, headache, liver toxicity at high doses",
+      "warnings": "Monitor liver function at high doses. May cause flushing.",
+      "priceRange": "GHS 20-35",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "May help with cholesterol"
+        }
+      ]
+    },
+    {
+      "id": "med173",
+      "brandName": "Pyridoxine",
+      "genericName": "Vitamin B6",
+      "description": "Vitamin for nerve function",
+      "usage": "For vitamin B6 deficiency and nerve health",
+      "dosageAdult": "1.3-1.7mg daily",
+      "dosageChild": "Based on age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause nerve damage at high doses",
+      "warnings": "Toxic at high doses. Don't exceed recommended amount.",
+      "priceRange": "GHS 15-25",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Helps with nerve function"
+        }
+      ]
+    },
+    {
+      "id": "med174",
+      "brandName": "Potassium",
+      "genericName": "Potassium Chloride",
+      "description": "Mineral supplement for electrolyte balance",
+      "usage": "For potassium deficiency and electrolyte balance",
+      "dosageAdult": "20-40mEq daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Nausea, vomiting, abdominal pain, hyperkalemia",
+      "warnings": "Monitor potassium levels. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-35",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with muscle function"
+        }
+      ]
+    },
+    {
+      "id": "med175",
+      "brandName": "Sodium Bicarbonate",
+      "genericName": "Sodium Bicarbonate",
+      "description": "Antacid for acid indigestion",
+      "usage": "For heartburn and acid indigestion",
+      "dosageAdult": "1/2 teaspoon in glass of water as needed",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Gas, bloating, metabolic alkalosis",
+      "warnings": "Don't use for more than 2 weeks. May cause fluid retention.",
+      "priceRange": "GHS 10-20",
+      "category": "Digestive",
+      "drugClass": "Antacid",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Quick relief for heartburn"
+        }
+      ]
+    },
+    {
+      "id": "med176",
+      "brandName": "Calcium Carbonate",
+      "genericName": "Calcium Carbonate",
+      "description": "Antacid and calcium supplement",
+      "usage": "For heartburn and calcium deficiency",
+      "dosageAdult": "1-2 tablets as needed for heartburn, 1-2 tablets daily for supplement",
+      "dosageChild": "Based on age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Constipation, gas, bloating",
+      "warnings": "May cause kidney stones. Don't exceed recommended amount.",
+      "priceRange": "GHS 15-25",
+      "category": "Digestive",
+      "drugClass": "Antacid",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Quick relief for heartburn"
+        }
+      ]
+    },
+    {
+      "id": "med177",
+      "brandName": "Magnesium Hydroxide",
+      "genericName": "Magnesium Hydroxide",
+      "description": "Antacid and laxative",
+      "usage": "For heartburn and constipation",
+      "dosageAdult": "1-2 tablespoons as needed",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Diarrhea, abdominal cramping",
+      "warnings": "Don't use for more than 1 week. May cause diarrhea.",
+      "priceRange": "GHS 15-25",
+      "category": "Digestive",
+      "drugClass": "Antacid",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Quick relief for heartburn"
+        }
+      ]
+    },
+    {
+      "id": "med178",
+      "brandName": "Simethicone",
+      "genericName": "Simethicone",
+      "description": "Antiflatulent for gas relief",
+      "usage": "For gas and bloating",
+      "dosageAdult": "40-125mg after meals and at bedtime",
+      "dosageChild": "Based on age",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause constipation",
+      "warnings": "Generally safe.",
+      "priceRange": "GHS 15-25",
+      "category": "Digestive",
+      "drugClass": "Antiflatulent",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Relieves gas and bloating"
+        }
+      ]
+    },
+    {
+      "id": "med179",
+      "brandName": "Docusate",
+      "genericName": "Docusate Sodium",
+      "description": "Stool softener",
+      "usage": "For constipation",
+      "dosageAdult": "50-400mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause stomach cramping",
+      "warnings": "Don't use for more than 1 week. Drink plenty of water.",
+      "priceRange": "GHS 15-25",
+      "category": "Digestive",
+      "drugClass": "Stool Softener",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Helps with constipation"
+        }
+      ]
+    },
+    {
+      "id": "med180",
+      "brandName": "Bisacodyl",
+      "genericName": "Bisacodyl",
+      "description": "Stimulant laxative",
+      "usage": "For constipation",
+      "dosageAdult": "5-15mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Abdominal cramping, diarrhea, electrolyte imbalance",
+      "warnings": "Don't use for more than 1 week. May cause dependency.",
+      "priceRange": "GHS 15-25",
+      "category": "Digestive",
+      "drugClass": "Stimulant Laxative",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Helps with constipation"
+        }
+      ]
+    },
+    {
+      "id": "med181",
+      "brandName": "Polyethylene Glycol",
+      "genericName": "Polyethylene Glycol 3350",
+      "description": "Osmotic laxative",
+      "usage": "For constipation",
+      "dosageAdult": "17g daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Bloating, gas, diarrhea",
+      "warnings": "Don't use for more than 2 weeks. Drink plenty of water.",
+      "priceRange": "GHS 20-35",
+      "category": "Digestive",
+      "drugClass": "Osmotic Laxative",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Helps with constipation"
+        }
+      ]
+    },
+    {
+      "id": "med182",
+      "brandName": "Psyllium",
+      "genericName": "Psyllium Husk",
+      "description": "Bulk-forming laxative",
+      "usage": "For constipation and diarrhea",
+      "dosageAdult": "1-2 teaspoons daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Bloating, gas, abdominal cramping",
+      "warnings": "Drink plenty of water. Don't use if you have difficulty swallowing.",
+      "priceRange": "GHS 20-35",
+      "category": "Digestive",
+      "drugClass": "Bulk-forming Laxative",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Helps with constipation and diarrhea"
+        }
+      ]
+    },
+    {
+      "id": "med183",
+      "brandName": "Methylcellulose",
+      "genericName": "Methylcellulose",
+      "description": "Bulk-forming laxative",
+      "usage": "For constipation",
+      "dosageAdult": "1 teaspoon daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Bloating, gas, abdominal cramping",
+      "warnings": "Drink plenty of water. Don't use if you have difficulty swallowing.",
+      "priceRange": "GHS 20-35",
+      "category": "Digestive",
+      "drugClass": "Bulk-forming Laxative",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Helps with constipation"
+        }
+      ]
+    },
+    {
+      "id": "med184",
+      "brandName": "Lactulose",
+      "genericName": "Lactulose",
+      "description": "Osmotic laxative",
+      "usage": "For constipation and hepatic encephalopathy",
+      "dosageAdult": "15-30ml daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Bloating, gas, diarrhea, electrolyte imbalance",
+      "warnings": "Don't use for more than 2 weeks. Monitor electrolytes.",
+      "priceRange": "GHS 25-40",
+      "category": "Digestive",
+      "drugClass": "Osmotic Laxative",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Helps with constipation"
+        }
+      ]
+    },
+    {
+      "id": "med185",
+      "brandName": "Senna",
+      "genericName": "Senna",
+      "description": "Stimulant laxative",
+      "usage": "For constipation",
+      "dosageAdult": "8.6-17.2mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Abdominal cramping, diarrhea, electrolyte imbalance",
+      "warnings": "Don't use for more than 1 week. May cause dependency.",
+      "priceRange": "GHS 15-25",
+      "category": "Digestive",
+      "drugClass": "Stimulant Laxative",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Helps with constipation"
+        }
+      ]
+    },
+    {
+      "id": "med186",
+      "brandName": "Cascara",
+      "genericName": "Cascara Sagrada",
+      "description": "Stimulant laxative",
+      "usage": "For constipation",
+      "dosageAdult": "300-1000mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Abdominal cramping, diarrhea, electrolyte imbalance",
+      "warnings": "Don't use for more than 1 week. May cause dependency.",
+      "priceRange": "GHS 15-25",
+      "category": "Digestive",
+      "drugClass": "Stimulant Laxative",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Helps with constipation"
+        }
+      ]
+    },
+    {
+      "id": "med187",
+      "brandName": "Aloe Vera",
+      "genericName": "Aloe Vera",
+      "description": "Laxative and skin healer",
+      "usage": "For constipation and skin conditions",
+      "dosageAdult": "50-200mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Abdominal cramping, diarrhea",
+      "warnings": "Don't use for more than 1 week. May cause dependency.",
+      "priceRange": "GHS 20-35",
+      "category": "Digestive",
+      "drugClass": "Stimulant Laxative",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Helps with constipation"
+        }
+      ]
+    },
+    {
+      "id": "med188",
+      "brandName": "Activated Charcoal",
+      "genericName": "Activated Charcoal",
+      "description": "Antidiarrheal and detoxifier",
+      "usage": "For diarrhea and poisoning",
+      "dosageAdult": "25-100g as single dose",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Black stools, constipation, vomiting",
+      "warnings": "Don't use for more than 2 days. May interfere with other medications.",
+      "priceRange": "GHS 15-25",
+      "category": "Digestive",
+      "drugClass": "Antidiarrheal",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "diarrhea",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with diarrhea"
+        }
+      ]
+    },
+    {
+      "id": "med189",
+      "brandName": "Kaolin-Pectin",
+      "genericName": "Kaolin-Pectin",
+      "description": "Antidiarrheal",
+      "usage": "For diarrhea",
+      "dosageAdult": "30-60ml after each loose stool",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Constipation, bloating",
+      "warnings": "Don't use for more than 2 days. May cause constipation.",
+      "priceRange": "GHS 15-25",
+      "category": "Digestive",
+      "drugClass": "Antidiarrheal",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "diarrhea",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with diarrhea"
+        }
+      ]
+    },
+    {
+      "id": "med190",
+      "brandName": "Racecadotril",
+      "genericName": "Racecadotril",
+      "description": "Antidiarrheal",
+      "usage": "For acute diarrhea",
+      "dosageAdult": "100mg three times daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Tonsillitis, headache, constipation",
+      "warnings": "Don't use for more than 7 days. May cause constipation.",
+      "priceRange": "GHS 25-40",
+      "category": "Digestive",
+      "drugClass": "Antidiarrheal",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "diarrhea",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with diarrhea"
+        }
+      ]
+    },
+    {
+      "id": "med191",
+      "brandName": "Octreotide",
+      "genericName": "Octreotide",
+      "description": "Antidiarrheal for severe cases",
+      "usage": "For severe diarrhea and carcinoid syndrome",
+      "dosageAdult": "50-100mcg subcutaneously two to three times daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Nausea, abdominal pain, gallstones, hyperglycemia",
+      "warnings": "Hospital use only. Monitor gallbladder function.",
+      "priceRange": "GHS 200-300",
+      "category": "Digestive",
+      "drugClass": "Antidiarrheal",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "diarrhea",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For severe diarrhea"
+        }
+      ]
+    },
+    {
+      "id": "med192",
+      "brandName": "Oral Rehydration Salts",
+      "genericName": "Oral Rehydration Salts",
+      "description": "Electrolyte solution for dehydration",
+      "usage": "For dehydration from diarrhea",
+      "dosageAdult": "1 liter solution over 4-6 hours",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause vomiting",
+      "warnings": "Use clean water. Don't add sugar.",
+      "priceRange": "GHS 5-15",
+      "category": "Digestive",
+      "drugClass": "Electrolyte Solution",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "diarrhea",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Essential for dehydration"
+        }
+      ]
+    },
+    {
+      "id": "med193",
+      "brandName": "Zinc Sulfate",
+      "genericName": "Zinc Sulfate",
+      "description": "Zinc supplement for diarrhea",
+      "usage": "For treatment of diarrhea",
+      "dosageAdult": "20mg daily for 10-14 days",
+      "dosageChild": "10-20mg daily for 10-14 days",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Nausea, vomiting, abdominal pain",
+      "warnings": "Take with food. Don't exceed recommended amount.",
+      "priceRange": "GHS 15-25",
+      "category": "Digestive",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "diarrhea",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Reduces diarrhea duration"
+        }
+      ]
+    },
+    {
+      "id": "med194",
+      "brandName": "Prochlorperazine",
+      "genericName": "Prochlorperazine",
+      "description": "Antiemetic for nausea and vomiting",
+      "usage": "For nausea, vomiting, and vertigo",
+      "dosageAdult": "5-10mg three to four times daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Drowsiness, dizziness, extrapyramidal symptoms",
+      "warnings": "May cause drowsiness. Avoid driving. Not for long-term use.",
+      "priceRange": "GHS 20-35",
+      "category": "Digestive",
+      "drugClass": "Antiemetic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "nausea",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for nausea and vomiting"
+        }
+      ]
+    },
+    {
+      "id": "med195",
+      "brandName": "Metoclopramide",
+      "genericName": "Metoclopramide",
+      "description": "Antiemetic and prokinetic",
+      "usage": "For nausea, vomiting, and gastroparesis",
+      "dosageAdult": "10mg four times daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Drowsiness, dizziness, extrapyramidal symptoms",
+      "warnings": "May cause drowsiness. Avoid driving. Not for long-term use.",
+      "priceRange": "GHS 20-35",
+      "category": "Digestive",
+      "drugClass": "Antiemetic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "nausea",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for nausea and vomiting"
+        }
+      ]
+    },
+    {
+      "id": "med196",
+      "brandName": "Ondansetron",
+      "genericName": "Ondansetron",
+      "description": "Antiemetic for chemotherapy-induced nausea",
+      "usage": "For nausea and vomiting",
+      "dosageAdult": "8mg twice daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, constipation, dizziness",
+      "warnings": "Generally well tolerated. Monitor for serotonin syndrome.",
+      "priceRange": "GHS 30-50",
+      "category": "Digestive",
+      "drugClass": "Antiemetic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "nausea",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for severe nausea"
+        }
+      ]
+    },
+    {
+      "id": "med197",
+      "brandName": "Granisetron",
+      "genericName": "Granisetron",
+      "description": "Antiemetic for chemotherapy-induced nausea",
+      "usage": "For nausea and vomiting",
+      "dosageAdult": "1-2mg twice daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, constipation, dizziness",
+      "warnings": "Generally well tolerated. Monitor for serotonin syndrome.",
+      "priceRange": "GHS 40-60",
+      "category": "Digestive",
+      "drugClass": "Antiemetic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "nausea",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for severe nausea"
+        }
+      ]
+    },
+    {
+      "id": "med198",
+      "brandName": "Dolasetron",
+      "genericName": "Dolasetron",
+      "description": "Antiemetic for chemotherapy-induced nausea",
+      "usage": "For nausea and vomiting",
+      "dosageAdult": "100mg as single dose",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, dizziness, ECG changes",
+      "warnings": "Monitor ECG in patients with heart conditions.",
+      "priceRange": "GHS 40-60",
+      "category": "Digestive",
+      "drugClass": "Antiemetic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "nausea",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for severe nausea"
+        }
+      ]
+    },
+    {
+      "id": "med199",
+      "brandName": "Palonosetron",
+      "genericName": "Palonosetron",
+      "description": "Long-acting antiemetic",
+      "usage": "For prevention of chemotherapy-induced nausea",
+      "dosageAdult": "0.25mg as single dose",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, constipation, dizziness",
+      "warnings": "Generally well tolerated. Monitor for serotonin syndrome.",
+      "priceRange": "GHS 50-80",
+      "category": "Digestive",
+      "drugClass": "Antiemetic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "nausea",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Long-acting antiemetic"
+        }
+      ]
+    },
+    {
+      "id": "med200",
+      "brandName": "Aprepitant",
+      "genericName": "Aprepitant",
+      "description": "NK1 receptor antagonist",
+      "usage": "For prevention of chemotherapy-induced nausea",
+      "dosageAdult": "125mg on day 1, then 80mg on days 2-3",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Fatigue, hiccups, constipation",
+      "warnings": "Many drug interactions. Check with pharmacist.",
+      "priceRange": "GHS 80-120",
+      "category": "Digestive",
+      "drugClass": "Antiemetic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "nausea",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for severe nausea"
+        }
+      ]
+    },
+    {
+      "id": "med201",
+      "brandName": "Fosaprepitant",
+      "genericName": "Fosaprepitant",
+      "description": "IV NK1 receptor antagonist",
+      "usage": "For prevention of chemotherapy-induced nausea",
+      "dosageAdult": "115mg IV on day 1",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Infusion site reactions, fatigue, hiccups",
+      "warnings": "Many drug interactions. Check with pharmacist.",
+      "priceRange": "GHS 100-150",
+      "category": "Digestive",
+      "drugClass": "Antiemetic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "nausea",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "IV form of aprepitant"
+        }
+      ]
+    },
+    {
+      "id": "med202",
+      "brandName": "Dexamethasone",
+      "genericName": "Dexamethasone",
+      "description": "Corticosteroid for inflammation and nausea",
+      "usage": "For inflammation, allergies, and nausea",
+      "dosageAdult": "0.75-9mg daily in divided doses",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Insomnia, increased appetite, fluid retention, immunosuppression",
+      "warnings": "Don't stop abruptly. Monitor for side effects with long-term use.",
+      "priceRange": "GHS 15-30",
+      "category": "Corticosteroid",
+      "drugClass": "Corticosteroid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "nausea",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for nausea and inflammation"
+        }
+      ]
+    },
+    {
+      "id": "med203",
+      "brandName": "Prednisone",
+      "genericName": "Prednisone",
+      "description": "Corticosteroid for inflammation",
+      "usage": "For inflammation, allergies, and autoimmune conditions",
+      "dosageAdult": "5-60mg daily in divided doses",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Insomnia, increased appetite, fluid retention, immunosuppression",
+      "warnings": "Don't stop abruptly. Monitor for side effects with long-term use.",
+      "priceRange": "GHS 15-30",
+      "category": "Corticosteroid",
+      "drugClass": "Corticosteroid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "inflammation",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for inflammation"
+        }
+      ]
+    },
+    {
+      "id": "med204",
+      "brandName": "Prednisolone",
+      "genericName": "Prednisolone",
+      "description": "Corticosteroid for inflammation",
+      "usage": "For inflammation, allergies, and autoimmune conditions",
+      "dosageAdult": "5-60mg daily in divided doses",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Insomnia, increased appetite, fluid retention, immunosuppression",
+      "warnings": "Don't stop abruptly. Monitor for side effects with long-term use.",
+      "priceRange": "GHS 15-30",
+      "category": "Corticosteroid",
+      "drugClass": "Corticosteroid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "inflammation",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for inflammation"
+        }
+      ]
+    },
+    {
+      "id": "med205",
+      "brandName": "Hydrocortisone",
+      "genericName": "Hydrocortisone",
+      "description": "Corticosteroid for inflammation",
+      "usage": "For inflammation, allergies, and adrenal insufficiency",
+      "dosageAdult": "20-240mg daily in divided doses",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Insomnia, increased appetite, fluid retention, immunosuppression",
+      "warnings": "Don't stop abruptly. Monitor for side effects with long-term use.",
+      "priceRange": "GHS 15-30",
+      "category": "Corticosteroid",
+      "drugClass": "Corticosteroid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "inflammation",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for inflammation"
+        }
+      ]
+    },
+    {
+      "id": "med206",
+      "brandName": "Methylprednisolone",
+      "genericName": "Methylprednisolone",
+      "description": "Corticosteroid for inflammation",
+      "usage": "For inflammation, allergies, and autoimmune conditions",
+      "dosageAdult": "4-48mg daily in divided doses",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Insomnia, increased appetite, fluid retention, immunosuppression",
+      "warnings": "Don't stop abruptly. Monitor for side effects with long-term use.",
+      "priceRange": "GHS 20-35",
+      "category": "Corticosteroid",
+      "drugClass": "Corticosteroid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "inflammation",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for inflammation"
+        }
+      ]
+    },
+    {
+      "id": "med207",
+      "brandName": "Betamethasone",
+      "genericName": "Betamethasone",
+      "description": "Potent corticosteroid for inflammation",
+      "usage": "For severe inflammation, allergies, and autoimmune conditions",
+      "dosageAdult": "0.6-7.2mg daily in divided doses",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Insomnia, increased appetite, fluid retention, immunosuppression",
+      "warnings": "Don't stop abruptly. Monitor for side effects with long-term use.",
+      "priceRange": "GHS 20-35",
+      "category": "Corticosteroid",
+      "drugClass": "Corticosteroid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "inflammation",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Potent anti-inflammatory"
+        }
+      ]
+    },
+    {
+      "id": "med208",
+      "brandName": "Triamcinolone",
+      "genericName": "Triamcinolone",
+      "description": "Corticosteroid for inflammation",
+      "usage": "For inflammation, allergies, and autoimmune conditions",
+      "dosageAdult": "4-48mg daily in divided doses",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Insomnia, increased appetite, fluid retention, immunosuppression",
+      "warnings": "Don't stop abruptly. Monitor for side effects with long-term use.",
+      "priceRange": "GHS 20-35",
+      "category": "Corticosteroid",
+      "drugClass": "Corticosteroid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "inflammation",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for inflammation"
+        }
+      ]
+    },
+    {
+      "id": "med209",
+      "brandName": "Fludrocortisone",
+      "genericName": "Fludrocortisone",
+      "description": "Mineralocorticoid for adrenal insufficiency",
+      "usage": "For adrenal insufficiency and salt-losing conditions",
+      "dosageAdult": "0.05-0.2mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Fluid retention, hypertension, hypokalemia",
+      "warnings": "Monitor blood pressure and electrolytes. Don't stop abruptly.",
+      "priceRange": "GHS 25-40",
+      "category": "Corticosteroid",
+      "drugClass": "Mineralocorticoid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Essential for adrenal insufficiency"
+        }
+      ]
+    },
+    {
+      "id": "med210",
+      "brandName": "Hydrocortisone Cream",
+      "genericName": "Hydrocortisone",
+      "description": "Topical corticosteroid for skin inflammation",
+      "usage": "For skin inflammation, eczema, and allergies",
+      "dosageAdult": "Apply thin layer to affected area 2-4 times daily",
+      "dosageChild": "Apply thin layer to affected area 2-4 times daily",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin thinning, stretch marks, acne",
+      "warnings": "Don't use on broken skin. Not for long-term use.",
+      "priceRange": "GHS 15-25",
+      "category": "Dermatological",
+      "drugClass": "Topical Corticosteroid",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for skin inflammation"
+        }
+      ]
+    },
+    {
+      "id": "med211",
+      "brandName": "Betamethasone Cream",
+      "genericName": "Betamethasone Valerate",
+      "description": "Potent topical corticosteroid",
+      "usage": "For severe skin inflammation, eczema, and psoriasis",
+      "dosageAdult": "Apply thin layer to affected area 1-2 times daily",
+      "dosageChild": "Apply thin layer to affected area 1-2 times daily",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin thinning, stretch marks, acne",
+      "warnings": "Don't use on broken skin. Not for long-term use.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Topical Corticosteroid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Potent for severe skin inflammation"
+        }
+      ]
+    },
+    {
+      "id": "med212",
+      "brandName": "Clobetasol Cream",
+      "genericName": "Clobetasol Propionate",
+      "description": "Super-potent topical corticosteroid",
+      "usage": "For severe skin inflammation, eczema, and psoriasis",
+      "dosageAdult": "Apply thin layer to affected area once daily",
+      "dosageChild": "Apply thin layer to affected area once daily",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin thinning, stretch marks, acne",
+      "warnings": "Don't use on broken skin. Not for long-term use. Maximum 2 weeks.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Corticosteroid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 10,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Most potent topical steroid"
+        }
+      ]
+    },
+    {
+      "id": "med213",
+      "brandName": "Mometasone Cream",
+      "genericName": "Mometasone Furoate",
+      "description": "Medium-potency topical corticosteroid",
+      "usage": "For skin inflammation, eczema, and psoriasis",
+      "dosageAdult": "Apply thin layer to affected area once daily",
+      "dosageChild": "Apply thin layer to affected area once daily",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin thinning, stretch marks, acne",
+      "warnings": "Don't use on broken skin. Not for long-term use.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Corticosteroid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for skin inflammation"
+        }
+      ]
+    },
+    {
+      "id": "med214",
+      "brandName": "Fluocinonide Cream",
+      "genericName": "Fluocinonide",
+      "description": "High-potency topical corticosteroid",
+      "usage": "For severe skin inflammation, eczema, and psoriasis",
+      "dosageAdult": "Apply thin layer to affected area 2-4 times daily",
+      "dosageChild": "Apply thin layer to affected area 2-4 times daily",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin thinning, stretch marks, acne",
+      "warnings": "Don't use on broken skin. Not for long-term use.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Corticosteroid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Potent for severe skin inflammation"
+        }
+      ]
+    },
+    {
+      "id": "med215",
+      "brandName": "Desonide Cream",
+      "genericName": "Desonide",
+      "description": "Low-potency topical corticosteroid",
+      "usage": "For mild skin inflammation, eczema, and dermatitis",
+      "dosageAdult": "Apply thin layer to affected area 2-3 times daily",
+      "dosageChild": "Apply thin layer to affected area 2-3 times daily",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin thinning, stretch marks, acne",
+      "warnings": "Don't use on broken skin. Not for long-term use.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Topical Corticosteroid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Mild for sensitive areas"
+        }
+      ]
+    },
+    {
+      "id": "med216",
+      "brandName": "Hydroquinone Cream",
+      "genericName": "Hydroquinone",
+      "description": "Skin lightening agent",
+      "usage": "For hyperpigmentation and melasma",
+      "dosageAdult": "Apply thin layer to affected area 1-2 times daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, redness, exogenous ochronosis",
+      "warnings": "Don't use for more than 3 months. Use sunscreen.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Skin Lightening Agent",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For hyperpigmentation"
+        }
+      ]
+    },
+    {
+      "id": "med217",
+      "brandName": "Tretinoin Cream",
+      "genericName": "Tretinoin",
+      "description": "Retinoid for acne and anti-aging",
+      "usage": "For acne, wrinkles, and photoaging",
+      "dosageAdult": "Apply thin layer to affected area at bedtime",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, redness, peeling, photosensitivity",
+      "warnings": "Use sunscreen. Don't use with other irritants.",
+      "priceRange": "GHS 30-50",
+      "category": "Dermatological",
+      "drugClass": "Retinoid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for acne and wrinkles"
+        }
+      ]
+    },
+    {
+      "id": "med218",
+      "brandName": "Adapalene Gel",
+      "genericName": "Adapalene",
+      "description": "Retinoid for acne",
+      "usage": "For acne",
+      "dosageAdult": "Apply thin layer to affected area at bedtime",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, redness, peeling, photosensitivity",
+      "warnings": "Use sunscreen. Don't use with other irritants.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Retinoid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for acne"
+        }
+      ]
+    },
+    {
+      "id": "med219",
+      "brandName": "Benzoyl Peroxide",
+      "genericName": "Benzoyl Peroxide",
+      "description": "Acne treatment",
+      "usage": "For acne",
+      "dosageAdult": "Apply thin layer to affected area 1-2 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, redness, peeling",
+      "warnings": "May bleach fabrics. Use sunscreen.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Acne Treatment",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for acne"
+        }
+      ]
+    },
+    {
+      "id": "med220",
+      "brandName": "Salicylic Acid",
+      "genericName": "Salicylic Acid",
+      "description": "Acne treatment and exfoliant",
+      "usage": "For acne, warts, and calluses",
+      "dosageAdult": "Apply thin layer to affected area 1-2 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, redness, peeling",
+      "warnings": "Don't use on large areas. Use sunscreen.",
+      "priceRange": "GHS 15-25",
+      "category": "Dermatological",
+      "drugClass": "Acne Treatment",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for acne and exfoliation"
+        }
+      ]
+    },
+    {
+      "id": "med221",
+      "brandName": "Clindamycin Gel",
+      "genericName": "Clindamycin Phosphate",
+      "description": "Topical antibiotic for acne",
+      "usage": "For acne",
+      "dosageAdult": "Apply thin layer to affected area 2 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, dryness, peeling",
+      "warnings": "May cause antibiotic resistance. Don't use with other irritants.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Antibiotic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for acne"
+        }
+      ]
+    },
+    {
+      "id": "med222",
+      "brandName": "Erythromycin Gel",
+      "genericName": "Erythromycin",
+      "description": "Topical antibiotic for acne",
+      "usage": "For acne",
+      "dosageAdult": "Apply thin layer to affected area 2 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, dryness, peeling",
+      "warnings": "May cause antibiotic resistance. Don't use with other irritants.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Antibiotic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for acne"
+        }
+      ]
+    },
+    {
+      "id": "med223",
+      "brandName": "Mupirocin Ointment",
+      "genericName": "Mupirocin",
+      "description": "Topical antibiotic for skin infections",
+      "usage": "For impetigo and other bacterial skin infections",
+      "dosageAdult": "Apply thin layer to affected area 2-3 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, burning, stinging",
+      "warnings": "Don't use for more than 10 days. May cause resistance.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Antibiotic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for bacterial skin infections"
+        }
+      ]
+    },
+    {
+      "id": "med224",
+      "brandName": "Fusidic Acid Cream",
+      "genericName": "Fusidic Acid",
+      "description": "Topical antibiotic for skin infections",
+      "usage": "For impetigo and other bacterial skin infections",
+      "dosageAdult": "Apply thin layer to affected area 2-3 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, burning, stinging",
+      "warnings": "Don't use for more than 10 days. May cause resistance.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Antibiotic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for bacterial skin infections"
+        }
+      ]
+    },
+    {
+      "id": "med225",
+      "brandName": "Retapamulin Ointment",
+      "genericName": "Retapamulin",
+      "description": "Topical antibiotic for skin infections",
+      "usage": "For impetigo and other bacterial skin infections",
+      "dosageAdult": "Apply thin layer to affected area 2 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, burning, stinging",
+      "warnings": "Don't use for more than 10 days. May cause resistance.",
+      "priceRange": "GHS 30-50",
+      "category": "Dermatological",
+      "drugClass": "Topical Antibiotic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for bacterial skin infections"
+        }
+      ]
+    },
+    {
+      "id": "med226",
+      "brandName": "Miconazole Cream",
+      "genericName": "Miconazole Nitrate",
+      "description": "Topical antifungal",
+      "usage": "For fungal skin infections",
+      "dosageAdult": "Apply thin layer to affected area 2 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, burning, stinging",
+      "warnings": "Don't use for more than 2 weeks. May cause resistance.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Topical Antifungal",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for fungal skin infections"
+        }
+      ]
+    },
+    {
+      "id": "med227",
+      "brandName": "Clotrimazole Cream",
+      "genericName": "Clotrimazole",
+      "description": "Topical antifungal",
+      "usage": "For fungal skin infections",
+      "dosageAdult": "Apply thin layer to affected area 2 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, burning, stinging",
+      "warnings": "Don't use for more than 2 weeks. May cause resistance.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Topical Antifungal",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for fungal skin infections"
+        }
+      ]
+    },
+    {
+      "id": "med228",
+      "brandName": "Terbinafine Cream",
+      "genericName": "Terbinafine Hydrochloride",
+      "description": "Topical antifungal",
+      "usage": "For fungal skin infections",
+      "dosageAdult": "Apply thin layer to affected area 1-2 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, burning, stinging",
+      "warnings": "Don't use for more than 2 weeks. May cause resistance.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Antifungal",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for fungal skin infections"
+        }
+      ]
+    },
+    {
+      "id": "med229",
+      "brandName": "Ketoconazole Cream",
+      "genericName": "Ketoconazole",
+      "description": "Topical antifungal",
+      "usage": "For fungal skin infections",
+      "dosageAdult": "Apply thin layer to affected area 1-2 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, burning, stinging",
+      "warnings": "Don't use for more than 2 weeks. May cause resistance.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Antifungal",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for fungal skin infections"
+        }
+      ]
+    },
+    {
+      "id": "med230",
+      "brandName": "Nystatin Cream",
+      "genericName": "Nystatin",
+      "description": "Topical antifungal",
+      "usage": "For fungal skin infections",
+      "dosageAdult": "Apply thin layer to affected area 2-3 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, burning, stinging",
+      "warnings": "Don't use for more than 2 weeks. May cause resistance.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Topical Antifungal",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for fungal skin infections"
+        }
+      ]
+    },
+    {
+      "id": "med231",
+      "brandName": "Amorolfine Nail Lacquer",
+      "genericName": "Amorolfine",
+      "description": "Topical antifungal for nail infections",
+      "usage": "For fungal nail infections",
+      "dosageAdult": "Apply to affected nails once or twice weekly",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Nail discoloration, brittleness",
+      "warnings": "Long treatment duration. Don't use with nail polish.",
+      "priceRange": "GHS 40-60",
+      "category": "Dermatological",
+      "drugClass": "Topical Antifungal",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For fungal nail infections"
+        }
+      ]
+    },
+    {
+      "id": "med232",
+      "brandName": "Ciclopirox Nail Lacquer",
+      "genericName": "Ciclopirox",
+      "description": "Topical antifungal for nail infections",
+      "usage": "For fungal nail infections",
+      "dosageAdult": "Apply to affected nails once daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Nail discoloration, brittleness",
+      "warnings": "Long treatment duration. Don't use with nail polish.",
+      "priceRange": "GHS 40-60",
+      "category": "Dermatological",
+      "drugClass": "Topical Antifungal",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For fungal nail infections"
+        }
+      ]
+    },
+    {
+      "id": "med233",
+      "brandName": "Acyclovir Cream",
+      "genericName": "Acyclovir",
+      "description": "Topical antiviral",
+      "usage": "For cold sores and genital herpes",
+      "dosageAdult": "Apply thin layer to affected area 5 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, burning, stinging",
+      "warnings": "Start at first sign of outbreak. Don't use for more than 10 days.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Antiviral",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for cold sores"
+        }
+      ]
+    },
+    {
+      "id": "med234",
+      "brandName": "Penciclovir Cream",
+      "genericName": "Penciclovir",
+      "description": "Topical antiviral",
+      "usage": "For cold sores",
+      "dosageAdult": "Apply thin layer to affected area every 2 hours while awake",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, burning, stinging",
+      "warnings": "Start at first sign of outbreak. Don't use for more than 4 days.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Antiviral",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for cold sores"
+        }
+      ]
+    },
+    {
+      "id": "med235",
+      "brandName": "Docosanol Cream",
+      "genericName": "Docosanol",
+      "description": "Topical antiviral",
+      "usage": "For cold sores",
+      "dosageAdult": "Apply thin layer to affected area 5 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, burning, stinging",
+      "warnings": "Start at first sign of outbreak. Don't use for more than 10 days.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Antiviral",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for cold sores"
+        }
+      ]
+    },
+    {
+      "id": "med236",
+      "brandName": "Imiquimod Cream",
+      "genericName": "Imiquimod",
+      "description": "Topical immune response modifier",
+      "usage": "For genital warts and actinic keratosis",
+      "dosageAdult": "Apply thin layer to affected area 3 times weekly",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, redness, swelling",
+      "warnings": "Don't use for more than 16 weeks. May cause flu-like symptoms.",
+      "priceRange": "GHS 40-60",
+      "category": "Dermatological",
+      "drugClass": "Topical Immune Modifier",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for genital warts"
+        }
+      ]
+    },
+    {
+      "id": "med237",
+      "brandName": "Podophyllotoxin Solution",
+      "genericName": "Podophyllotoxin",
+      "description": "Topical antimitotic",
+      "usage": "For genital warts",
+      "dosageAdult": "Apply to affected area twice daily for 3 days",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, burning, stinging",
+      "warnings": "Don't use for more than 4 weeks. May cause systemic toxicity.",
+      "priceRange": "GHS 30-50",
+      "category": "Dermatological",
+      "drugClass": "Topical Antimitotic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for genital warts"
+        }
+      ]
+    },
+    {
+      "id": "med238",
+      "brandName": "Sinecatechins Ointment",
+      "genericName": "Sinecatechins",
+      "description": "Topical botanical for genital warts",
+      "usage": "For genital warts",
+      "dosageAdult": "Apply thin layer to affected area 3 times daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, redness, swelling",
+      "warnings": "Don't use for more than 16 weeks. May cause flu-like symptoms.",
+      "priceRange": "GHS 40-60",
+      "category": "Dermatological",
+      "drugClass": "Topical Botanical",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For genital warts"
+        }
+      ]
+    },
+    {
+      "id": "med239",
+      "brandName": "Salicylic Acid Plaster",
+      "genericName": "Salicylic Acid",
+      "description": "Wart treatment",
+      "usage": "For warts and calluses",
+      "dosageAdult": "Apply to affected area and change every 48 hours",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, redness, peeling",
+      "warnings": "Don't use on large areas. Use sunscreen.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Wart Treatment",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For warts and calluses"
+        }
+      ]
+    },
+    {
+      "id": "med240",
+      "brandName": "Cryotherapy",
+      "genericName": "Dimethyl Ether Propane",
+      "description": "Wart treatment",
+      "usage": "For warts",
+      "dosageAdult": "Apply to affected area as directed",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Pain, blistering, scarring",
+      "warnings": "Don't use on sensitive areas. May cause scarring.",
+      "priceRange": "GHS 30-50",
+      "category": "Dermatological",
+      "drugClass": "Wart Treatment",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For warts"
+        }
+      ]
+    },
+    {
+      "id": "med241",
+      "brandName": "Duct Tape Occlusion",
+      "genericName": "Duct Tape",
+      "description": "Wart treatment",
+      "usage": "For warts",
+      "dosageAdult": "Apply to affected area and change every 6 days",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, redness",
+      "warnings": "Don't use on sensitive areas. May cause skin irritation.",
+      "priceRange": "GHS 10-20",
+      "category": "Dermatological",
+      "drugClass": "Wart Treatment",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For warts"
+        }
+      ]
+    },
+    {
+      "id": "med242",
+      "brandName": "Calamine Lotion",
+      "genericName": "Calamine",
+      "description": "Skin soothing lotion",
+      "usage": "For itching and skin irritation",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on broken skin.",
+      "priceRange": "GHS 15-25",
+      "category": "Dermatological",
+      "drugClass": "Skin Soothing",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For itching and skin irritation"
+        }
+      ]
+    },
+    {
+      "id": "med243",
+      "brandName": "Camphor Lotion",
+      "genericName": "Camphor",
+      "description": "Skin soothing lotion",
+      "usage": "For itching and skin irritation",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on broken skin.",
+      "priceRange": "GHS 15-25",
+      "category": "Dermatological",
+      "drugClass": "Skin Soothing",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For itching and skin irritation"
+        }
+      ]
+    },
+    {
+      "id": "med244",
+      "brandName": "Menthol Lotion",
+      "genericName": "Menthol",
+      "description": "Skin soothing lotion",
+      "usage": "For itching and skin irritation",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on broken skin.",
+      "priceRange": "GHS 15-25",
+      "category": "Dermatological",
+      "drugClass": "Skin Soothing",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For itching and skin irritation"
+        }
+      ]
+    },
+    {
+      "id": "med245",
+      "brandName": "Phenol Lotion",
+      "genericName": "Phenol",
+      "description": "Skin soothing lotion",
+      "usage": "For itching and skin irritation",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on broken skin.",
+      "priceRange": "GHS 15-25",
+      "category": "Dermatological",
+      "drugClass": "Skin Soothing",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For itching and skin irritation"
+        }
+      ]
+    },
+    {
+      "id": "med246",
+      "brandName": "Pramoxine Lotion",
+      "genericName": "Pramoxine",
+      "description": "Topical anesthetic",
+      "usage": "For itching and skin irritation",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on broken skin.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Topical Anesthetic",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For itching and skin irritation"
+        }
+      ]
+    },
+    {
+      "id": "med247",
+      "brandName": "Diphenhydramine Lotion",
+      "genericName": "Diphenhydramine",
+      "description": "Topical antihistamine",
+      "usage": "For itching and skin irritation",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on broken skin.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Topical Antihistamine",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For itching and skin irritation"
+        }
+      ]
+    },
+    {
+      "id": "med248",
+      "brandName": "Doxepin Cream",
+      "genericName": "Doxepin",
+      "description": "Topical antihistamine",
+      "usage": "For itching and skin irritation",
+      "dosageAdult": "Apply thin layer to affected area 4 times daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Drowsiness, skin irritation",
+      "warnings": "May cause drowsiness. Don't use on broken skin.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Antihistamine",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For itching and skin irritation"
+        }
+      ]
+    },
+    {
+      "id": "med249",
+      "brandName": "Capsaicin Cream",
+      "genericName": "Capsaicin",
+      "description": "Topical analgesic",
+      "usage": "For pain and itching",
+      "dosageAdult": "Apply thin layer to affected area 3-4 times daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Burning, stinging, redness",
+      "warnings": "May cause burning sensation. Don't use on broken skin.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Analgesic",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For pain and itching"
+        }
+      ]
+    },
+    {
+      "id": "med250",
+      "brandName": "Lidocaine Cream",
+      "genericName": "Lidocaine",
+      "description": "Topical anesthetic",
+      "usage": "For pain and itching",
+      "dosageAdult": "Apply thin layer to affected area as needed",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on broken skin.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Anesthetic",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For pain and itching"
+        }
+      ]
+    },
+    {
+      "id": "med251",
+      "brandName": "Benzocaine Cream",
+      "genericName": "Benzocaine",
+      "description": "Topical anesthetic",
+      "usage": "For pain and itching",
+      "dosageAdult": "Apply thin layer to affected area as needed",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on broken skin.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Topical Anesthetic",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For pain and itching"
+        }
+      ]
+    },
+    {
+      "id": "med252",
+      "brandName": "Tetracaine Cream",
+      "genericName": "Tetracaine",
+      "description": "Topical anesthetic",
+      "usage": "For pain and itching",
+      "dosageAdult": "Apply thin layer to affected area as needed",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on broken skin.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Anesthetic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For pain and itching"
+        }
+      ]
+    },
+    {
+      "id": "med253",
+      "brandName": "Silver Sulfadiazine Cream",
+      "genericName": "Silver Sulfadiazine",
+      "description": "Topical antibiotic for burns",
+      "usage": "For burns and wounds",
+      "dosageAdult": "Apply thin layer to affected area 1-2 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin discoloration, burning, stinging",
+      "warnings": "Don't use on large areas. May cause sulfonamide allergy.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Topical Antibiotic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For burns and wounds"
+        }
+      ]
+    },
+    {
+      "id": "med254",
+      "brandName": "Mafenide Acetate Cream",
+      "genericName": "Mafenide Acetate",
+      "description": "Topical antibiotic for burns",
+      "usage": "For burns and wounds",
+      "dosageAdult": "Apply thin layer to affected area 1-2 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Burning, stinging, pain",
+      "warnings": "Don't use on large areas. May cause metabolic acidosis.",
+      "priceRange": "GHS 30-50",
+      "category": "Dermatological",
+      "drugClass": "Topical Antibiotic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For burns and wounds"
+        }
+      ]
+    },
+    {
+      "id": "med255",
+      "brandName": "Bacitracin Ointment",
+      "genericName": "Bacitracin",
+      "description": "Topical antibiotic for wounds",
+      "usage": "For wounds and skin infections",
+      "dosageAdult": "Apply thin layer to affected area 1-3 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, allergic reaction",
+      "warnings": "Don't use on large areas. May cause allergic reaction.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Topical Antibiotic",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For wounds and skin infections"
+        }
+      ]
+    },
+    {
+      "id": "med256",
+      "brandName": "Neomycin Ointment",
+      "genericName": "Neomycin",
+      "description": "Topical antibiotic for wounds",
+      "usage": "For wounds and skin infections",
+      "dosageAdult": "Apply thin layer to affected area 1-3 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, allergic reaction",
+      "warnings": "Don't use on large areas. May cause allergic reaction.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Topical Antibiotic",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For wounds and skin infections"
+        }
+      ]
+    },
+    {
+      "id": "med257",
+      "brandName": "Polymyxin B Ointment",
+      "genericName": "Polymyxin B",
+      "description": "Topical antibiotic for wounds",
+      "usage": "For wounds and skin infections",
+      "dosageAdult": "Apply thin layer to affected area 1-3 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, allergic reaction",
+      "warnings": "Don't use on large areas. May cause allergic reaction.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Topical Antibiotic",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For wounds and skin infections"
+        }
+      ]
+    },
+    {
+      "id": "med258",
+      "brandName": "Triple Antibiotic Ointment",
+      "genericName": "Bacitracin-Neomycin-Polymyxin B",
+      "description": "Topical antibiotic for wounds",
+      "usage": "For wounds and skin infections",
+      "dosageAdult": "Apply thin layer to affected area 1-3 times daily",
+      "dosageChild": "Based on age and severity",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, allergic reaction",
+      "warnings": "Don't use on large areas. May cause allergic reaction.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Topical Antibiotic",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For wounds and skin infections"
+        }
+      ]
+    },
+    {
+      "id": "med259",
+      "brandName": "Petrolatum",
+      "genericName": "Petrolatum",
+      "description": "Skin protectant",
+      "usage": "For dry skin and minor wounds",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 15-25",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For dry skin and minor wounds"
+        }
+      ]
+    },
+    {
+      "id": "med260",
+      "brandName": "Lanolin",
+      "genericName": "Lanolin",
+      "description": "Skin protectant",
+      "usage": "For dry skin and cracked nipples",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause allergic reaction",
+      "warnings": "Generally safe. May cause allergic reaction.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For dry skin and cracked nipples"
+        }
+      ]
+    },
+    {
+      "id": "med261",
+      "brandName": "Dimethicone",
+      "genericName": "Dimethicone",
+      "description": "Skin protectant",
+      "usage": "For dry skin and diaper rash",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For dry skin and diaper rash"
+        }
+      ]
+    },
+    {
+      "id": "med262",
+      "brandName": "Zinc Oxide",
+      "genericName": "Zinc Oxide",
+      "description": "Skin protectant",
+      "usage": "For diaper rash and minor skin irritation",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 15-25",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For diaper rash and minor skin irritation"
+        }
+      ]
+    },
+    {
+      "id": "med263",
+      "brandName": "Allantoin",
+      "genericName": "Allantoin",
+      "description": "Skin protectant",
+      "usage": "For dry skin and minor wounds",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For dry skin and minor wounds"
+        }
+      ]
+    },
+    {
+      "id": "med264",
+      "brandName": "Panthenol",
+      "genericName": "Panthenol",
+      "description": "Skin protectant",
+      "usage": "For dry skin and minor wounds",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For dry skin and minor wounds"
+        }
+      ]
+    },
+    {
+      "id": "med265",
+      "brandName": "Glycerin",
+      "genericName": "Glycerin",
+      "description": "Skin protectant",
+      "usage": "For dry skin and minor wounds",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 15-25",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For dry skin and minor wounds"
+        }
+      ]
+    },
+    {
+      "id": "med266",
+      "brandName": "Urea Cream",
+      "genericName": "Urea",
+      "description": "Skin protectant",
+      "usage": "For dry skin and calluses",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For dry skin and calluses"
+        }
+      ]
+    },
+    {
+      "id": "med267",
+      "brandName": "Lactic Acid Cream",
+      "genericName": "Lactic Acid",
+      "description": "Skin protectant",
+      "usage": "For dry skin and calluses",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For dry skin and calluses"
+        }
+      ]
+    },
+    {
+      "id": "med268",
+      "brandName": "Salicylic Acid Cream",
+      "genericName": "Salicylic Acid",
+      "description": "Skin protectant",
+      "usage": "For dry skin and calluses",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For dry skin and calluses"
+        }
+      ]
+    },
+    {
+      "id": "med269",
+      "brandName": "Coal Tar",
+      "genericName": "Coal Tar",
+      "description": "Skin protectant",
+      "usage": "For psoriasis and dandruff",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 20-35",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For psoriasis and dandruff"
+        }
+      ]
+    },
+    {
+      "id": "med270",
+      "brandName": "Anthralin",
+      "genericName": "Anthralin",
+      "description": "Skin protectant",
+      "usage": "For psoriasis",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 25-40",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For psoriasis"
+        }
+      ]
+    },
+    {
+      "id": "med271",
+      "brandName": "Calcipotriene",
+      "genericName": "Calcipotriene",
+      "description": "Skin protectant",
+      "usage": "For psoriasis",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 30-50",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For psoriasis"
+        }
+      ]
+    },
+    {
+      "id": "med272",
+      "brandName": "Calcitriol",
+      "genericName": "Calcitriol",
+      "description": "Skin protectant",
+      "usage": "For psoriasis",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 30-50",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For psoriasis"
+        }
+      ]
+    },
+    {
+      "id": "med273",
+      "brandName": "Tazarotene",
+      "genericName": "Tazarotene",
+      "description": "Skin protectant",
+      "usage": "For psoriasis",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 30-50",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For psoriasis"
+        }
+      ]
+    },
+    {
+      "id": "med274",
+      "brandName": "Pimecrolimus",
+      "genericName": "Pimecrolimus",
+      "description": "Skin protectant",
+      "usage": "For eczema",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 30-50",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For eczema"
+        }
+      ]
+    },
+    {
+      "id": "med275",
+      "brandName": "Tacrolimus",
+      "genericName": "Tacrolimus",
+      "description": "Skin protectant",
+      "usage": "For eczema",
+      "dosageAdult": "Apply to affected area as needed",
+      "dosageChild": "Apply to affected area as needed",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't use on deep wounds.",
+      "priceRange": "GHS 30-50",
+      "category": "Dermatological",
+      "drugClass": "Skin Protectant",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For eczema"
+        }
+      ]
+    },
+    {
+      "id": "med276",
+      "brandName": "Vitamin D3",
+      "genericName": "Vitamin D3",
+      "description": "Vitamin supplement",
+      "usage": "For vitamin D deficiency",
+      "dosageAdult": "800-2000 IU daily",
+      "dosageChild": "400-1000 IU daily",
+      "dosageElderly": "800-2000 IU daily",
+      "sideEffects": "Rare, may cause hypercalcemia at high doses",
+      "warnings": "Monitor calcium levels at high doses.",
+      "priceRange": "GHS 15-30",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For vitamin D deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med277",
+      "brandName": "Vitamin K1",
+      "genericName": "Vitamin K1",
+      "description": "Vitamin supplement",
+      "usage": "For vitamin K deficiency",
+      "dosageAdult": "1-5mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause flushing or rash",
+      "warnings": "Generally safe. Monitor response.",
+      "priceRange": "GHS 15-25",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For vitamin K deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med278",
+      "brandName": "Vitamin B1",
+      "genericName": "Thiamine",
+      "description": "Vitamin supplement",
+      "usage": "For vitamin B1 deficiency",
+      "dosageAdult": "50-100mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause upset stomach",
+      "warnings": "Generally safe.",
+      "priceRange": "GHS 15-25",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For vitamin B1 deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med279",
+      "brandName": "Vitamin B2",
+      "genericName": "Riboflavin",
+      "description": "Vitamin supplement",
+      "usage": "For vitamin B2 deficiency",
+      "dosageAdult": "1.3-1.6mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause urine discoloration",
+      "warnings": "Generally safe. May cause bright yellow urine.",
+      "priceRange": "GHS 15-25",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For vitamin B2 deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med280",
+      "brandName": "Vitamin B3",
+      "genericName": "Niacin",
+      "description": "Vitamin supplement",
+      "usage": "For vitamin B3 deficiency",
+      "dosageAdult": "14-16mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Flushing, itching, headache, liver toxicity at high doses",
+      "warnings": "Monitor liver function at high doses. May cause flushing.",
+      "priceRange": "GHS 20-35",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For vitamin B3 deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med281",
+      "brandName": "Vitamin B5",
+      "genericName": "Pantothenic Acid",
+      "description": "Vitamin supplement",
+      "usage": "For vitamin B5 deficiency",
+      "dosageAdult": "5mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause diarrhea",
+      "warnings": "Generally safe.",
+      "priceRange": "GHS 20-35",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For vitamin B5 deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med282",
+      "brandName": "Vitamin B6",
+      "genericName": "Pyridoxine",
+      "description": "Vitamin supplement",
+      "usage": "For vitamin B6 deficiency",
+      "dosageAdult": "1.3-1.7mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause nerve damage at high doses",
+      "warnings": "Toxic at high doses. Don't exceed recommended amount.",
+      "priceRange": "GHS 15-25",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For vitamin B6 deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med283",
+      "brandName": "Vitamin B7",
+      "genericName": "Biotin",
+      "description": "Vitamin supplement",
+      "usage": "For vitamin B7 deficiency",
+      "dosageAdult": "30-100mcg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause acne",
+      "warnings": "Generally safe. May interfere with lab tests.",
+      "priceRange": "GHS 25-40",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For vitamin B7 deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med284",
+      "brandName": "Vitamin B9",
+      "genericName": "Folic Acid",
+      "description": "Vitamin supplement",
+      "usage": "For vitamin B9 deficiency",
+      "dosageAdult": "400-800mcg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may mask B12 deficiency",
+      "warnings": "Generally safe. May mask B12 deficiency.",
+      "priceRange": "GHS 10-20",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For vitamin B9 deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med285",
+      "brandName": "Vitamin B12",
+      "genericName": "Cyanocobalamin",
+      "description": "Vitamin supplement",
+      "usage": "For vitamin B12 deficiency",
+      "dosageAdult": "2.4mcg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause itching or rash",
+      "warnings": "Generally safe. Monitor response.",
+      "priceRange": "GHS 20-40",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For vitamin B12 deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med286",
+      "brandName": "Vitamin C",
+      "genericName": "Ascorbic Acid",
+      "description": "Vitamin supplement",
+      "usage": "For vitamin C deficiency",
+      "dosageAdult": "75-90mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause diarrhea at high doses",
+      "warnings": "Generally safe. High doses may cause kidney stones in susceptible individuals.",
+      "priceRange": "GHS 10-20",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For vitamin C deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med287",
+      "brandName": "Vitamin E",
+      "genericName": "Tocopherol",
+      "description": "Vitamin supplement",
+      "usage": "For vitamin E deficiency",
+      "dosageAdult": "15mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may increase bleeding risk at high doses",
+      "warnings": "May increase bleeding risk. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-35",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For vitamin E deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med288",
+      "brandName": "Vitamin A",
+      "genericName": "Retinol",
+      "description": "Vitamin supplement",
+      "usage": "For vitamin A deficiency",
+      "dosageAdult": "700-900mcg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, liver toxicity at high doses",
+      "warnings": "Toxic in high doses. Don't exceed recommended amount.",
+      "priceRange": "GHS 15-25",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For vitamin A deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med289",
+      "brandName": "Vitamin K2",
+      "genericName": "Menaquinone",
+      "description": "Vitamin supplement",
+      "usage": "For vitamin K2 deficiency",
+      "dosageAdult": "100-200mcg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause flushing or rash",
+      "warnings": "Generally safe. Monitor response.",
+      "priceRange": "GHS 20-35",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For vitamin K2 deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med290",
+      "brandName": "Calcium",
+      "genericName": "Calcium Carbonate",
+      "description": "Mineral supplement",
+      "usage": "For calcium deficiency",
+      "dosageAdult": "1000-1300mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Constipation, gas, bloating",
+      "warnings": "May cause kidney stones. Don't exceed recommended amount.",
+      "priceRange": "GHS 15-25",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For calcium deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med291",
+      "brandName": "Magnesium",
+      "genericName": "Magnesium Oxide",
+      "description": "Mineral supplement",
+      "usage": "For magnesium deficiency",
+      "dosageAdult": "320-420mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Diarrhea, stomach upset",
+      "warnings": "May cause diarrhea. Start with low dose.",
+      "priceRange": "GHS 20-35",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For magnesium deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med292",
+      "brandName": "Zinc",
+      "genericName": "Zinc Gluconate",
+      "description": "Mineral supplement",
+      "usage": "For zinc deficiency",
+      "dosageAdult": "8-11mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Nausea, vomiting, metallic taste",
+      "warnings": "May interfere with copper absorption. Don't exceed recommended amount.",
+      "priceRange": "GHS 15-25",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For zinc deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med293",
+      "brandName": "Iron",
+      "genericName": "Ferrous Sulfate",
+      "description": "Mineral supplement",
+      "usage": "For iron deficiency",
+      "dosageAdult": "8-18mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Constipation, nausea, black stools",
+      "warnings": "Take on empty stomach for better absorption. May stain teeth.",
+      "priceRange": "GHS 15-25",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For iron deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med294",
+      "brandName": "Selenium",
+      "genericName": "Selenium Selenite",
+      "description": "Mineral supplement",
+      "usage": "For selenium deficiency",
+      "dosageAdult": "55mcg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Garlic breath, hair loss, nail changes",
+      "warnings": "Toxic in high doses. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For selenium deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med295",
+      "brandName": "Copper",
+      "genericName": "Copper Gluconate",
+      "description": "Mineral supplement",
+      "usage": "For copper deficiency",
+      "dosageAdult": "900mcg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Nausea, vomiting, stomach pain",
+      "warnings": "Toxic in high doses. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For copper deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med296",
+      "brandName": "Manganese",
+      "genericName": "Manganese Sulfate",
+      "description": "Mineral supplement",
+      "usage": "For manganese deficiency",
+      "dosageAdult": "2.3mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Neurological symptoms at high doses",
+      "warnings": "Toxic in high doses. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For manganese deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med297",
+      "brandName": "Chromium",
+      "genericName": "Chromium Picolinate",
+      "description": "Mineral supplement",
+      "usage": "For chromium deficiency",
+      "dosageAdult": "25-35mcg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Skin irritation, headache",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For chromium deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med298",
+      "brandName": "Molybdenum",
+      "genericName": "Molybdenum Glycinate",
+      "description": "Mineral supplement",
+      "usage": "For molybdenum deficiency",
+      "dosageAdult": "45mcg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause joint pain",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For molybdenum deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med299",
+      "brandName": "Iodine",
+      "genericName": "Potassium Iodide",
+      "description": "Mineral supplement",
+      "usage": "For iodine deficiency",
+      "dosageAdult": "150mcg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Metallic taste, increased salivation",
+      "warnings": "Toxic in high doses. Don't exceed recommended amount.",
+      "priceRange": "GHS 15-25",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For iodine deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med300",
+      "brandName": "Fluoride",
+      "genericName": "Sodium Fluoride",
+      "description": "Mineral supplement",
+      "usage": "For fluoride deficiency",
+      "dosageAdult": "3-4mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Dental fluorosis at high doses",
+      "warnings": "Toxic in high doses. Don't exceed recommended amount.",
+      "priceRange": "GHS 15-25",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For fluoride deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med301",
+      "brandName": "Phosphorus",
+      "genericName": "Phosphorus",
+      "description": "Mineral supplement",
+      "usage": "For phosphorus deficiency",
+      "dosageAdult": "700mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Diarrhea, nausea",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For phosphorus deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med302",
+      "brandName": "Sulfur",
+      "genericName": "Sulfur",
+      "description": "Mineral supplement",
+      "usage": "For sulfur deficiency",
+      "dosageAdult": "Based on individual needs",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause stomach upset",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For sulfur deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med303",
+      "brandName": "Potassium",
+      "genericName": "Potassium Chloride",
+      "description": "Mineral supplement",
+      "usage": "For potassium deficiency",
+      "dosageAdult": "2000-3000mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Nausea, vomiting, abdominal pain, hyperkalemia",
+      "warnings": "Monitor potassium levels. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-35",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "For potassium deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med304",
+      "brandName": "Sodium",
+      "genericName": "Sodium Chloride",
+      "description": "Mineral supplement",
+      "usage": "For sodium deficiency",
+      "dosageAdult": "1500-2300mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Fluid retention, hypertension at high doses",
+      "warnings": "Monitor blood pressure. Don't exceed recommended amount.",
+      "priceRange": "GHS 10-20",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For sodium deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med305",
+      "brandName": "Chloride",
+      "genericName": "Chloride",
+      "description": "Mineral supplement",
+      "usage": "For chloride deficiency",
+      "dosageAdult": "2300mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause stomach upset",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 15-25",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For chloride deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med306",
+      "brandName": "Boron",
+      "genericName": "Boron",
+      "description": "Mineral supplement",
+      "usage": "For boron deficiency",
+      "dosageAdult": "1-3mg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For boron deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med307",
+      "brandName": "Silicon",
+      "genericName": "Silicon",
+      "description": "Mineral supplement",
+      "usage": "For silicon deficiency",
+      "dosageAdult": "Based on individual needs",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause stomach upset",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For silicon deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med308",
+      "brandName": "Vanadium",
+      "genericName": "Vanadium",
+      "description": "Mineral supplement",
+      "usage": "For vanadium deficiency",
+      "dosageAdult": "Based on individual needs",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause stomach upset",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For vanadium deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med309",
+      "brandName": "Nickel",
+      "genericName": "Nickel",
+      "description": "Mineral supplement",
+      "usage": "For nickel deficiency",
+      "dosageAdult": "Based on individual needs",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For nickel deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med310",
+      "brandName": "Cobalt",
+      "genericName": "Cobalt",
+      "description": "Mineral supplement",
+      "usage": "For cobalt deficiency",
+      "dosageAdult": "Based on individual needs",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For cobalt deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med311",
+      "brandName": "Arsenic",
+      "genericName": "Arsenic",
+      "description": "Mineral supplement",
+      "usage": "For arsenic deficiency",
+      "dosageAdult": "Based on individual needs",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For arsenic deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med312",
+      "brandName": "Lithium",
+      "genericName": "Lithium",
+      "description": "Mineral supplement",
+      "usage": "For lithium deficiency",
+      "dosageAdult": "Based on individual needs",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For lithium deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med313",
+      "brandName": "Strontium",
+      "genericName": "Strontium",
+      "description": "Mineral supplement",
+      "usage": "For strontium deficiency",
+      "dosageAdult": "Based on individual needs",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For strontium deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med314",
+      "brandName": "Rubidium",
+      "genericName": "Rubidium",
+      "description": "Mineral supplement",
+      "usage": "For rubidium deficiency",
+      "dosageAdult": "Based on individual needs",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For rubidium deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med315",
+      "brandName": "Germanium",
+      "genericName": "Germanium",
+      "description": "Mineral supplement",
+      "usage": "For germanium deficiency",
+      "dosageAdult": "Based on individual needs",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For germanium deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med316",
+      "brandName": "Tin",
+      "genericName": "Tin",
+      "description": "Mineral supplement",
+      "usage": "For tin deficiency",
+      "dosageAdult": "Based on individual needs",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For tin deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med317",
+      "brandName": "Titanium",
+      "genericName": "Titanium",
+      "description": "Mineral supplement",
+      "usage": "For titanium deficiency",
+      "dosageAdult": "Based on individual needs",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For titanium deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med318",
+      "brandName": "Zirconium",
+      "genericName": "Zirconium",
+      "description": "Mineral supplement",
+      "usage": "For zirconium deficiency",
+      "dosageAdult": "Based on individual needs",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For zirconium deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med319",
+      "brandName": "Niobium",
+      "genericName": "Niobium",
+      "description": "Mineral supplement",
+      "usage": "For niobium deficiency",
+      "dosageAdult": "Based on individual needs",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause skin irritation",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For niobium deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med320",
+      "brandName": "Molybdenum",
+      "genericName": "Molybdenum",
+      "description": "Mineral supplement",
+      "usage": "For molybdenum deficiency",
+      "dosageAdult": "45mcg daily",
+      "dosageChild": "Based on age and weight",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause joint pain",
+      "warnings": "Generally safe. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "For molybdenum deficiency"
+        }
+      ]
     }
   ]
 }
