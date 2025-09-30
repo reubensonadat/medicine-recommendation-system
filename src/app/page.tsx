@@ -11,6 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Heart, Pill, Stethoscope, AlertTriangle, Star, ArrowRight, Search, Plus, Filter, Grid } from "lucide-react"
 import MedicineFilter from "@/components/MedicineFilter"
 import MedicineGrid from "@/components/MedicineGrid"
+import { useRouter } from "next/navigation"
 
 // Frontend-only medicine data will be loaded from JSON
 
@@ -44,8 +45,6 @@ const commonSymptoms = [
   { id: "excessive-thirst", name: "Excessive Thirst", description: "Increased thirst and fluid intake", category: "Systemic", severity: "Moderate" },
   { id: "weight-loss", name: "Unexplained Weight Loss", description: "Losing weight without trying", category: "Systemic", severity: "Moderate" },
   { id: "blurred-vision", name: "Blurred Vision", description: "Unclear or fuzzy vision", category: "Ocular", severity: "Moderate" },
-  // Additional symptoms for the expanded database
-  { id: "inflammation", name: "Inflammation", description: "Swelling, redness, heat, and pain", category: "Systemic", severity: "Moderate" },
   { id: "constipation", name: "Constipation", description: "Difficulty passing stools", category: "Gastrointestinal", severity: "Mild" },
   { id: "heartburn", name: "Heartburn", description: "Burning sensation in chest", category: "Gastrointestinal", severity: "Mild" },
   { id: "indigestion", name: "Indigestion", description: "Discomfort after eating", category: "Gastrointestinal", severity: "Mild" },
@@ -57,7 +56,6 @@ const commonSymptoms = [
   { id: "allergies", name: "Allergies", description: "Immune system reaction to substances", category: "Immunological", severity: "Mild" },
   { id: "asthma", name: "Asthma", description: "Difficulty breathing due to airway constriction", category: "Respiratory", severity: "Moderate" },
   { id: "bronchitis", name: "Bronchitis", description: "Inflammation of bronchial tubes", category: "Respiratory", severity: "Moderate" },
-  { id: "pneumonia", name: "Pneumonia", description: "Infection of lungs", category: "Respiratory", severity: "Severe" },
   { id: "sinusitis", name: "Sinusitis", description: "Inflammation of sinuses", category: "Respiratory", severity: "Moderate" },
   { id: "ear-pain", name: "Ear Pain", description: "Pain in one or both ears", category: "Otolaryngological", severity: "Moderate" },
   { id: "sore-eyes", name: "Sore Eyes", description: "Pain or discomfort in eyes", category: "Ocular", severity: "Mild" },
@@ -69,15 +67,10 @@ const commonSymptoms = [
   { id: "fungal-infection", name: "Fungal Infection", description: "Infection caused by fungi", category: "Dermatological", severity: "Mild" },
   { id: "bacterial-infection", name: "Bacterial Infection", description: "Infection caused by bacteria", category: "Infectious", severity: "Moderate" },
   { id: "viral-infection", name: "Viral Infection", description: "Infection caused by viruses", category: "Infectious", severity: "Moderate" },
-  { id: "parasitic-infection", name: "Parasitic Infection", description: "Infection caused by parasites", category: "Infectious", severity: "Moderate" },
-  { id: "malaria", name: "Malaria", description: "Mosquito-borne disease", category: "Infectious", severity: "Severe" },
-  { id: "typhoid", name: "Typhoid", description: "Bacterial infection", category: "Infectious", severity: "Severe" },
-  { id: "meningitis", name: "Meningitis", description: "Inflammation of membranes around brain", category: "Infectious", severity: "Severe" },
   { id: "urinary-tract-infection", name: "UTI", description: "Infection in urinary system", category: "Renal", severity: "Moderate" },
   { id: "kidney-stones", name: "Kidney Stones", description: "Hard deposits in kidneys", category: "Renal", severity: "Severe" },
   { id: "liver-problems", name: "Liver Problems", description: "Issues with liver function", category: "Hepatic", severity: "Severe" },
   { id: "gallstones", name: "Gallstones", description: "Hard deposits in gallbladder", category: "Hepatic", severity: "Moderate" },
-  { id: "pancreatitis", name: "Pancreatitis", description: "Inflammation of pancreas", category: "Hepatic", severity: "Severe" },
   { id: "arthritis", name: "Arthritis", description: "Inflammation of joints", category: "Musculoskeletal", severity: "Moderate" },
   { id: "osteoporosis", name: "Osteoporosis", description: "Weak and brittle bones", category: "Musculoskeletal", severity: "Moderate" },
   { id: "sprains-strains", name: "Sprains & Strains", description: "Injury to ligaments or muscles", category: "Musculoskeletal", severity: "Moderate" },
@@ -85,11 +78,8 @@ const commonSymptoms = [
   { id: "migraine", name: "Migraine", description: "Severe headache with other symptoms", category: "Neurological", severity: "Moderate" },
   { id: "seizures", name: "Seizures", description: "Uncontrolled electrical activity in brain", category: "Neurological", severity: "Severe" },
   { id: "stroke", name: "Stroke", description: "Brain damage due to interrupted blood supply", category: "Neurological", severity: "Severe" },
-  { id: "parkinsons", name: "Parkinson's", description: "Progressive nervous system disorder", category: "Neurological", severity: "Severe" },
-  { id: "alzheimers", name: "Alzheimer's", description: "Progressive brain disorder", category: "Neurological", severity: "Severe" },
   { id: "diabetes", name: "Diabetes", description: "High blood sugar levels", category: "Endocrine", severity: "Moderate" },
   { id: "thyroid-problems", name: "Thyroid Problems", description: "Issues with thyroid gland", category: "Endocrine", severity: "Moderate" },
-  { id: "hormonal-imbalance", name: "Hormonal Imbalance", description: "Disruption of hormone levels", category: "Endocrine", severity: "Moderate" },
   { id: "anemia", name: "Anemia", description: "Lack of healthy red blood cells", category: "Hematological", severity: "Moderate" },
   { id: "blood-clots", name: "Blood Clots", description: "Clumps of blood that form in blood vessels", category: "Hematological", severity: "Severe" },
   { id: "high-cholesterol", name: "High Cholesterol", description: "High levels of cholesterol in blood", category: "Cardiovascular", severity: "Moderate" },
@@ -102,8 +92,6 @@ const commonSymptoms = [
   { id: "menopause", name: "Menopause", description: "End of menstrual cycles", category: "Reproductive", severity: "Moderate" },
   { id: "infertility", name: "Infertility", description: "Inability to conceive", category: "Reproductive", severity: "Severe" },
   { id: "prostate-problems", name: "Prostate Problems", description: "Issues with prostate gland", category: "Reproductive", severity: "Moderate" },
-  { id: "std", name: "STD", description: "Sexually transmitted diseases", category: "Reproductive", severity: "Moderate" },
-  { id: "hiv-aids", name: "HIV/AIDS", description: "Human immunodeficiency virus", category: "Infectious", severity: "Severe" },
   { id: "cancer", name: "Cancer", description: "Uncontrolled cell growth", category: "Oncological", severity: "Severe" },
   { id: "tumor", name: "Tumor", description: "Abnormal mass of tissue", category: "Oncological", severity: "Moderate" },
   { id: "chemotherapy-side-effects", name: "Chemo Side Effects", description: "Side effects from cancer treatment", category: "Oncological", severity: "Moderate" },
@@ -799,6 +787,8 @@ export default function Home() {
   const [severityFilter, setSeverityFilter] = useState<string>("All")
   const [isMounted, setIsMounted] = useState(false)
   const [loadingProgress, setLoadingProgress] = useState(0)
+  const [symptomSearch, setSymptomSearch] = useState("")
+  const router = useRouter()
 
   // Load medicines data from JSON file
   useEffect(() => {
@@ -1080,14 +1070,27 @@ export default function Home() {
   }
 
   const handleMedicineClick = (medicine: any) => {
-    window.location.href = `/medicine/${medicine.id}`
+    router.push(`/medicine/${medicine.id}`)
   }
 
   const getFilteredSymptoms = () => {
-    if (severityFilter === "All") {
-      return commonSymptoms
+    let filtered = commonSymptoms
+    
+    // Apply severity filter
+    if (severityFilter !== "All") {
+      filtered = filtered.filter(symptom => symptom.severity === severityFilter)
     }
-    return commonSymptoms.filter(symptom => symptom.severity === severityFilter)
+    
+    // Apply search filter
+    if (symptomSearch) {
+      const searchLower = symptomSearch.toLowerCase()
+      filtered = filtered.filter(symptom => 
+        symptom.name.toLowerCase().includes(searchLower) ||
+        symptom.description.toLowerCase().includes(searchLower)
+      )
+    }
+    
+    return filtered
   }
 
   const getEffectivenessStars = (score: number) => {
@@ -1198,6 +1201,20 @@ export default function Home() {
                   </div>
                 )}
                 
+                {/* Symptom Search Bar */}
+                <div className="mb-4">
+                  <label className="text-sm font-medium mb-2 block">Search Symptoms</label>
+                  <div className="relative">
+                    <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
+                    <Input
+                      placeholder="Search symptoms..."
+                      value={symptomSearch}
+                      onChange={(e) => setSymptomSearch(e.target.value)}
+                      className="pl-10"
+                    />
+                  </div>
+                </div>
+                
                 {/* Severity Filter */}
                 <div className="mb-4">
                   <label className="text-sm font-medium mb-2 block">Filter by Severity</label>
@@ -1263,7 +1280,7 @@ export default function Home() {
                             </div>
                           )}
                         </div>
-                      </div>
+                      )
                     )
                   })}
                 </div>
@@ -1341,7 +1358,7 @@ export default function Home() {
                               const symptom = commonSymptoms.find(s => s.id === selectedSymptom.id)
                               return (
                                 <Badge key={selectedSymptom.id} variant="secondary" className="flex items-center space-x-1">
-                                  <span>{getSeverityIcon(selectedSymptom.severity)}</span>
+                                  <span>{getSeverityIcon(selectedSymptom.severity}</span>
                                   <span>{symptom?.name}</span>
                                   <Badge variant="outline" className={`text-xs ${getSeverityColor(selectedSymptom.severity)}`}>
                                     {selectedSymptom.severity}
@@ -1458,7 +1475,7 @@ export default function Home() {
                     coveragePercentage: rec.coveragePercentage,
                     severityAdjustedScore: rec.severityAdjustedScore,
                     priceScore: rec.priceScore
-                  }))} 
+                  })} 
                   onMedicineClick={handleMedicineClick}
                 />
               </div>
