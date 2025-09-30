@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -126,19 +125,17 @@ interface SelectedSymptomWithSeverity {
 }
 
 export default function Home() {
-  const router = useRouter()
-  
   // Helper functions for recommendation system
   const getPriceScore = (priceRange: string | undefined): number => {
     if (!priceRange) return 5 // Default score
-   
+    
     const extractPrice = (priceStr: string): number => {
       const match = priceStr.match(/(\d+)/)
       return match ? parseInt(match[1]) : 50
     }
-   
+    
     const price = extractPrice(priceRange)
-   
+    
     // Lower price = higher score (1-10 scale)
     if (price <= 10) return 10
     if (price <= 20) return 8
@@ -158,7 +155,7 @@ export default function Home() {
 
   const calculateCoveragePercentage = (medicineSymptoms: string[], selectedSymptoms: string[]): number => {
     if (selectedSymptoms.length === 0) return 0
-    const coveredSymptoms = medicineSymptoms.filter(symptom =>
+    const coveredSymptoms = medicineSymptoms.filter(symptom => 
       selectedSymptoms.includes(symptom)
     )
     return Math.round((coveredSymptoms.length / selectedSymptoms.length) * 100)
@@ -176,8 +173,6 @@ export default function Home() {
   const [filters, setFilters] = useState<MedicineFilters>({})
   const [severityFilter, setSeverityFilter] = useState<string>("All")
   const [isMounted, setIsMounted] = useState(false)
-  const [symptomSearchQuery, setSymptomSearchQuery] = useState("")
-  const [showSymptomSearch, setShowSymptomSearch] = useState(false)
 
   // Load medicines data from JSON file
   useEffect(() => {
@@ -192,7 +187,7 @@ export default function Home() {
         console.error('Home: Error loading medicines data:', error)
       }
     }
-   
+    
     loadMedicinesData()
     setIsMounted(true)
   }, [])
@@ -214,9 +209,9 @@ export default function Home() {
   }
 
   const handleSymptomSeverityChange = (symptomId: string, newSeverity: string) => {
-    setSelectedSymptoms(prev =>
-      prev.map(symptom =>
-        symptom.id === symptomId
+    setSelectedSymptoms(prev => 
+      prev.map(symptom => 
+        symptom.id === symptomId 
           ? { ...symptom, severity: newSeverity }
           : symptom
       )
@@ -257,27 +252,27 @@ export default function Home() {
       console.log("No symptoms selected, returning early")
       return
     }
-   
+    
     console.log("Finding medicines for:", {
       selectedSymptoms,
       customSymptoms
     })
-   
+    
     setIsLoading(true)
     setApiMessage("")
-   
+    
     try {
       // Get selected symptom IDs and their severities
       const selectedSymptomIds = selectedSymptoms.map(s => s.id)
-     
+      
       // Find medicines that match the selected symptoms
       const matchingMedicines: MedicineRecommendation[] = []
-     
+      
       for (const medicine of allMedicines) {
-        const relevantMappings = medicine.symptomMappings.filter(mapping =>
+        const relevantMappings = medicine.symptomMappings.filter(mapping => 
           selectedSymptomIds.includes(mapping.symptomId)
         )
-       
+        
         if (relevantMappings.length > 0) {
           // Create symptom matches with full symptom details
           const symptomMatches = relevantMappings.map(mapping => {
@@ -296,25 +291,25 @@ export default function Home() {
               notes: mapping.notes
             }
           })
-         
+          
           // Calculate average effectiveness
           const totalScore = symptomMatches.reduce((sum, match) => sum + match.effectivenessScore, 0)
           const averageEffectiveness = totalScore / symptomMatches.length
-         
+          
           // Calculate coverage percentage
           const coveragePercentage = calculateCoveragePercentage(
             symptomMatches.map(match => match.symptom.id),
             selectedSymptomIds
           )
-         
+          
           // Calculate severity-adjusted score
           const severityMultipliers = selectedSymptoms.map(s => getSeverityMultiplier(s.severity))
           const avgSeverityMultiplier = severityMultipliers.reduce((sum, mult) => sum + mult, 0) / severityMultipliers.length
           const severityAdjustedScore = averageEffectiveness * avgSeverityMultiplier
-         
+          
           // Calculate price score
           const priceScore = getPriceScore(medicine.priceRange)
-         
+          
           matchingMedicines.push({
             id: medicine.id,
             brandName: medicine.brandName,
@@ -341,31 +336,31 @@ export default function Home() {
           })
         }
       }
-     
+      
       // Sort by comprehensive score: coverage percentage first, then severity-adjusted effectiveness
       matchingMedicines.sort((a, b) => {
         // Primary sort: coverage percentage (more symptoms covered = better)
         if (b.coveragePercentage !== a.coveragePercentage) {
           return b.coveragePercentage - a.coveragePercentage
         }
-       
+        
         // Secondary sort: severity-adjusted effectiveness
         if (b.severityAdjustedScore !== a.severityAdjustedScore) {
           return b.severityAdjustedScore - a.severityAdjustedScore
         }
-       
+        
         // Tertiary sort: price score (for same coverage and effectiveness, prefer cheaper)
         return b.priceScore - a.priceScore
       })
-     
+      
       console.log("Found matching medicines:", matchingMedicines.length)
-     
+      
       setRecommendations(matchingMedicines.slice(0, 20)) // Limit to top 20
-     
+      
       if (customSymptoms.length > 0) {
         setApiMessage('Custom symptoms were noted. Please verify recommendations with a healthcare professional.')
       }
-     
+      
       setActiveTab("recommendations")
     } catch (error) {
       console.error('Error processing recommendations:', error)
@@ -392,60 +387,60 @@ export default function Home() {
 
   const handleFiltersChange = (newFilters: MedicineFilters) => {
     setFilters(newFilters)
-   
+    
     // Apply filters locally
     let filtered = [...allMedicines]
-   
+    
     if (newFilters.category) {
-      filtered = filtered.filter(medicine =>
+      filtered = filtered.filter(medicine => 
         medicine.category === newFilters.category
       )
     }
-   
+    
     if (newFilters.drugClass) {
-      filtered = filtered.filter(medicine =>
+      filtered = filtered.filter(medicine => 
         medicine.drugClass === newFilters.drugClass
       )
     }
-   
+    
     if (newFilters.prescriptionOnly) {
-      filtered = filtered.filter(medicine =>
+      filtered = filtered.filter(medicine => 
         medicine.prescription === true
       )
     }
-   
+    
     if (newFilters.controlledOnly) {
-      filtered = filtered.filter(medicine =>
+      filtered = filtered.filter(medicine => 
         medicine.controlled === true
       )
     }
-   
+    
     if (newFilters.search) {
       const searchLower = newFilters.search.toLowerCase()
-      filtered = filtered.filter(medicine =>
+      filtered = filtered.filter(medicine => 
         medicine.brandName.toLowerCase().includes(searchLower) ||
         medicine.genericName.toLowerCase().includes(searchLower) ||
         medicine.description?.toLowerCase().includes(searchLower)
       )
     }
-   
+    
     if (newFilters.minEffectiveness) {
       filtered = filtered.filter(medicine => {
-        const avgEffectiveness = medicine.symptomMappings.length > 0
+        const avgEffectiveness = medicine.symptomMappings.length > 0 
           ? medicine.symptomMappings.reduce((sum, mapping) => sum + mapping.effectivenessScore, 0) / medicine.symptomMappings.length
           : 0
         return avgEffectiveness >= (newFilters.minEffectiveness || 0)
       })
     }
-   
+    
     if (newFilters.symptoms && newFilters.symptoms.length > 0) {
-      filtered = filtered.filter(medicine =>
-        newFilters.symptoms!.some(symptomId =>
+      filtered = filtered.filter(medicine => 
+        newFilters.symptoms!.some(symptomId => 
           medicine.symptomMappings.some(mapping => mapping.symptomId === symptomId)
         )
       )
     }
-   
+    
     setFilteredMedicines(filtered)
   }
 
@@ -454,9 +449,15 @@ export default function Home() {
     setFilteredMedicines(allMedicines)
   }
 
-  // Update this function to use Next.js router
   const handleMedicineClick = (medicine: any) => {
-    router.push(`/medicine/${medicine.id}`)
+    window.location.href = `/medicine/${medicine.id}`
+  }
+
+  const getFilteredSymptoms = () => {
+    if (severityFilter === "All") {
+      return commonSymptoms
+    }
+    return commonSymptoms.filter(symptom => symptom.severity === severityFilter)
   }
 
   const getEffectivenessStars = (score: number) => {
@@ -494,34 +495,6 @@ export default function Home() {
     }
   }
 
-  // Filter symptoms based on search query
-  const getFilteredSymptoms = () => {
-    let symptoms = commonSymptoms
-    
-    // Apply severity filter
-    if (severityFilter !== "All") {
-      symptoms = symptoms.filter(symptom => symptom.severity === severityFilter)
-    }
-    
-    // Apply search filter
-    if (symptomSearchQuery.trim()) {
-      const query = symptomSearchQuery.toLowerCase()
-      symptoms = symptoms.filter(symptom => 
-        symptom.name.toLowerCase().includes(query) ||
-        symptom.description.toLowerCase().includes(query) ||
-        symptom.category.toLowerCase().includes(query)
-      )
-    }
-    
-    return symptoms
-  }
-
-  // Handle symptom search
-  const handleSymptomSearch = (e: React.FormEvent) => {
-    e.preventDefault()
-    // The search is already applied through the filtered symptoms
-  }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       {/* Header */}
@@ -547,7 +520,7 @@ export default function Home() {
             What symptoms are you experiencing?
           </h2>
           <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto">
-            Get personalized over-the-counter medicine recommendations based on your symptoms.
+            Get personalized over-the-counter medicine recommendations based on your symptoms. 
             Always consult a healthcare professional for medical advice.
           </p>
         </div>
@@ -566,74 +539,24 @@ export default function Home() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                {/* Symptom Search */}
+                {/* Severity Filter */}
                 <div className="mb-4">
-                  <form onSubmit={handleSymptomSearch} className="flex gap-2">
-                    <div className="relative flex-1">
-                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-                      <Input
-                        placeholder="Search symptoms..."
-                        value={symptomSearchQuery}
-                        onChange={(e) => setSymptomSearchQuery(e.target.value)}
-                        className="pl-10"
-                      />
-                    </div>
-                    <Button
-                      type="button"
-                      variant="outline"
-                      onClick={() => setShowSymptomSearch(!showSymptomSearch)}
-                      className="flex items-center gap-2"
-                    >
-                      <Filter className="h-4 w-4" />
-                      Filters
-                    </Button>
-                  </form>
-                  
-                  {showSymptomSearch && (
-                    <div className="mt-3 p-3 bg-gray-50 rounded-lg border">
-                      <div className="mb-3">
-                        <label className="text-sm font-medium mb-2 block">Filter by Severity</label>
-                        <div className="flex flex-wrap gap-2">
-                          {["All", "Mild", "Moderate", "Severe"].map((severity) => (
-                            <Button
-                              key={severity}
-                              variant={severityFilter === severity ? "default" : "outline"}
-                              size="sm"
-                              onClick={() => setSeverityFilter(severity)}
-                              className="text-xs h-8 px-3"
-                            >
-                              {severity}
-                            </Button>
-                          ))}
-                        </div>
-                      </div>
-                      
-                      <div>
-                        <label className="text-sm font-medium mb-2 block">Filter by Category</label>
-                        <div className="flex flex-wrap gap-2">
-                          {["All", "Respiratory", "Cardiovascular", "Gastrointestinal", "Neurological", "Musculoskeletal", "Systemic", "Ocular", "Dermatological", "Psychological", "Renal"].map((category) => (
-                            <Button
-                              key={category}
-                              variant="outline"
-                              size="sm"
-                              onClick={() => {
-                                if (category === "All") {
-                                  setSymptomSearchQuery("")
-                                } else {
-                                  setSymptomSearchQuery(category.toLowerCase())
-                                }
-                              }}
-                              className="text-xs h-8 px-3"
-                            >
-                              {category}
-                            </Button>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  )}
+                  <label className="text-sm font-medium mb-2 block">Filter by Severity</label>
+                  <div className="flex flex-wrap gap-2">
+                    {["All", "Mild", "Moderate", "Severe"].map((severity) => (
+                      <Button
+                        key={severity}
+                        variant={severityFilter === severity ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => setSeverityFilter(severity)}
+                        className="text-xs h-8 px-3"
+                      >
+                        {severity}
+                      </Button>
+                    ))}
+                  </div>
                 </div>
-               
+                
                 <div className="grid grid-cols-1 gap-2 sm:gap-3 mb-6 max-h-96 overflow-y-auto">
                   {getFilteredSymptoms().map((symptom) => {
                     const selectedSymptom = selectedSymptoms.find(s => s.id === symptom.id)
@@ -659,7 +582,7 @@ export default function Home() {
                           <Badge variant="secondary" className={`text-xs ${getCategoryColor(symptom.category)}`}>
                             {symptom.category}
                           </Badge>
-                         
+                          
                           {isSelected && (
                             <div className="mt-3">
                               <label className="text-xs font-medium text-gray-700 mb-1 block">
@@ -700,8 +623,8 @@ export default function Home() {
                         }
                       }}
                     />
-                    <Button
-                      variant="outline"
+                    <Button 
+                      variant="outline" 
                       onClick={handleAddCustomSymptom}
                       disabled={!customSymptomInput.trim()}
                       className="w-full sm:w-auto"
@@ -709,7 +632,7 @@ export default function Home() {
                       <Plus className="w-4 h-4" />
                     </Button>
                   </div>
-                 
+                  
                   {customSymptoms.length > 0 && (
                     <div className="space-y-2">
                       <p className="text-sm font-medium">Custom Symptoms Added:</p>
@@ -770,7 +693,7 @@ export default function Home() {
                           </div>
                         </div>
                       )}
-                     
+                      
                       {customSymptoms.length > 0 && (
                         <div>
                           <p className="text-sm font-medium mb-2">Custom Symptoms:</p>
@@ -784,7 +707,7 @@ export default function Home() {
                           </div>
                         </div>
                       )}
-                     
+                      
                       {/* Smart Recommendation Info */}
                       <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
                         <p className="text-sm font-medium text-blue-800 mb-2">🧠 Smart Recommendations</p>
@@ -796,8 +719,8 @@ export default function Home() {
                       </div>
                     </>
                   )}
-                 
-                  <Button
+                  
+                  <Button 
                     onClick={handleFindMedicines}
                     disabled={(selectedSymptoms.length === 0 && customSymptoms.length === 0) || isLoading}
                     className="w-full mt-4"
@@ -866,14 +789,14 @@ export default function Home() {
             <TabsContent value="recommendations" className="mt-6">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Recommended Medicines</h3>
-                <MedicineGrid
+                <MedicineGrid 
                   medicines={recommendations.map(rec => ({
                     ...rec,
                     symptomCount: rec.symptomMatches.length,
                     coveragePercentage: rec.coveragePercentage,
                     severityAdjustedScore: rec.severityAdjustedScore,
                     priceScore: rec.priceScore
-                  }))}
+                  }))} 
                   onMedicineClick={handleMedicineClick}
                 />
               </div>
@@ -905,16 +828,16 @@ export default function Home() {
                   <MedicineGrid
                     medicines={filteredMedicines.map(med => {
                       // Calculate average effectiveness from symptom mappings
-                      const avgEffectiveness = med.symptomMappings.length > 0
+                      const avgEffectiveness = med.symptomMappings.length > 0 
                         ? med.symptomMappings.reduce((sum, mapping) => sum + mapping.effectivenessScore, 0) / med.symptomMappings.length
                         : 0;
-                     
+                      
                       // Get symptom names from mappings
                       const symptomNames = med.symptomMappings.map(mapping => {
                         const symptom = commonSymptoms.find(s => s.id === mapping.symptomId);
                         return symptom?.name || mapping.symptomId;
                       });
-                     
+                      
                       return {
                         id: med.id,
                         brandName: med.brandName,
@@ -949,9 +872,9 @@ export default function Home() {
         <Alert className="mt-8">
           <AlertTriangle className="h-4 w-4" />
           <AlertDescription>
-            <strong>Important Disclaimer:</strong> This tool provides informational guidance only and is not a substitute
-            for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider
-            if your symptoms persist, worsen, or if you have concerns about your health. In case of emergency,
+            <strong>Important Disclaimer:</strong> This tool provides informational guidance only and is not a substitute 
+            for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider 
+            if your symptoms persist, worsen, or if you have concerns about your health. In case of emergency, 
             seek immediate medical attention.
           </AlertDescription>
         </Alert>
