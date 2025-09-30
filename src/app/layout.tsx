@@ -34,13 +34,22 @@ export const metadata: Metadata = {
     // Updated Description for the Link Preview - Removed AI references
     description: "Modern web development project built with React and Next.js.",
     
-    // Kept original URL (Update this if the URL changes!)
-    url: "https://chat.z.ai",
+    // IMPORTANT: Update this URL to your live project URL!
+    url: "https://symptommed-project.pages.dev", 
     
     // Updated Site Name
     siteName: "SymptomMed",
     type: "website",
-    // NOTE: You should add an 'images' array here if you want a custom image in the link preview
+    
+    // ADDED: Explicit Open Graph Image Configuration
+    images: [
+      {
+        url: "public/logo.svg", // NOTE: This image file MUST be placed in your /public folder.
+        width: 1200,
+        height: 630,
+        alt: "SymptomMed Project Logo",
+      },
+    ],
   },
   
   // --- TWITTER CARD CONFIGURATION ---
@@ -51,7 +60,9 @@ export const metadata: Metadata = {
     
     // Updated Description for Twitter Card - Removed AI references
     description: "Modern web development project built with React and Next.js.",
-    // NOTE: You should add an 'images' property here for the Twitter Card image
+    
+    // ADDED: Explicit Twitter Image Configuration
+    images: ["/og-image.png"], // NOTE: This image file MUST be placed in your /public folder.
   },
 };
 
