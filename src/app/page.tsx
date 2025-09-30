@@ -11,6 +11,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Heart, Pill, Stethoscope, AlertTriangle, Star, ArrowRight, Search, Plus, Filter, Grid } from "lucide-react"
 import MedicineFilter from "@/components/MedicineFilter"
 import MedicineGrid from "@/components/MedicineGrid"
+import { useRouter } from "next/navigation"
+
+// Inside the component
+const router = useRouter()
 
 // Frontend-only medicine data will be loaded from JSON
 
@@ -115,7 +119,7 @@ interface MedicineFilters {
   controlledOnly?: boolean
   search?: string
   minEffectiveness?: number
-  maxPrice?: string
+  maxPrice?: number
   symptoms?: string[]
 }
 
@@ -450,7 +454,7 @@ export default function Home() {
   }
 
   const handleMedicineClick = (medicine: any) => {
-    window.location.href = `/medicine/${medicine.id}`
+  router.push(`/medicine/${medicine.id}`)
   }
 
   const getFilteredSymptoms = () => {

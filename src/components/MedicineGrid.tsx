@@ -1,14 +1,11 @@
 "use client"
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { Star, AlertTriangle, Search, Pill, Package, Clock } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Star, Pill, Package, DollarSign, AlertTriangle, ArrowRight } from "lucide-react"
 
-interface Medicine {
+interface MedicineData {
   id: string
   brandName: string
   genericName: string
@@ -24,33 +21,21 @@ interface Medicine {
   drugClass?: string
   prescription: boolean
   controlled: boolean
-  averageEffectiveness: number
-  symptomCount: number
-  symptoms: string[]
+  averageEffectiveness?: number
+  symptomCount?: number
+  symptoms?: string[]
   coveragePercentage?: number
   severityAdjustedScore?: number
   priceScore?: number
 }
 
 interface MedicineGridProps {
-  medicines: Medicine[]
+  medicines: MedicineData[]
   isLoading?: boolean
-  onMedicineClick?: (medicine: Medicine) => void
+  onMedicineClick: (medicine: MedicineData) => void
 }
 
-export default function MedicineGrid({ 
-  medicines, 
-  isLoading = false, 
-  onMedicineClick 
-}: MedicineGridProps) {
-  const [searchTerm, setSearchTerm] = useState("")
-
-  const filteredMedicines = medicines.filter(medicine =>
-    medicine.brandName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    medicine.genericName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    medicine.description.toLowerCase().includes(searchTerm.toLowerCase())
-  )
-
+export default function MedicineGrid({ medicines, isLoading = false, onMedicineClick }: MedicineGridProps) {
   const getEffectivenessStars = (score: number) => {
     const fullStars = Math.floor(score / 2)
     const halfStar = score % 2 >= 1
@@ -70,53 +55,35 @@ export default function MedicineGrid({
     )
   }
 
-  const getCoverageBadge = (coveragePercentage?: number) => {
-    if (!coveragePercentage) return null
-    
-    let color = ""
-    if (coveragePercentage >= 80) color = "bg-green-100 text-green-800 border-green-200"
-    else if (coveragePercentage >= 60) color = "bg-yellow-100 text-yellow-800 border-yellow-200"
-    else color = "bg-red-100 text-red-800 border-red-200"
-    
-    return (
-      <Badge variant="outline" className={`text-xs ${color}`}>
-        {coveragePercentage}% coverage
-      </Badge>
-    )
-  }
-
-  const getPriceValue = (priceRange?: string) => {
-    if (!priceRange) return 5
-    const match = priceRange.match(/(\d+)/)
-    return match ? parseInt(match[1]) : 50
-  }
-
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'Antibiotic': return 'bg-blue-100 text-blue-800 border-blue-200'
-      case 'Pain Relief': return 'bg-green-100 text-green-800 border-green-200'
-      case 'Antimalarial': return 'bg-purple-100 text-purple-800 border-purple-200'
-      case 'Antihistamine': return 'bg-yellow-100 text-yellow-800 border-yellow-200'
-      case 'Anti-inflammatory': return 'bg-red-100 text-red-800 border-red-200'
-      case 'Antifungal': return 'bg-pink-100 text-pink-800 border-pink-200'
-      case 'Antiviral': return 'bg-indigo-100 text-indigo-800 border-indigo-200'
-      case 'Antidiabetic': return 'bg-orange-100 text-orange-800 border-orange-200'
-      case 'Antihypertensive': return 'bg-cyan-100 text-cyan-800 border-cyan-200'
-      case 'Digestive': return 'bg-teal-100 text-teal-800 border-teal-200'
+      case 'Pain Relief': return 'bg-blue-100 text-blue-800 border-blue-200'
+      case 'Antimalarial': return 'bg-green-100 text-green-800 border-green-200'
+      case 'Vitamins & Supplements': return 'bg-purple-100 text-purple-800 border-purple-200'
+      case 'Antibiotics': return 'bg-red-100 text-red-800 border-red-200'
+      case 'Allergy': return 'bg-yellow-100 text-yellow-800 border-yellow-200'
+      case 'Cold & Flu': return 'bg-cyan-100 text-cyan-800 border-cyan-200'
+      case 'Digestive Health': return 'bg-orange-100 text-orange-800 border-orange-200'
+      case 'Antiparasitic': return 'bg-pink-100 text-pink-800 border-pink-200'
       default: return 'bg-gray-100 text-gray-800 border-gray-200'
     }
   }
 
   if (isLoading) {
     return (
-      <div className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[...Array(6)].map((_, i) => (
           <Card key={i} className="animate-pulse">
-            <CardContent className="p-6">
-              <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
-              <div className="h-3 bg-gray-200 rounded w-1/2 mb-4"></div>
-              <div className="h-3 bg-gray-200 rounded w-full mb-2"></div>
-              <div className="h-3 bg-gray-200 rounded w-5/6"></div>
+            <CardHeader>
+              <div className="h-6 bg-gray-200 rounded mb-2"></div>
+              <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-2">
+                <div className="h-4 bg-gray-200 rounded"></div>
+                <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+                <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+              </div>
             </CardContent>
           </Card>
         ))}
@@ -126,178 +93,98 @@ export default function MedicineGrid({
 
   if (medicines.length === 0) {
     return (
-      <Alert>
-        <AlertTriangle className="h-4 w-4" />
-        <AlertDescription>
-          No medicines found matching your criteria. Try adjusting your filters.
-        </AlertDescription>
-      </Alert>
+      <div className="text-center py-12">
+        <Pill className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+        <h3 className="text-lg font-medium text-gray-900 mb-2">No medicines found</h3>
+        <p className="text-gray-500">Try adjusting your filters or search terms</p>
+      </div>
     )
   }
 
   return (
-    <div className="space-y-6">
-      {/* Search Bar */}
-      <div className="relative mb-4">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-        <Input
-          placeholder="Search medicines..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="pl-10"
-        />
-      </div>
-
-      {/* Results Count */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-4 pb-4 border-b">
-        <p className="text-sm text-gray-600">
-          Showing {filteredMedicines.length} of {medicines.length} medicines
-        </p>
-        <div className="flex items-center space-x-2">
-          <Package className="w-4 h-4 text-gray-500" />
-          <span className="text-sm text-gray-600">
-            {medicines.length} total medicines
-          </span>
-        </div>
-      </div>
-
-      {/* Medicine Grid */}
-      <div className="grid grid-cols-1 gap-3 sm:gap-4 md:gap-6">
-        {filteredMedicines.map((medicine) => (
-          <Card 
-            key={medicine.id} 
-            className="hover:shadow-lg transition-shadow cursor-pointer"
-            onClick={() => onMedicineClick?.(medicine)}
-          >
-            <CardHeader className="pb-3">
-              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
-                <div className="flex-1 min-w-0">
-                  <CardTitle className="text-base md:text-lg font-semibold mb-1 truncate">
-                    {medicine.brandName}
-                  </CardTitle>
-                  <CardDescription className="text-xs md:text-sm">
-                    {medicine.genericName}
-                  </CardDescription>
-                </div>
-                <div className="flex flex-wrap gap-1 justify-end sm:justify-start sm:flex-col sm:items-end">
-                  {medicine.prescription && (
-                    <Badge variant="destructive" className="text-xs">
-                      Rx
-                    </Badge>
-                  )}
-                  {medicine.controlled && (
-                    <Badge variant="outline" className="text-xs border-red-200 text-red-800">
-                      Controlled
-                    </Badge>
-                  )}
-                </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {medicines.map((medicine) => (
+        <Card key={medicine.id} className="h-full flex flex-col hover:shadow-lg transition-shadow">
+          <CardHeader>
+            <div className="flex justify-between items-start">
+              <div className="flex-1">
+                <CardTitle className="text-lg">{medicine.brandName}</CardTitle>
+                <CardDescription className="text-sm">{medicine.genericName}</CardDescription>
               </div>
-              
-              {/* Category and Effectiveness */}
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-3 gap-2">
-                <div className="flex flex-wrap gap-1">
-                  {medicine.category && (
-                    <Badge variant="secondary" className={`text-xs ${getCategoryColor(medicine.category)} self-start`}>
-                      {medicine.category}
-                    </Badge>
-                  )}
-                  {getCoverageBadge(medicine.coveragePercentage)}
-                </div>
-                <div className="text-xs">
-                  {getEffectivenessStars(medicine.averageEffectiveness)}
-                </div>
+              <div className="flex flex-col items-end space-y-1">
+                {medicine.prescription && (
+                  <Badge variant="outline" className="bg-red-50 text-red-800 border-red-200 text-xs">
+                    Rx
+                  </Badge>
+                )}
+                {medicine.controlled && (
+                  <Badge variant="outline" className="bg-orange-50 text-orange-800 border-orange-200 text-xs">
+                    Controlled
+                  </Badge>
+                )}
               </div>
-            </CardHeader>
+            </div>
+          </CardHeader>
+          <CardContent className="flex-1 flex flex-col">
+            <p className="text-sm text-gray-700 mb-4 line-clamp-2">{medicine.description}</p>
             
-            <CardContent className="pt-0">
-              <p className="text-xs md:text-sm text-gray-600 mb-3 line-clamp-2">
-                {medicine.description}
-              </p>
-              
-              {/* Key Info */}
-              <div className="space-y-1 md:space-y-2 mb-3">
-                <div className="flex items-center text-xs text-gray-500">
-                  <Pill className="w-3 h-3 mr-1 flex-shrink-0" />
-                  <span className="truncate">{medicine.symptomCount} symptom{medicine.symptomCount !== 1 ? 's' : ''} covered</span>
-                </div>
-                
-                {medicine.coveragePercentage && (
-                  <div className="flex items-center text-xs text-gray-500">
-                    <span className="font-medium flex-shrink-0">Coverage:</span>
-                    <span className="ml-1 truncate">{medicine.coveragePercentage}% of your symptoms</span>
-                  </div>
-                )}
-                
-                {medicine.priceRange && (
-                  <div className="flex items-center text-xs text-gray-500">
-                    <span className="font-medium flex-shrink-0">Price:</span>
-                    <span className="ml-1 truncate">{medicine.priceRange}</span>
-                  </div>
-                )}
-                
-                {medicine.drugClass && (
-                  <div className="flex items-center text-xs text-gray-500">
-                    <span className="font-medium flex-shrink-0">Class:</span>
-                    <span className="ml-1 truncate">{medicine.drugClass}</span>
-                  </div>
-                )}
-              </div>
-              
-              {/* Top Symptoms */}
-              {medicine.symptoms.length > 0 && (
-                <div className="mb-3">
-                  <p className="text-xs font-medium text-gray-700 mb-1">Common symptoms:</p>
-                  <div className="flex flex-wrap gap-1">
-                    {medicine.symptoms.slice(0, 2).map((symptom, index) => (
-                      <Badge key={index} variant="outline" className="text-xs">
-                        {symptom}
-                      </Badge>
-                    ))}
-                    {medicine.symptoms.length > 2 && (
-                      <Badge variant="outline" className="text-xs">
-                        +{medicine.symptoms.length - 2} more
-                      </Badge>
-                    )}
-                  </div>
-                </div>
+            <div className="mb-4">
+              {medicine.category && (
+                <Badge variant="secondary" className={`mr-2 mb-1 ${getCategoryColor(medicine.category)}`}>
+                  {medicine.category}
+                </Badge>
               )}
+              {medicine.drugClass && (
+                <Badge variant="outline" className="mr-2 mb-1 text-xs">
+                  {medicine.drugClass}
+                </Badge>
+              )}
+            </div>
 
-              {/* Coverage Details */}
-              {medicine.coveragePercentage && (
-                <div className="mb-3 p-2 bg-gray-50 rounded-lg">
-                  <p className="text-xs font-medium text-gray-700 mb-1">Match Quality:</p>
-                  <div className="flex items-center justify-between text-xs text-gray-600">
-                    <span>Symptom Coverage</span>
-                    <span className="font-medium">{medicine.coveragePercentage}%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-1.5 mt-1">
-                    <div 
-                      className={`h-1.5 rounded-full ${
-                        medicine.coveragePercentage >= 80 ? 'bg-green-500' :
-                        medicine.coveragePercentage >= 60 ? 'bg-yellow-500' : 'bg-red-500'
-                      }`}
-                      style={{ width: `${medicine.coveragePercentage}%` }}
-                    ></div>
-                  </div>
+            {medicine.averageEffectiveness && (
+              <div className="mb-4">
+                {getEffectivenessStars(medicine.averageEffectiveness)}
+              </div>
+            )}
+
+            {medicine.symptomCount !== undefined && (
+              <div className="flex items-center text-sm text-gray-600 mb-2">
+                <Package className="h-4 w-4 mr-1" />
+                Treats {medicine.symptomCount} symptom{medicine.symptomCount !== 1 ? 's' : ''}
+              </div>
+            )}
+
+            {medicine.coveragePercentage !== undefined && (
+              <div className="flex items-center text-sm text-gray-600 mb-2">
+                <div className="w-full bg-gray-200 rounded-full h-2 mr-2">
+                  <div 
+                    className="bg-green-600 h-2 rounded-full" 
+                    style={{ width: `${medicine.coveragePercentage}%` }}
+                  ></div>
                 </div>
-              )}
-              
-              {/* Action Button */}
+                <span>{medicine.coveragePercentage}% match</span>
+              </div>
+            )}
+
+            {medicine.priceRange && (
+              <div className="flex items-center text-sm text-gray-600 mb-4">
+                <DollarSign className="h-4 w-4 mr-1" />
+                {medicine.priceRange}
+              </div>
+            )}
+
+            <div className="mt-auto pt-4 border-t">
               <Button 
-                variant="outline" 
-                size="sm" 
-                className="w-full mt-3 text-xs"
-                onClick={(e) => {
-                  e.stopPropagation()
-                  onMedicineClick?.(medicine)
-                }}
+                onClick={() => onMedicineClick(medicine)}
+                className="w-full"
               >
                 View Details
+                <ArrowRight className="h-4 w-4 ml-2" />
               </Button>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
     </div>
   )
 }
