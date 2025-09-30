@@ -1,0 +1,3481 @@
+{
+  "medicines": [
+    {
+      "id": "med001",
+      "brandName": "Panadol",
+      "genericName": "Paracetamol",
+      "description": "Pain reliever and fever reducer",
+      "usage": "For relief of mild to moderate pain and fever",
+      "dosageAdult": "1-2 tablets (500-1000mg) every 4-6 hours as needed, maximum 4000mg/day",
+      "dosageChild": "10-15mg/kg every 4-6 hours, consult doctor for children under 2",
+      "dosageElderly": "Same as adult, but monitor liver function",
+      "sideEffects": "Rare when used as directed. May cause liver damage if taken in excess.",
+      "warnings": "Do not take with other paracetamol-containing products. Avoid alcohol. Not recommended with liver disease.",
+      "priceRange": "GHS 5-15",
+      "category": "Pain Relief",
+      "drugClass": "Analgesic",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "First-line treatment for fever"
+        },
+        {
+          "symptomId": "headache",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for mild to moderate headaches"
+        },
+        {
+          "symptomId": "body-aches",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with general body aches"
+        }
+      ]
+    },
+    {
+      "id": "med002",
+      "brandName": "Ibuprofen",
+      "genericName": "Ibuprofen",
+      "description": "Non-steroidal anti-inflammatory drug (NSAID)",
+      "usage": "For pain, inflammation, and fever reduction",
+      "dosageAdult": "200-400mg every 4-6 hours as needed, maximum 1200mg/day",
+      "dosageChild": "5-10mg/kg every 6-8 hours for children over 6 months",
+      "dosageElderly": "Lower dose recommended, monitor kidney function",
+      "sideEffects": "Stomach upset, nausea, dizziness. May increase risk of bleeding.",
+      "warnings": "Take with food. Not recommended for people with stomach ulcers, kidney disease, or on blood thinners.",
+      "priceRange": "GHS 8-20",
+      "category": "Pain Relief",
+      "drugClass": "NSAID",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "headache",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Excellent for tension headaches and migraines"
+        },
+        {
+          "symptomId": "body-aches",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Superior for inflammatory pain"
+        },
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 8,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Effective fever reducer"
+        },
+        {
+          "symptomId": "joint-pain",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Good for joint inflammation"
+        }
+      ]
+    },
+    {
+      "id": "med003",
+      "brandName": "Aspirin",
+      "genericName": "Acetylsalicylic Acid",
+      "description": "Pain reliever, fever reducer, and blood thinner",
+      "usage": "For pain, fever, and heart protection",
+      "dosageAdult": "325-650mg every 4-6 hours as needed",
+      "dosageChild": "Not recommended for children under 16",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Stomach irritation, increased bleeding risk",
+      "warnings": "Not for children (Reye's syndrome risk). Avoid with stomach ulcers.",
+      "priceRange": "GHS 5-15",
+      "category": "Pain Relief",
+      "drugClass": "NSAID",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "headache",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Classic headache treatment"
+        },
+        {
+          "symptomId": "body-aches",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Good for muscle and joint pain"
+        },
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Effective fever reducer"
+        }
+      ]
+    },
+    {
+      "id": "med004",
+      "brandName": "Diclofenac",
+      "genericName": "Diclofenac Sodium",
+      "description": "Potent NSAID for pain and inflammation",
+      "usage": "For severe pain, arthritis, and inflammatory conditions",
+      "dosageAdult": "25-50mg every 6-8 hours as needed",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Stomach pain, nausea, increased risk of cardiovascular events",
+      "warnings": "Use lowest effective dose. Not for long-term use without medical supervision.",
+      "priceRange": "GHS 15-30",
+      "category": "Pain Relief",
+      "drugClass": "NSAID",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "joint-pain",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Excellent for arthritis pain"
+        },
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Strong anti-inflammatory effect"
+        },
+        {
+          "symptomId": "back-pain",
+          "effectivenessScore": 8,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "Effective for back inflammation"
+        }
+      ]
+    },
+    {
+      "id": "med005",
+      "brandName": "Naproxen",
+      "genericName": "Naproxen",
+      "description": "Long-acting NSAID for persistent pain",
+      "usage": "For chronic pain, arthritis, and menstrual cramps",
+      "dosageAdult": "220-550mg every 8-12 hours",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Stomach upset, dizziness, headache",
+      "warnings": "May increase risk of heart attack and stroke. Take with food.",
+      "priceRange": "GHS 20-35",
+      "category": "Pain Relief",
+      "drugClass": "NSAID",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "joint-pain",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Long-lasting relief for arthritis"
+        },
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 8,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Good for muscle inflammation"
+        }
+      ]
+    },
+    {
+      "id": "med006",
+      "brandName": "Codeine",
+      "genericName": "Codeine Phosphate",
+      "description": "Opioid analgesic for moderate to severe pain",
+      "usage": "For moderate to severe pain and persistent cough",
+      "dosageAdult": "15-60mg every 4-6 hours as needed",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Drowsiness, constipation, respiratory depression",
+      "warnings": "High potential for abuse and dependence. Not for long-term use.",
+      "priceRange": "GHS 25-45",
+      "category": "Pain Relief",
+      "drugClass": "Opioid",
+      "prescription": true,
+      "controlled": true,
+      "symptomMappings": [
+        {
+          "symptomId": "cough",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Strong cough suppressant"
+        },
+        {
+          "symptomId": "body-aches",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for severe pain"
+        }
+      ]
+    },
+    {
+      "id": "med007",
+      "brandName": "Tramadol",
+      "genericName": "Tramadol Hydrochloride",
+      "description": "Synthetic opioid analgesic",
+      "usage": "For moderate to moderately severe pain",
+      "dosageAdult": "50-100mg every 4-6 hours as needed",
+      "dosageChild": "Not recommended for children under 16",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Nausea, dizziness, headache, constipation",
+      "warnings": "May cause seizures. Risk of dependence and serotonin syndrome.",
+      "priceRange": "GHS 30-50",
+      "category": "Pain Relief",
+      "drugClass": "Opioid",
+      "prescription": true,
+      "controlled": true,
+      "symptomMappings": [
+        {
+          "symptomId": "body-aches",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Strong pain relief for severe aches"
+        },
+        {
+          "symptomId": "joint-pain",
+          "effectivenessScore": 8,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for joint and nerve pain"
+        }
+      ]
+    },
+    {
+      "id": "med008",
+      "brandName": "Morphine",
+      "genericName": "Morphine Sulfate",
+      "description": "Strong opioid analgesic for severe pain",
+      "usage": "For severe pain, cancer pain, and post-operative pain",
+      "dosageAdult": "5-30mg every 4 hours as needed",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Severe drowsiness, respiratory depression, constipation",
+      "warnings": "High potential for abuse. Only for severe pain under medical supervision.",
+      "priceRange": "GHS 40-70",
+      "category": "Pain Relief",
+      "drugClass": "Opioid",
+      "prescription": true,
+      "controlled": true,
+      "symptomMappings": [
+        {
+          "symptomId": "body-aches",
+          "effectivenessScore": 10,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Most effective for severe pain"
+        },
+        {
+          "symptomId": "chest-pain",
+          "effectivenessScore": 8,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Used for severe chest pain"
+        }
+      ]
+    },
+    {
+      "id": "med009",
+      "brandName": "Fentanyl",
+      "genericName": "Fentanyl Citrate",
+      "description": "Potent synthetic opioid for breakthrough pain",
+      "usage": "For breakthrough cancer pain and severe chronic pain",
+      "dosageAdult": "25-100mcg every 2-4 hours as needed",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Respiratory depression, severe drowsiness, confusion",
+      "warnings": "Extremely potent. High abuse potential. Medical supervision required.",
+      "priceRange": "GHS 50-100",
+      "category": "Pain Relief",
+      "drugClass": "Opioid",
+      "prescription": true,
+      "controlled": true,
+      "symptomMappings": [
+        {
+          "symptomId": "body-aches",
+          "effectivenessScore": 10,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Most potent pain relief available"
+        }
+      ]
+    },
+    {
+      "id": "med010",
+      "brandName": "Gabapentin",
+      "genericName": "Gabapentin",
+      "description": "Anticonvulsant for nerve pain",
+      "usage": "For neuropathic pain, seizures, and nerve-related pain",
+      "dosageAdult": "300-600mg three times daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Dizziness, drowsiness, fatigue, weight gain",
+      "warnings": "May increase risk of suicidal thoughts. Do not stop abruptly.",
+      "priceRange": "GHS 35-60",
+      "category": "Pain Relief",
+      "drugClass": "Anticonvulsant",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "joint-pain",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Excellent for nerve-related joint pain"
+        },
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with neuropathic muscle pain"
+        }
+      ]
+    },
+    {
+      "id": "med011",
+      "brandName": "Pregabalin",
+      "genericName": "Pregabalin",
+      "description": "Anticonvulsant for neuropathic pain",
+      "usage": "For neuropathic pain, fibromyalgia, and anxiety",
+      "dosageAdult": "75-150mg twice daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Dizziness, drowsiness, dry mouth, edema",
+      "warnings": "May cause dizziness and drowsiness. Avoid alcohol.",
+      "priceRange": "GHS 40-70",
+      "category": "Pain Relief",
+      "drugClass": "Anticonvulsant",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "joint-pain",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Superior for neuropathic joint pain"
+        },
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 8,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for nerve-related muscle pain"
+        }
+      ]
+    },
+    {
+      "id": "med012",
+      "brandName": "Amitriptyline",
+      "genericName": "Amitriptyline Hydrochloride",
+      "description": "Tricyclic antidepressant for chronic pain",
+      "usage": "For chronic pain, migraines, and neuropathic pain",
+      "dosageAdult": "10-75mg at bedtime",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Dry mouth, drowsiness, constipation, weight gain",
+      "warnings": "May cause suicidal thoughts. Not for people with heart conditions.",
+      "priceRange": "GHS 20-40",
+      "category": "Pain Relief",
+      "drugClass": "Tricyclic Antidepressant",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "headache",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Preventive treatment for migraines"
+        },
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with chronic muscle pain"
+        }
+      ]
+    },
+    {
+      "id": "med013",
+      "brandName": "Duloxetine",
+      "genericName": "Duloxetine Hydrochloride",
+      "description": "SNRI for chronic pain and depression",
+      "usage": "For chronic musculoskeletal pain, fibromyalgia, and depression",
+      "dosageAdult": "30-60mg once daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Nausea, dry mouth, fatigue, insomnia",
+      "warnings": "May increase risk of suicidal thoughts. Monitor for serotonin syndrome.",
+      "priceRange": "GHS 45-80",
+      "category": "Pain Relief",
+      "drugClass": "SNRI",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Excellent for chronic muscle pain"
+        },
+        {
+          "symptomId": "joint-pain",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Good for chronic joint pain"
+        }
+      ]
+    },
+    {
+      "id": "med014",
+      "brandName": "Benylin",
+      "genericName": "Dextromethorphan + Guaifenesin",
+      "description": "Multi-symptom cough relief",
+      "usage": "For cough and chest congestion",
+      "dosageAdult": "20ml every 4 hours",
+      "dosageChild": "10ml every 4 hours for children 6-12 years",
+      "dosageElderly": "Normal adult dose",
+      "sideEffects": "Drowsiness, dizziness, dry mouth",
+      "warnings": "Less drowsy formula. Still use caution when driving.",
+      "priceRange": "GHS 25-30",
+      "category": "Cough & Cold",
+      "drugClass": "Combination",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "cough",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Good for productive cough"
+        },
+        {
+          "symptomId": "sore-throat",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Weak",
+          "notes": "May help soothe throat irritation"
+        }
+      ]
+    },
+    {
+      "id": "med015",
+      "brandName": "Mentholix",
+      "genericName": "Menthol + Dextromethorphan",
+      "description": "Cough syrup with menthol flavor",
+      "usage": "For relief of cough and cold symptoms",
+      "dosageAdult": "10ml every 6-8 hours",
+      "dosageChild": "5ml every 6-8 hours for children 6-12 years",
+      "dosageElderly": "Normal adult dose",
+      "sideEffects": "Drowsiness, dizziness, upset stomach",
+      "warnings": "May cause drowsiness. Do not drive or operate machinery.",
+      "priceRange": "GHS 20-25",
+      "category": "Cough & Cold",
+      "drugClass": "Antitussive",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "cough",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Effective for dry cough"
+        }
+      ]
+    },
+    {
+      "id": "med016",
+      "brandName": "Robitussin",
+      "genericName": "Dextromethorphan",
+      "description": "Cough suppressant",
+      "usage": "For temporary relief of cough",
+      "dosageAdult": "10-20ml every 4-6 hours",
+      "dosageChild": "5-10ml every 4-6 hours for children 6-12 years",
+      "dosageElderly": "Normal adult dose",
+      "sideEffects": "Drowsiness, dizziness, nausea",
+      "warnings": "May cause drowsiness. Avoid alcohol.",
+      "priceRange": "GHS 18-25",
+      "category": "Cough & Cold",
+      "drugClass": "Antitussive",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "cough",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Standard cough suppressant"
+        }
+      ]
+    },
+    {
+      "id": "med017",
+      "brandName": "Delsym",
+      "genericName": "Dextromethorphan Polistirex",
+      "description": "Extended-release cough suppressant",
+      "usage": "For 12-hour cough relief",
+      "dosageAdult": "30ml every 12 hours",
+      "dosageChild": "15ml every 12 hours for children 6-12 years",
+      "dosageElderly": "Normal adult dose",
+      "sideEffects": "Drowsiness, dizziness, upset stomach",
+      "warnings": "Extended-release formula. Take as directed.",
+      "priceRange": "GHS 22-30",
+      "category": "Cough & Cold",
+      "drugClass": "Antitussive",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "cough",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Long-lasting cough relief"
+        }
+      ]
+    },
+    {
+      "id": "med018",
+      "brandName": "Mucinex",
+      "genericName": "Guaifenesin",
+      "description": "Expectorant for chest congestion",
+      "usage": "For loosening mucus and chest congestion",
+      "dosageAdult": "600-1200mg every 12 hours",
+      "dosageChild": "200-400mg every 12 hours for children 6-12 years",
+      "dosageElderly": "Normal adult dose",
+      "sideEffects": "Nausea, vomiting, stomach upset",
+      "warnings": "Drink plenty of water while taking this medication.",
+      "priceRange": "GHS 25-35",
+      "category": "Cough & Cold",
+      "drugClass": "Expectorant",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "cough",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps loosen mucus"
+        }
+      ]
+    },
+    {
+      "id": "med019",
+      "brandName": "Actifed",
+      "genericName": "Triprolidine + Pseudoephedrine",
+      "description": "Cold and allergy relief",
+      "usage": "For nasal congestion, runny nose, and sneezing",
+      "dosageAdult": "1 tablet every 4-6 hours",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Half dose recommended",
+      "sideEffects": "Drowsiness, dry mouth, dizziness",
+      "warnings": "May cause drowsiness. Avoid alcohol. Not for people with high blood pressure.",
+      "priceRange": "GHS 15-25",
+      "category": "Cold & Allergy",
+      "drugClass": "Antihistamine + Decongestant",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "runny-nose",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Excellent for nasal congestion"
+        },
+        {
+          "symptomId": "sneezing",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Reduces sneezing frequency"
+        },
+        {
+          "symptomId": "itchy-eyes",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with eye allergy symptoms"
+        }
+      ]
+    },
+    {
+      "id": "med020",
+      "brandName": "Sudafed",
+      "genericName": "Pseudoephedrine",
+      "description": "Nasal decongestant",
+      "usage": "For nasal congestion and sinus pressure",
+      "dosageAdult": "30-60mg every 4-6 hours",
+      "dosageChild": "15-30mg every 4-6 hours for children 6-12 years",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Nervousness, dizziness, sleeplessness",
+      "warnings": "May increase blood pressure. Not for people with heart conditions.",
+      "priceRange": "GHS 12-20",
+      "category": "Cold & Allergy",
+      "drugClass": "Decongestant",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "runny-nose",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Excellent decongestant"
+        }
+      ]
+    },
+    {
+      "id": "med021",
+      "brandName": "Zyrtec",
+      "genericName": "Cetirizine",
+      "description": "24-hour allergy relief",
+      "usage": "For allergy symptoms including hay fever",
+      "dosageAdult": "10mg once daily",
+      "dosageChild": "5mg once daily for children 6-12 years",
+      "dosageElderly": "5mg once daily",
+      "sideEffects": "Mild drowsiness, dry mouth, headache",
+      "warnings": "Less drowsy than older antihistamines. Avoid alcohol.",
+      "priceRange": "GHS 30-45",
+      "category": "Allergy",
+      "drugClass": "Antihistamine",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "itchy-eyes",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Excellent for eye allergy symptoms"
+        },
+        {
+          "symptomId": "sneezing",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Highly effective for sneezing"
+        },
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Good for allergic skin reactions"
+        }
+      ]
+    },
+    {
+      "id": "med022",
+      "brandName": "Claritin",
+      "genericName": "Loratadine",
+      "description": "Non-drowsy allergy relief",
+      "usage": "For seasonal allergies and hay fever",
+      "dosageAdult": "10mg once daily",
+      "dosageChild": "5mg once daily for children 2-12 years",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Minimal side effects, rare headache",
+      "warnings": "Generally well tolerated. Safe for most users.",
+      "priceRange": "GHS 15-25",
+      "category": "Allergy",
+      "drugClass": "Antihistamine",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "itchy-eyes",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Non-drowsy option for eye allergies"
+        },
+        {
+          "symptomId": "sneezing",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective without causing drowsiness"
+        },
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with allergic skin reactions"
+        }
+      ]
+    },
+    {
+      "id": "med023",
+      "brandName": "Allegra",
+      "genericName": "Fexofenadine",
+      "description": "Fast-acting non-drowsy allergy relief",
+      "usage": "For seasonal allergies and chronic hives",
+      "dosageAdult": "60mg twice daily or 180mg once daily",
+      "dosageChild": "30mg twice daily for children 6-12 years",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Minimal, rare headache or nausea",
+      "warnings": "Generally safe and well tolerated.",
+      "priceRange": "GHS 25-40",
+      "category": "Allergy",
+      "drugClass": "Antihistamine",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "itchy-eyes",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Fast relief for eye allergies"
+        },
+        {
+          "symptomId": "sneezing",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Quick action against sneezing"
+        }
+      ]
+    },
+    {
+      "id": "med024",
+      "brandName": "Benadryl",
+      "genericName": "Diphenhydramine",
+      "description": "First-generation antihistamine",
+      "usage": "For allergies, insomnia, and motion sickness",
+      "dosageAdult": "25-50mg every 4-6 hours as needed",
+      "dosageChild": "12.5-25mg every 4-6 hours for children over 6",
+      "dosageElderly": "12.5-25mg as needed",
+      "sideEffects": "Significant drowsiness, dry mouth, blurred vision",
+      "warnings": "Causes marked drowsiness. Do not drive or operate machinery.",
+      "priceRange": "GHS 8-15",
+      "category": "Allergy",
+      "drugClass": "Antihistamine",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "itchy-eyes",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective but sedating"
+        },
+        {
+          "symptomId": "difficulty-sleeping",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Can help with sleep due to sedation"
+        }
+      ]
+    },
+    {
+      "id": "med025",
+      "brandName": "Ventolin",
+      "genericName": "Salbutamol",
+      "description": "Bronchodilator for asthma relief",
+      "usage": "For quick relief of asthma symptoms and breathing difficulties",
+      "dosageAdult": "1-2 puffs as needed, maximum 4 times daily",
+      "dosageChild": "1 puff as needed, consult doctor for children under 4",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Tremor, nervousness, headache, rapid heartbeat",
+      "warnings": "For emergency use only. Not for prevention. Seek medical help if symptoms worsen.",
+      "priceRange": "GHS 40-60",
+      "category": "Respiratory",
+      "drugClass": "Bronchodilator",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "shortness-breath",
+          "effectivenessScore": 10,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Life-saving for asthma attacks"
+        },
+        {
+          "symptomId": "wheezing",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Quickly relieves wheezing"
+        }
+      ]
+    },
+    {
+      "id": "med026",
+      "brandName": "ProAir",
+      "genericName": "Albuterol",
+      "description": "Bronchodilator inhaler",
+      "usage": "For asthma and COPD symptoms",
+      "dosageAdult": "1-2 puffs every 4-6 hours as needed",
+      "dosageChild": "1 puff every 4-6 hours for children over 4",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Nervousness, tremor, headache",
+      "warnings": "For quick relief only. Not for maintenance therapy.",
+      "priceRange": "GHS 35-55",
+      "category": "Respiratory",
+      "drugClass": "Bronchodilator",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "shortness-breath",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Rapid relief for breathing difficulties"
+        },
+        {
+          "symptomId": "wheezing",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for wheezing relief"
+        }
+      ]
+    },
+    {
+      "id": "med027",
+      "brandName": "Symbicort",
+      "genericName": "Budesonide + Formoterol",
+      "description": "Combination inhaler for asthma and COPD",
+      "usage": "For maintenance and relief of asthma and COPD symptoms",
+      "dosageAdult": "2 puffs twice daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Thrush, headache, throat irritation",
+      "warnings": "Contains steroid. Rinse mouth after use.",
+      "priceRange": "GHS 80-120",
+      "category": "Respiratory",
+      "drugClass": "Combination Inhaler",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "shortness-breath",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Long-term control of breathing"
+        },
+        {
+          "symptomId": "wheezing",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Prevents and treats wheezing"
+        }
+      ]
+    },
+    {
+      "id": "med028",
+      "brandName": "Advair",
+      "genericName": "Fluticasone + Salmeterol",
+      "description": "Combination inhaler for asthma",
+      "usage": "For long-term control of asthma symptoms",
+      "dosageAdult": "1 inhalation twice daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, throat irritation, hoarseness",
+      "warnings": "Not for sudden asthma attacks. Contains steroid.",
+      "priceRange": "GHS 90-130",
+      "category": "Respiratory",
+      "drugClass": "Combination Inhaler",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "shortness-breath",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Long-term asthma control"
+        },
+        {
+          "symptomId": "wheezing",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Prevents asthma symptoms"
+        }
+      ]
+    },
+    {
+      "id": "med029",
+      "brandName": "Spiriva",
+      "genericName": "Tiotropium",
+      "description": "Long-acting bronchodilator for COPD",
+      "usage": "For maintenance treatment of COPD",
+      "dosageAdult": "1 inhalation once daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Dry mouth, constipation, blurred vision",
+      "warnings": "For long-term use only. Not for acute symptoms.",
+      "priceRange": "GHS 70-100",
+      "category": "Respiratory",
+      "drugClass": "Anticholinergic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "shortness-breath",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "24-hour COPD control"
+        }
+      ]
+    },
+    {
+      "id": "med030",
+      "brandName": "Omeprazole",
+      "genericName": "Omeprazole",
+      "description": "Proton pump inhibitor for acid reflux",
+      "usage": "For heartburn, acid reflux, and stomach ulcers",
+      "dosageAdult": "20mg once daily before meal",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, diarrhea, stomach pain",
+      "warnings": "Long-term use may increase fracture risk. Not for immediate relief.",
+      "priceRange": "GHS 25-40",
+      "category": "Digestive",
+      "drugClass": "Proton Pump Inhibitor",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Excellent for acid-related stomach pain"
+        },
+        {
+          "symptomId": "nausea",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "May help with nausea from acid reflux"
+        }
+      ]
+    },
+    {
+      "id": "med031",
+      "brandName": "Nexium",
+      "genericName": "Esomeprazole",
+      "description": "Proton pump inhibitor for GERD",
+      "usage": "For gastroesophageal reflux disease and ulcers",
+      "dosageAdult": "20-40mg once daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, diarrhea, abdominal pain",
+      "warnings": "May increase risk of bone fractures. Long-term use requires monitoring.",
+      "priceRange": "GHS 35-55",
+      "category": "Digestive",
+      "drugClass": "Proton Pump Inhibitor",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Superior acid control"
+        }
+      ]
+    },
+    {
+      "id": "med032",
+      "brandName": "Prilosec",
+      "genericName": "Omeprazole Magnesium",
+      "description": "OTC proton pump inhibitor",
+      "usage": "For frequent heartburn and acid reflux",
+      "dosageAdult": "20mg once daily for 14 days",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, stomach pain, nausea",
+      "warnings": "Not for immediate relief. 14-day limit without doctor consultation.",
+      "priceRange": "GHS 20-35",
+      "category": "Digestive",
+      "drugClass": "Proton Pump Inhibitor",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "OTC acid control"
+        }
+      ]
+    },
+    {
+      "id": "med033",
+      "brandName": "Zantac",
+      "genericName": "Ranitidine",
+      "description": "H2 blocker for acid reduction",
+      "usage": "For heartburn, acid indigestion, and sour stomach",
+      "dosageAdult": "75-150mg twice daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Headache, constipation, diarrhea",
+      "warnings": "May contain NDMA (carcinogen). Check for recalls.",
+      "priceRange": "GHS 15-25",
+      "category": "Digestive",
+      "drugClass": "H2 Blocker",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Moderate acid reduction"
+        }
+      ]
+    },
+    {
+      "id": "med034",
+      "brandName": "Pepcid",
+      "genericName": "Famotidine",
+      "description": "H2 blocker for heartburn relief",
+      "usage": "For heartburn, acid indigestion, and GERD",
+      "dosageAdult": "10-20mg once or twice daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Headache, dizziness, constipation",
+      "warnings": "Generally safe for short-term use.",
+      "priceRange": "GHS 18-30",
+      "category": "Digestive",
+      "drugClass": "H2 Blocker",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Good alternative to PPIs"
+        }
+      ]
+    },
+    {
+      "id": "med035",
+      "brandName": "Tagamet",
+      "genericName": "Cimetidine",
+      "description": "H2 blocker for ulcers and heartburn",
+      "usage": "For ulcers, heartburn, and acid reflux",
+      "dosageAdult": "200-400mg twice daily",
+      "dosageChild": "Not recommended for children under 16",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Dizziness, drowsiness, gynecomastia",
+      "warnings": "Many drug interactions. Check with pharmacist.",
+      "priceRange": "GHS 20-35",
+      "category": "Digestive",
+      "drugClass": "H2 Blocker",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Older but effective"
+        }
+      ]
+    },
+    {
+      "id": "med036",
+      "brandName": "Gaviscon",
+      "genericName": "Aluminum Hydroxide + Magnesium Carbonate",
+      "description": "Antacid for heartburn relief",
+      "usage": "For heartburn, acid indigestion, and GERD",
+      "dosageAdult": "10-20ml as needed",
+      "dosageChild": "5-10ml as needed for children over 6",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Constipation, diarrhea",
+      "warnings": "May interfere with other medications. Take separately.",
+      "priceRange": "GHS 25-40",
+      "category": "Digestive",
+      "drugClass": "Antacid",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Fast relief with barrier action"
+        }
+      ]
+    },
+    {
+      "id": "med037",
+      "brandName": "Mylanta",
+      "genericName": "Aluminum + Magnesium Hydroxide",
+      "description": "Liquid antacid",
+      "usage": "For heartburn, acid indigestion, and upset stomach",
+      "dosageAdult": "10-20ml as needed",
+      "dosageChild": "5-10ml as needed for children over 6",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Constipation or diarrhea",
+      "warnings": "Take as needed. Not for long-term use.",
+      "priceRange": "GHS 15-25",
+      "category": "Digestive",
+      "drugClass": "Antacid",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Quick but temporary relief"
+        }
+      ]
+    },
+    {
+      "id": "med038",
+      "brandName": "Tums",
+      "genericName": "Calcium Carbonate",
+      "description": "Chewable antacid tablets",
+      "usage": "For heartburn and acid indigestion",
+      "dosageAdult": "2-4 tablets as needed",
+      "dosageChild": "1-2 tablets as needed for children over 6",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Constipation, rebound acidity",
+      "warnings": "May cause kidney stones with long-term use.",
+      "priceRange": "GHS 10-20",
+      "category": "Digestive",
+      "drugClass": "Antacid",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": true,
+          "evidenceLevel": "Weak",
+          "notes": "Fast-acting calcium-based"
+        }
+      ]
+    },
+    {
+      "id": "med039",
+      "brandName": "Pepto-Bismol",
+      "genericName": "Bismuth Subsalicylate",
+      "description": "Antidiarrheal and stomach relief",
+      "usage": "For diarrhea, indigestion, and upset stomach",
+      "dosageAdult": "30ml every 30 minutes as needed",
+      "dosageChild": "15ml every 30 minutes for children over 12",
+      "dosageElderly": "Not recommended",
+      "sideEffects": "Dark stools, tongue discoloration",
+      "warnings": "May cause Reye's syndrome in children. Contains salicylate.",
+      "priceRange": "GHS 20-30",
+      "category": "Digestive",
+      "drugClass": "Antidiarrheal",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "diarrhea",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Good for mild diarrhea"
+        },
+        {
+          "symptomId": "nausea",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Weak",
+          "notes": "Helps with upset stomach"
+        }
+      ]
+    },
+    {
+      "id": "med040",
+      "brandName": "Imodium",
+      "genericName": "Loperamide",
+      "description": "Antidiarrheal medication",
+      "usage": "For acute diarrhea and traveler's diarrhea",
+      "dosageAdult": "2mg after first loose stool, then 1mg after each subsequent stool",
+      "dosageChild": "Not recommended for children under 6",
+      "dosageElderly": "Use with caution",
+      "sideEffects": "Constipation, abdominal pain, dizziness",
+      "warnings": "Not for bacterial infections. Stop if fever develops.",
+      "priceRange": "GHS 15-25",
+      "category": "Digestive",
+      "drugClass": "Antidiarrheal",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "diarrhea",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Excellent for acute diarrhea"
+        }
+      ]
+    },
+    {
+      "id": "med041",
+      "brandName": "Lomotil",
+      "genericName": "Diphenoxylate + Atropine",
+      "description": "Prescription antidiarrheal",
+      "usage": "For severe diarrhea",
+      "dosageAdult": "2.5-5mg three times daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Drowsiness, dizziness, dry mouth",
+      "warnings": "Contains atropine. Potential for abuse.",
+      "priceRange": "GHS 25-40",
+      "category": "Digestive",
+      "drugClass": "Antidiarrheal",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "diarrhea",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Strong prescription option"
+        }
+      ]
+    },
+    {
+      "id": "med042",
+      "brandName": "Flagyl",
+      "genericName": "Metronidazole",
+      "description": "Antibiotic for bacterial and parasitic infections",
+      "usage": "For bacterial infections and certain parasitic infestations",
+      "dosageAdult": "500mg every 8 hours for 7-10 days",
+      "dosageChild": "15mg/kg/day divided in 3 doses",
+      "dosageElderly": "Lower dose may be needed",
+      "sideEffects": "Metallic taste, nausea, headache",
+      "warnings": "Avoid alcohol completely during treatment. May cause dark urine.",
+      "priceRange": "GHS 20-35",
+      "category": "Antibiotic",
+      "drugClass": "Nitroimidazole",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "diarrhea",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for bacterial diarrhea"
+        },
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with abdominal infections"
+        }
+      ]
+    },
+    {
+      "id": "med043",
+      "brandName": "Amoxicillin",
+      "genericName": "Amoxicillin",
+      "description": "Broad-spectrum antibiotic",
+      "usage": "For bacterial infections of respiratory tract, ears, skin",
+      "dosageAdult": "500mg every 8 hours for 7-10 days",
+      "dosageChild": "25mg/kg/day divided in 2-3 doses",
+      "dosageElderly": "Same as adult, monitor kidney function",
+      "sideEffects": "Diarrhea, nausea, skin rash",
+      "warnings": "Complete full course even if feeling better. May cause allergic reactions.",
+      "priceRange": "GHS 15-30",
+      "category": "Antibiotic",
+      "drugClass": "Penicillin",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "sore-throat",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "First-line for strep throat"
+        },
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 8,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Treats bacterial fevers"
+        }
+      ]
+    },
+    {
+      "id": "med044",
+      "brandName": "Augmentin",
+      "genericName": "Amoxicillin + Clavulanate",
+      "description": "Broad-spectrum antibiotic with beta-lactamase inhibitor",
+      "usage": "For resistant bacterial infections",
+      "dosageAdult": "500-875mg every 12 hours",
+      "dosageChild": "20-40mg/kg/day divided in 2-3 doses",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Diarrhea, nausea, skin rash",
+      "warnings": "Higher risk of diarrhea. Complete full course.",
+      "priceRange": "GHS 30-50",
+      "category": "Antibiotic",
+      "drugClass": "Penicillin Combination",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "sore-throat",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For resistant infections"
+        },
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 8,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Treats resistant bacterial infections"
+        }
+      ]
+    },
+    {
+      "id": "med045",
+      "brandName": "Azithromycin",
+      "genericName": "Azithromycin",
+      "description": "Macrolide antibiotic",
+      "usage": "For respiratory infections, skin infections, and STDs",
+      "dosageAdult": "500mg on day 1, then 250mg on days 2-5",
+      "dosageChild": "10mg/kg on day 1, then 5mg/kg on days 2-5",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Diarrhea, nausea, abdominal pain",
+      "warnings": "May cause QT prolongation. Complete full course.",
+      "priceRange": "GHS 25-45",
+      "category": "Antibiotic",
+      "drugClass": "Macrolide",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "sore-throat",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Good for atypical infections"
+        },
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Short course effective"
+        }
+      ]
+    },
+    {
+      "id": "med046",
+      "brandName": "Doxycycline",
+      "genericName": "Doxycycline",
+      "description": "Tetracycline antibiotic",
+      "usage": "For respiratory infections, acne, and tick-borne diseases",
+      "dosageAdult": "100mg every 12 hours",
+      "dosageChild": "Not recommended for children under 8",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Photosensitivity, nausea, esophageal irritation",
+      "warnings": "Take with plenty of water. Avoid sun exposure.",
+      "priceRange": "GHS 20-35",
+      "category": "Antibiotic",
+      "drugClass": "Tetracycline",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "sore-throat",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Broad coverage"
+        },
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Good for skin infections"
+        }
+      ]
+    },
+    {
+      "id": "med047",
+      "brandName": "Ciprofloxacin",
+      "genericName": "Ciprofloxacin",
+      "description": "Fluoroquinolone antibiotic",
+      "usage": "For urinary tract infections and bacterial infections",
+      "dosageAdult": "250-750mg every 12 hours for 3-14 days",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Nausea, diarrhea, tendon inflammation",
+      "warnings": "Risk of tendon rupture. Avoid with certain medications. Not for children.",
+      "priceRange": "GHS 30-50",
+      "category": "Antibiotic",
+      "drugClass": "Fluoroquinolone",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "frequent-urination",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "First-line for UTIs"
+        }
+      ]
+    },
+    {
+      "id": "med048",
+      "brandName": "Levaquin",
+      "genericName": "Levofloxacin",
+      "description": "Fluoroquinolone antibiotic",
+      "usage": "For respiratory infections, UTIs, and skin infections",
+      "dosageAdult": "250-750mg once daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Nausea, diarrhea, headache, tendon rupture",
+      "warnings": "Black box warning for tendon rupture and nerve damage.",
+      "priceRange": "GHS 40-70",
+      "category": "Antibiotic",
+      "drugClass": "Fluoroquinolone",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "frequent-urination",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Potent UTI treatment"
+        }
+      ]
+    },
+    {
+      "id": "med049",
+      "brandName": "Bactrim",
+      "genericName": "Sulfamethoxazole + Trimethoprim",
+      "description": "Combination antibiotic",
+      "usage": "For UTIs, respiratory infections, and traveler's diarrhea",
+      "dosageAdult": "1 tablet (800/160mg) every 12 hours",
+      "dosageChild": "Based on weight, every 12 hours",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Nausea, vomiting, skin rash",
+      "warnings": "May cause severe skin reactions. Avoid in sulfa allergy.",
+      "priceRange": "GHS 25-40",
+      "category": "Antibiotic",
+      "drugClass": "Sulfonamide",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "frequent-urination",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Good for UTIs"
+        },
+        {
+          "symptomId": "diarrhea",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "For traveler's diarrhea"
+        }
+      ]
+    },
+    {
+      "id": "med050",
+      "brandName": "Clindamycin",
+      "genericName": "Clindamycin",
+      "description": "Lincosamide antibiotic",
+      "usage": "For serious bacterial infections",
+      "dosageAdult": "150-450mg every 6 hours",
+      "dosageChild": "8-20mg/kg/day divided in 3-4 doses",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Diarrhea, nausea, abdominal pain",
+      "warnings": "May cause C. difficile colitis. Monitor for diarrhea.",
+      "priceRange": "GHS 30-50",
+      "category": "Antibiotic",
+      "drugClass": "Lincosamide",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "sore-throat",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For serious infections"
+        },
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Good for skin infections"
+        }
+      ]
+    },
+    {
+      "id": "med051",
+      "brandName": "Vancomycin",
+      "genericName": "Vancomycin",
+      "description": "Glycopeptide antibiotic",
+      "usage": "For serious gram-positive infections",
+      "dosageAdult": "15-20mg/kg every 8-12 hours IV",
+      "dosageChild": "40-60mg/kg/day divided in 4 doses",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Nephrotoxicity, ototoxicity, red man syndrome",
+      "warnings": "Hospital use only. Requires monitoring.",
+      "priceRange": "GHS 100-200",
+      "category": "Antibiotic",
+      "drugClass": "Glycopeptide",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "For serious infections"
+        }
+      ]
+    },
+    {
+      "id": "med052",
+      "brandName": "Albendazole",
+      "genericName": "Albendazole",
+      "description": "Anthelmintic for parasitic worm infections",
+      "usage": "For treatment of intestinal worm infections",
+      "dosageAdult": "400mg single dose, may repeat in 2 weeks",
+      "dosageChild": "200mg for children 1-2 years, 400mg for over 2 years",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Abdominal pain, nausea, dizziness",
+      "warnings": "May cause liver enzyme elevation. Monitor blood counts.",
+      "priceRange": "GHS 15-25",
+      "category": "Antiparasitic",
+      "drugClass": "Benzimidazole",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Treats parasitic abdominal pain"
+        },
+        {
+          "symptomId": "diarrhea",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Helps with parasitic diarrhea"
+        }
+      ]
+    },
+    {
+      "id": "med053",
+      "brandName": "Mebendazole",
+      "genericName": "Mebendazole",
+      "description": "Anthelmintic for worm infections",
+      "usage": "For treatment of intestinal parasites",
+      "dosageAdult": "100mg twice daily for 3 days",
+      "dosageChild": "100mg once daily for 3 days for children over 2",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Abdominal pain, diarrhea, headache",
+      "warnings": "Generally well tolerated. May cause abdominal discomfort.",
+      "priceRange": "GHS 12-20",
+      "category": "Antiparasitic",
+      "drugClass": "Benzimidazole",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for worm infections"
+        }
+      ]
+    },
+    {
+      "id": "med054",
+      "brandName": "Ivermectin",
+      "genericName": "Ivermectin",
+      "description": "Antiparasitic for various infections",
+      "usage": "For river blindness, strongyloidiasis, and scabies",
+      "dosageAdult": "150-200mcg/kg single dose",
+      "dosageChild": "150mcg/kg single dose for children over 15kg",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Fever, rash, dizziness",
+      "warnings": "Not for COVID-19. May cause Mazzotti reaction.",
+      "priceRange": "GHS 20-35",
+      "category": "Antiparasitic",
+      "drugClass": "Avermectin",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "skin-rash",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Good for parasitic skin infections"
+        }
+      ]
+    },
+    {
+      "id": "med055",
+      "brandName": "Artemether-Lumefantrine",
+      "genericName": "Artemether-Lumefantrine",
+      "description": "Antimalarial combination therapy",
+      "usage": "For treatment of uncomplicated malaria",
+      "dosageAdult": "4 tablets at 0, 8, 24, 36, 48, and 60 hours",
+      "dosageChild": "Dose based on weight, 6 doses over 3 days",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Headache, dizziness, nausea, loss of appetite",
+      "warnings": "Take with fatty food for better absorption. Complete full course.",
+      "priceRange": "GHS 40-60",
+      "category": "Antimalarial",
+      "drugClass": "Artemisinin Combination",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 10,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Essential for malaria treatment"
+        },
+        {
+          "symptomId": "headache",
+          "effectivenessScore": 8,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Treats malaria headaches"
+        },
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with malaria fatigue"
+        }
+      ]
+    },
+    {
+      "id": "med056",
+      "brandName": "Chloroquine",
+      "genericName": "Chloroquine Phosphate",
+      "description": "Antimalarial medication",
+      "usage": "For malaria prevention and treatment",
+      "dosageAdult": "500mg weekly for prevention, 1g then 500mg at 6, 24, 48 hours for treatment",
+      "dosageChild": "5mg/kg weekly for prevention",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Nausea, vomiting, headache, vision changes",
+      "warnings": "Check for resistance in your area. May cause retinopathy.",
+      "priceRange": "GHS 10-20",
+      "category": "Antimalarial",
+      "drugClass": "Aminoquinoline",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Traditional malaria treatment"
+        }
+      ]
+    },
+    {
+      "id": "med057",
+      "brandName": "Quinine",
+      "genericName": "Quinine Sulfate",
+      "description": "Antimalarial and muscle relaxant",
+      "usage": "For malaria and nocturnal leg cramps",
+      "dosageAdult": "650mg every 8 hours for malaria, 200-300mg at bedtime for cramps",
+      "dosageChild": "10mg/kg every 8 hours for malaria",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Tinnitus, headache, nausea, vision changes",
+      "warnings": "May cause cinchonism. Many drug interactions.",
+      "priceRange": "GHS 25-40",
+      "category": "Antimalarial",
+      "drugClass": "Alkaloid",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for severe malaria"
+        },
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "Helps with muscle cramps"
+        }
+      ]
+    },
+    {
+      "id": "med058",
+      "brandName": "Mefloquine",
+      "genericName": "Mefloquine Hydrochloride",
+      "description": "Antimalarial for prevention and treatment",
+      "usage": "For malaria prevention and treatment",
+      "dosageAdult": "250mg weekly for prevention, 750mg then 500mg at 6-8 hours for treatment",
+      "dosageChild": "Not recommended for children under 3 months or under 5kg",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Dizziness, headache, nausea, psychiatric effects",
+      "warnings": "May cause neuropsychiatric effects. Not for people with depression.",
+      "priceRange": "GHS 35-55",
+      "category": "Antimalarial",
+      "drugClass": "Quinoline",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fever",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Good for resistant malaria"
+        }
+      ]
+    },
+    {
+      "id": "med059",
+      "brandName": "Diazepam",
+      "genericName": "Diazepam",
+      "description": "Benzodiazepine for anxiety and muscle relaxation",
+      "usage": "For anxiety, muscle spasms, and seizures",
+      "dosageAdult": "2-10mg 2-4 times daily as needed",
+      "dosageChild": "Not recommended for children under 6 months",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Drowsiness, dizziness, confusion, dependence",
+      "warnings": "High potential for dependence. Not for long-term use. Avoid alcohol.",
+      "priceRange": "GHS 20-40",
+      "category": "Anxiety",
+      "drugClass": "Benzodiazepine",
+      "prescription": true,
+      "controlled": true,
+      "symptomMappings": [
+        {
+          "symptomId": "anxiety",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Highly effective for acute anxiety"
+        },
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "Relieves muscle spasms"
+        }
+      ]
+    },
+    {
+      "id": "med060",
+      "brandName": "Alprazolam",
+      "genericName": "Alprazolam",
+      "description": "Short-acting benzodiazepine for anxiety",
+      "usage": "For anxiety disorders and panic attacks",
+      "dosageAdult": "0.25-0.5mg three times daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Drowsiness, dizziness, memory impairment",
+      "warnings": "High potential for abuse and dependence. Short-term use only.",
+      "priceRange": "GHS 25-45",
+      "category": "Anxiety",
+      "drugClass": "Benzodiazepine",
+      "prescription": true,
+      "controlled": true,
+      "symptomMappings": [
+        {
+          "symptomId": "anxiety",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Fast-acting for anxiety"
+        }
+      ]
+    },
+    {
+      "id": "med061",
+      "brandName": "Lorazepam",
+      "genericName": "Lorazepam",
+      "description": "Intermediate-acting benzodiazepine",
+      "usage": "For anxiety, insomnia, and preoperative sedation",
+      "dosageAdult": "1-4mg daily in divided doses",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Drowsiness, dizziness, unsteadiness",
+      "warnings": "May cause dependence. Use with caution in elderly.",
+      "priceRange": "GHS 20-35",
+      "category": "Anxiety",
+      "drugClass": "Benzodiazepine",
+      "prescription": true,
+      "controlled": true,
+      "symptomMappings": [
+        {
+          "symptomId": "anxiety",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Good for persistent anxiety"
+        }
+      ]
+    },
+    {
+      "id": "med062",
+      "brandName": "Clonazepam",
+      "genericName": "Clonazepam",
+      "description": "Long-acting benzodiazepine",
+      "usage": "For seizures, panic disorder, and anxiety",
+      "dosageAdult": "0.5-2mg twice daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Drowsiness, ataxia, behavioral changes",
+      "warnings": "High potential for dependence. Not for long-term use.",
+      "priceRange": "GHS 25-40",
+      "category": "Anxiety",
+      "drugClass": "Benzodiazepine",
+      "prescription": true,
+      "controlled": true,
+      "symptomMappings": [
+        {
+          "symptomId": "anxiety",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Long-lasting anxiety relief"
+        }
+      ]
+    },
+    {
+      "id": "med063",
+      "brandName": "Buspirone",
+      "genericName": "Buspirone Hydrochloride",
+      "description": "Non-benzodiazepine anxiolytic",
+      "usage": "For generalized anxiety disorder",
+      "dosageAdult": "5-10mg two to three times daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Dizziness, headache, nausea",
+      "warnings": "Takes 2-4 weeks to work. Not for immediate relief.",
+      "priceRange": "GHS 30-50",
+      "category": "Anxiety",
+      "drugClass": "Azapirone",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "anxiety",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Non-addictive alternative"
+        }
+      ]
+    },
+    {
+      "id": "med064",
+      "brandName": "Hydroxyzine",
+      "genericName": "Hydroxyzine Hydrochloride",
+      "description": "Antihistamine anxiolytic",
+      "usage": "For anxiety, tension, and as a sedative",
+      "dosageAdult": "50-100mg four times daily",
+      "dosageChild": "50mg daily for children over 6",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Drowsiness, dry mouth, headache",
+      "warnings": "Causes drowsiness. Avoid driving or operating machinery.",
+      "priceRange": "GHS 20-35",
+      "category": "Anxiety",
+      "drugClass": "Antihistamine",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "anxiety",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Sedating anxiolytic"
+        }
+      ]
+    },
+    {
+      "id": "med065",
+      "brandName": "Lisinopril",
+      "genericName": "Lisinopril",
+      "description": "ACE inhibitor for blood pressure",
+      "usage": "For high blood pressure and heart failure",
+      "dosageAdult": "10-40mg once daily",
+      "dosageChild": "Not recommended for children under 6",
+      "dosageElderly": "Start with lower dose",
+      "sideEffects": "Dry cough, dizziness, fatigue",
+      "warnings": "Can cause birth defects. Monitor potassium levels. May cause angioedema.",
+      "priceRange": "GHS 25-45",
+      "category": "Cardiovascular",
+      "drugClass": "ACE Inhibitor",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "First-line treatment for hypertension"
+        }
+      ]
+    },
+    {
+      "id": "med066",
+      "brandName": "Enalapril",
+      "genericName": "Enalapril Maleate",
+      "description": "ACE inhibitor for hypertension",
+      "usage": "For high blood pressure and heart failure",
+      "dosageAdult": "5-40mg daily in 1-2 divided doses",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Dry cough, dizziness, hypotension",
+      "warnings": "May cause angioedema. Monitor renal function.",
+      "priceRange": "GHS 20-35",
+      "category": "Cardiovascular",
+      "drugClass": "ACE Inhibitor",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective ACE inhibitor"
+        }
+      ]
+    },
+    {
+      "id": "med067",
+      "brandName": "Ramipril",
+      "genericName": "Ramipril",
+      "description": "ACE inhibitor for cardiovascular protection",
+      "usage": "For hypertension, heart failure, and renal protection",
+      "dosageAdult": "2.5-10mg once daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Dry cough, dizziness, hypotension",
+      "warnings": "May cause angioedema. Monitor potassium.",
+      "priceRange": "GHS 30-50",
+      "category": "Cardiovascular",
+      "drugClass": "ACE Inhibitor",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Good cardiovascular protection"
+        }
+      ]
+    },
+    {
+      "id": "med068",
+      "brandName": "Losartan",
+      "genericName": "Losartan Potassium",
+      "description": "Angiotensin II receptor blocker",
+      "usage": "For high blood pressure and diabetic nephropathy",
+      "dosageAdult": "25-100mg once daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Dizziness, hyperkalemia, cough (less than ACEI)",
+      "warnings": "Monitor potassium levels. May cause angioedema.",
+      "priceRange": "GHS 25-45",
+      "category": "Cardiovascular",
+      "drugClass": "ARB",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Alternative to ACE inhibitors"
+        }
+      ]
+    },
+    {
+      "id": "med069",
+      "brandName": "Valsartan",
+      "genericName": "Valsartan",
+      "description": "Angiotensin II receptor blocker",
+      "usage": "For hypertension and heart failure",
+      "dosageAdult": "80-320mg once daily",
+      "dosageChild": "Not recommended for children under 6",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Dizziness, hyperkalemia, fatigue",
+      "warnings": "Monitor for hyperkalemia. Avoid in pregnancy.",
+      "priceRange": "GHS 30-50",
+      "category": "Cardiovascular",
+      "drugClass": "ARB",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Good blood pressure control"
+        }
+      ]
+    },
+    {
+      "id": "med070",
+      "brandName": "Amlodipine",
+      "genericName": "Amlodipine Besylate",
+      "description": "Calcium channel blocker",
+      "usage": "For hypertension and angina",
+      "dosageAdult": "5-10mg once daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Peripheral edema, dizziness, flushing",
+      "warnings": "May cause reflex tachycardia. Monitor blood pressure.",
+      "priceRange": "GHS 20-35",
+      "category": "Cardiovascular",
+      "drugClass": "Calcium Channel Blocker",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Good for hypertension with angina"
+        }
+      ]
+    },
+    {
+      "id": "med071",
+      "brandName": "Nifedipine",
+      "genericName": "Nifedipine",
+      "description": "Calcium channel blocker",
+      "usage": "For hypertension and angina",
+      "dosageAdult": "10-30mg three times daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Headache, flushing, peripheral edema",
+      "warnings": "May cause reflex tachycardia. Avoid grapefruit.",
+      "priceRange": "GHS 15-25",
+      "category": "Cardiovascular",
+      "drugClass": "Calcium Channel Blocker",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Fast-acting calcium blocker"
+        }
+      ]
+    },
+    {
+      "id": "med072",
+      "brandName": "Diltiazem",
+      "genericName": "Diltiazem Hydrochloride",
+      "description": "Calcium channel blocker",
+      "usage": "For hypertension, angina, and arrhythmias",
+      "dosageAdult": "30-90mg four times daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Dizziness, headache, bradycardia",
+      "warnings": "May cause heart block. Monitor heart rate.",
+      "priceRange": "GHS 25-40",
+      "category": "Cardiovascular",
+      "drugClass": "Calcium Channel Blocker",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Good for hypertension with arrhythmias"
+        }
+      ]
+    },
+    {
+      "id": "med073",
+      "brandName": "Verapamil",
+      "genericName": "Verapamil Hydrochloride",
+      "description": "Calcium channel blocker",
+      "usage": "For hypertension, angina, and arrhythmias",
+      "dosageAdult": "80-160mg three times daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Constipation, dizziness, hypotension",
+      "warnings": "May cause heart block. Avoid with beta-blockers.",
+      "priceRange": "GHS 20-35",
+      "category": "Cardiovascular",
+      "drugClass": "Calcium Channel Blocker",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Good for hypertension with arrhythmias"
+        }
+      ]
+    },
+    {
+      "id": "med074",
+      "brandName": "Metoprolol",
+      "genericName": "Metoprolol Tartrate",
+      "description": "Beta blocker for hypertension and heart conditions",
+      "usage": "For hypertension, angina, and heart failure",
+      "dosageAdult": "50-100mg twice daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Fatigue, dizziness, bradycardia",
+      "warnings": "May cause bronchospasm. Not for abrupt withdrawal.",
+      "priceRange": "GHS 20-35",
+      "category": "Cardiovascular",
+      "drugClass": "Beta Blocker",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Good for hypertension with heart conditions"
+        }
+      ]
+    },
+    {
+      "id": "med075",
+      "brandName": "Atenolol",
+      "genericName": "Atenolol",
+      "description": "Beta blocker for hypertension",
+      "usage": "For hypertension and angina",
+      "dosageAdult": "25-100mg once daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Fatigue, cold extremities, bradycardia",
+      "warnings": "May cause bronchospasm. Monitor heart rate.",
+      "priceRange": "GHS 15-25",
+      "category": "Cardiovascular",
+      "drugClass": "Beta Blocker",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Once-daily beta blocker"
+        }
+      ]
+    },
+    {
+      "id": "med076",
+      "brandName": "Propranolol",
+      "genericName": "Propranolol Hydrochloride",
+      "description": "Non-selective beta blocker",
+      "usage": "For hypertension, anxiety, and migraine prevention",
+      "dosageAdult": "40-160mg twice daily",
+      "dosageChild": "Based on weight and age",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Fatigue, dizziness, bronchospasm",
+      "warnings": "May cause bronchospasm. Not for asthmatics.",
+      "priceRange": "GHS 15-25",
+      "category": "Cardiovascular",
+      "drugClass": "Beta Blocker",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Also helps with anxiety"
+        }
+      ]
+    },
+    {
+      "id": "med077",
+      "brandName": "Carvedilol",
+      "genericName": "Carvedilol",
+      "description": "Alpha-beta blocker for heart failure",
+      "usage": "For heart failure and hypertension",
+      "dosageAdult": "3.125-25mg twice daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Dizziness, fatigue, hypotension",
+      "warnings": "May cause severe hypotension. Monitor closely.",
+      "priceRange": "GHS 30-50",
+      "category": "Cardiovascular",
+      "drugClass": "Alpha-Beta Blocker",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Good for heart failure patients"
+        }
+      ]
+    },
+    {
+      "id": "med078",
+      "brandName": "Bisoprolol",
+      "genericName": "Bisoprolol Fumarate",
+      "description": "Beta-1 selective blocker",
+      "usage": "For hypertension and heart failure",
+      "dosageAdult": "2.5-10mg once daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Fatigue, dizziness, bradycardia",
+      "warnings": "May cause bronchospasm. Monitor heart rate.",
+      "priceRange": "GHS 25-45",
+      "category": "Cardiovascular",
+      "drugClass": "Beta Blocker",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Cardioselective beta blocker"
+        }
+      ]
+    },
+    {
+      "id": "med079",
+      "brandName": "Hydrochlorothiazide",
+      "genericName": "Hydrochlorothiazide",
+      "description": "Diuretic for blood pressure and fluid retention",
+      "usage": "For high blood pressure and edema",
+      "dosageAdult": "12.5-25mg once daily",
+      "dosageChild": "1-2mg/kg/day divided in 1-2 doses",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Increased urination, dizziness, electrolyte imbalance",
+      "warnings": "Monitor potassium levels. Take in morning to avoid nighttime urination.",
+      "priceRange": "GHS 10-20",
+      "category": "Cardiovascular",
+      "drugClass": "Diuretic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for hypertension"
+        }
+      ]
+    },
+    {
+      "id": "med080",
+      "brandName": "Furosemide",
+      "genericName": "Furosemide",
+      "description": "Loop diuretic for fluid retention",
+      "usage": "For edema, heart failure, and hypertension",
+      "dosageAdult": "20-80mg once or twice daily",
+      "dosageChild": "1-2mg/kg/day divided in 1-2 doses",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Dehydration, electrolyte imbalance, ototoxicity",
+      "warnings": "Monitor electrolytes and kidney function. Potent diuretic.",
+      "priceRange": "GHS 15-25",
+      "category": "Cardiovascular",
+      "drugClass": "Loop Diuretic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Used for severe hypertension"
+        }
+      ]
+    },
+    {
+      "id": "med081",
+      "brandName": "Spironolactone",
+      "genericName": "Spironolactone",
+      "description": "Potassium-sparing diuretic",
+      "usage": "For heart failure, hypertension, and edema",
+      "dosageAdult": "25-200mg daily in divided doses",
+      "dosageChild": "1-3mg/kg/day divided in 1-4 doses",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Hyperkalemia, gynecomastia, menstrual irregularities",
+      "warnings": "Monitor potassium levels. May cause hormonal side effects.",
+      "priceRange": "GHS 20-35",
+      "category": "Cardiovascular",
+      "drugClass": "Potassium-Sparing Diuretic",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Good for heart failure patients"
+        }
+      ]
+    },
+    {
+      "id": "med082",
+      "brandName": "Metformin",
+      "genericName": "Metformin",
+      "description": "Biguanide for type 2 diabetes",
+      "usage": "For blood sugar control in type 2 diabetes",
+      "dosageAdult": "500-1000mg twice daily with meals",
+      "dosageChild": "Not recommended for children under 10",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Diarrhea, nausea, stomach upset",
+      "warnings": "Can cause lactic acidosis (rare but serious). Monitor kidney function.",
+      "priceRange": "GHS 20-35",
+      "category": "Diabetes",
+      "drugClass": "Biguanide",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "excessive-thirst",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Helps control diabetes symptoms"
+        },
+        {
+          "symptomId": "frequent-urination",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Reduces diabetes-related urination"
+        }
+      ]
+    },
+    {
+      "id": "med083",
+      "brandName": "Glucophage",
+      "genericName": "Metformin Hydrochloride",
+      "description": "Biguanide for diabetes management",
+      "usage": "For type 2 diabetes blood sugar control",
+      "dosageAdult": "500mg twice daily, increase as needed",
+      "dosageChild": "Not recommended for children under 10",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "GI upset, metallic taste, vitamin B12 deficiency",
+      "warnings": "Take with meals to reduce GI side effects.",
+      "priceRange": "GHS 25-40",
+      "category": "Diabetes",
+      "drugClass": "Biguanide",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "excessive-thirst",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "First-line diabetes treatment"
+        },
+        {
+          "symptomId": "frequent-urination",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Controls diabetes symptoms"
+        }
+      ]
+    },
+    {
+      "id": "med084",
+      "brandName": "Glibenclamide",
+      "genericName": "Glibenclamide",
+      "description": "Sulfonylurea for type 2 diabetes",
+      "usage": "For blood sugar control in type 2 diabetes",
+      "dosageAdult": "2.5-15mg once daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Hypoglycemia, weight gain, nausea",
+      "warnings": "May cause severe hypoglycemia. Monitor blood sugar closely.",
+      "priceRange": "GHS 15-25",
+      "category": "Diabetes",
+      "drugClass": "Sulfonylurea",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "excessive-thirst",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Stimulates insulin release"
+        }
+      ]
+    },
+    {
+      "id": "med085",
+      "brandName": "Glipizide",
+      "genericName": "Glipizide",
+      "description": "Sulfonylurea for diabetes",
+      "usage": "For type 2 diabetes blood sugar control",
+      "dosageAdult": "5-40mg daily in divided doses",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Hypoglycemia, weight gain, dizziness",
+      "warnings": "Take 30 minutes before meals. Monitor for hypoglycemia.",
+      "priceRange": "GHS 20-35",
+      "category": "Diabetes",
+      "drugClass": "Sulfonylurea",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "excessive-thirst",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Fast-acting sulfonylurea"
+        }
+      ]
+    },
+    {
+      "id": "med086",
+      "brandName": "Pioglitazone",
+      "genericName": "Pioglitazone",
+      "description": "Thiazolidinedione for diabetes",
+      "usage": "For type 2 diabetes blood sugar control",
+      "dosageAdult": "15-45mg once daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Weight gain, edema, heart failure risk",
+      "warnings": "May cause or worsen heart failure. Monitor weight.",
+      "priceRange": "GHS 30-50",
+      "category": "Diabetes",
+      "drugClass": "Thiazolidinedione",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "excessive-thirst",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Improves insulin sensitivity"
+        }
+      ]
+    },
+    {
+      "id": "med087",
+      "brandName": "Sitagliptin",
+      "genericName": "Sitagliptin",
+      "description": "DPP-4 inhibitor for diabetes",
+      "usage": "For type 2 diabetes blood sugar control",
+      "dosageAdult": "100mg once daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Upper respiratory infection, headache, nausea",
+      "warnings": "May cause pancreatitis. Monitor for joint pain.",
+      "priceRange": "GHS 50-80",
+      "category": "Diabetes",
+      "drugClass": "DPP-4 Inhibitor",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "excessive-thirst",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Once-daily DPP-4 inhibitor"
+        }
+      ]
+    },
+    {
+      "id": "med088",
+      "brandName": "Empagliflozin",
+      "genericName": "Empagliflozin",
+      "description": "SGLT2 inhibitor for diabetes",
+      "usage": "For type 2 diabetes blood sugar control",
+      "dosageAdult": "10-25mg once daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Genital yeast infections, urinary tract infections",
+      "warnings": "May cause dehydration and ketoacidosis. Monitor renal function.",
+      "priceRange": "GHS 60-100",
+      "category": "Diabetes",
+      "drugClass": "SGLT2 Inhibitor",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "excessive-thirst",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Also provides cardiovascular benefits"
+        }
+      ]
+    },
+    {
+      "id": "med089",
+      "brandName": "Insulin",
+      "genericName": "Insulin Human",
+      "description": "Hormone for diabetes management",
+      "usage": "For type 1 and type 2 diabetes",
+      "dosageAdult": "Individualized based on blood sugar",
+      "dosageChild": "Individualized based on weight and blood sugar",
+      "dosageElderly": "Lower doses often needed",
+      "sideEffects": "Hypoglycemia, weight gain, lipodystrophy",
+      "warnings": "Requires blood sugar monitoring. Risk of hypoglycemia.",
+      "priceRange": "GHS 100-300",
+      "category": "Diabetes",
+      "drugClass": "Hormone",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "excessive-thirst",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Essential for type 1 diabetes"
+        },
+        {
+          "symptomId": "frequent-urination",
+          "effectivenessScore": 9,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Controls all diabetes symptoms"
+        }
+      ]
+    },
+    {
+      "id": "med090",
+      "brandName": "Simvastatin",
+      "genericName": "Simvastatin",
+      "description": "Statin for cholesterol management",
+      "usage": "For high cholesterol and cardiovascular prevention",
+      "dosageAdult": "10-40mg once daily in evening",
+      "dosageChild": "Not recommended for children under 10",
+      "dosageElderly": "Start with lower dose",
+      "sideEffects": "Muscle pain, liver enzyme elevation",
+      "warnings": "Monitor liver function. Avoid grapefruit. Report muscle pain immediately.",
+      "priceRange": "GHS 30-50",
+      "category": "Cardiovascular",
+      "drugClass": "Statin",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Helps with cardiovascular health"
+        }
+      ]
+    },
+    {
+      "id": "med091",
+      "brandName": "Atorvastatin",
+      "genericName": "Atorvastatin Calcium",
+      "description": "Statin for high cholesterol",
+      "usage": "For hypercholesterolemia and cardiovascular prevention",
+      "dosageAdult": "10-80mg once daily",
+      "dosageChild": "Not recommended for children under 10",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Muscle pain, liver enzyme elevation",
+      "warnings": "Monitor liver function. Avoid grapefruit. Report muscle pain.",
+      "priceRange": "GHS 35-60",
+      "category": "Cardiovascular",
+      "drugClass": "Statin",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Potent statin for cholesterol"
+        }
+      ]
+    },
+    {
+      "id": "med092",
+      "brandName": "Rosuvastatin",
+      "genericName": "Rosuvastatin Calcium",
+      "description": "Potent statin for cholesterol",
+      "usage": "For high cholesterol and cardiovascular risk reduction",
+      "dosageAdult": "5-40mg once daily",
+      "dosageChild": "Not recommended for children under 10",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Muscle pain, liver enzyme elevation, diabetes risk",
+      "warnings": "Most potent statin. Monitor closely for side effects.",
+      "priceRange": "GHS 40-70",
+      "category": "Cardiovascular",
+      "drugClass": "Statin",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Most effective statin"
+        }
+      ]
+    },
+    {
+      "id": "med093",
+      "brandName": "Pravastatin",
+      "genericName": "Pravastatin Sodium",
+      "description": "Statin for cholesterol management",
+      "usage": "For hypercholesterolemia and prevention of cardiovascular events",
+      "dosageAdult": "10-40mg once daily",
+      "dosageChild": "Not recommended for children under 8",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Muscle pain, headache, nausea",
+      "warnings": "Generally well tolerated. Monitor liver function.",
+      "priceRange": "GHS 30-50",
+      "category": "Cardiovascular",
+      "drugClass": "Statin",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Well-tolerated statin"
+        }
+      ]
+    },
+    {
+      "id": "med094",
+      "brandName": "Ezetimibe",
+      "genericName": "Ezetimibe",
+      "description": "Cholesterol absorption inhibitor",
+      "usage": "For high cholesterol alone or with statins",
+      "dosageAdult": "10mg once daily",
+      "dosageChild": "Not recommended for children under 10",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Diarrhea, abdominal pain, fatigue",
+      "warnings": "Often used with statins. Monitor liver function.",
+      "priceRange": "GHS 40-60",
+      "category": "Cardiovascular",
+      "drugClass": "Cholesterol Absorption Inhibitor",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Alternative to statins"
+        }
+      ]
+    },
+    {
+      "id": "med095",
+      "brandName": "Warfarin",
+      "genericName": "Warfarin Sodium",
+      "description": "Anticoagulant for blood thinning",
+      "usage": "For prevention of blood clots and stroke",
+      "dosageAdult": "2-10mg daily based on INR",
+      "dosageChild": "Based on weight and INR",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Bleeding, bruising, hair loss",
+      "warnings": "Requires regular INR monitoring. Many drug and food interactions.",
+      "priceRange": "GHS 20-35",
+      "category": "Cardiovascular",
+      "drugClass": "Anticoagulant",
+      "prescription": true,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "chest-pain",
+          "effectivenessScore": 8,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Prevents clot-related chest pain"
+        }
+      ]
+    },
+    {
+      "id": "med096",
+      "brandName": "Aspirin 81",
+      "genericName": "Low-Dose Aspirin",
+      "description": "Low-dose aspirin for heart protection",
+      "usage": "For cardiovascular protection and stroke prevention",
+      "dosageAdult": "81mg once daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Same as adult with caution",
+      "sideEffects": "Stomach irritation, bleeding risk",
+      "warnings": "Not for everyone. Consult doctor before starting.",
+      "priceRange": "GHS 10-20",
+      "category": "Cardiovascular",
+      "drugClass": "NSAID",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "chest-pain",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Strong",
+          "notes": "Prevents heart attacks"
+        }
+      ]
+    },
+    {
+      "id": "med097",
+      "brandName": "Vitamin C",
+      "genericName": "Ascorbic Acid",
+      "description": "Vitamin supplement and antioxidant",
+      "usage": "For vitamin C deficiency and immune support",
+      "dosageAdult": "500-1000mg once daily",
+      "dosageChild": "250-500mg once daily for children over 4",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, may cause diarrhea at high doses",
+      "warnings": "Generally safe. High doses may cause kidney stones in susceptible individuals.",
+      "priceRange": "GHS 10-20",
+      "category": "Vitamin",
+      "drugClass": "Vitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Weak",
+          "notes": "May help with fatigue from deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med098",
+      "brandName": "Iron Supplements",
+      "genericName": "Ferrous Sulfate",
+      "description": "Iron supplement for anemia",
+      "usage": "For iron deficiency anemia",
+      "dosageAdult": "325mg (65mg elemental iron) 1-3 times daily",
+      "dosageChild": "3-6mg/kg elemental iron daily in 1-2 doses",
+      "dosageElderly": "Lower dose may be needed",
+      "sideEffects": "Constipation, nausea, black stools",
+      "warnings": "Take on empty stomach for better absorption. May stain teeth.",
+      "priceRange": "GHS 15-25",
+      "category": "Supplement",
+      "drugClass": "Iron Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Essential for anemia-related fatigue"
+        }
+      ]
+    },
+    {
+      "id": "med099",
+      "brandName": "Calcium + D3",
+      "genericName": "Calcium Carbonate + Vitamin D3",
+      "description": "Calcium and vitamin D supplement",
+      "usage": "For bone health and calcium deficiency",
+      "dosageAdult": "1-2 tablets daily with meals",
+      "dosageChild": "1 tablet daily for children over 4",
+      "dosageElderly": "1-2 tablets daily",
+      "sideEffects": "Constipation, bloating",
+      "warnings": "Take with meals for better absorption. Don't exceed recommended dose.",
+      "priceRange": "GHS 20-35",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 5,
+          "isPrimary": false,
+          "evidenceLevel": "Weak",
+          "notes": "May help with muscle cramps from deficiency"
+        }
+      ]
+    },
+    {
+      "id": "med100",
+      "brandName": "Multivitamin",
+      "genericName": "Multivitamin Complex",
+      "description": "Comprehensive daily multivitamin",
+      "usage": "For general health and nutritional support",
+      "dosageAdult": "1 tablet daily with breakfast",
+      "dosageChild": "Children's formulation available",
+      "dosageElderly": "1 tablet daily",
+      "sideEffects": "Rare, mild stomach upset",
+      "warnings": "Don't exceed recommended daily dose. Not a substitute for healthy diet.",
+      "priceRange": "GHS 25-40",
+      "category": "Vitamin",
+      "drugClass": "Multivitamin",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 5,
+          "isPrimary": false,
+          "evidenceLevel": "Weak",
+          "notes": "May help with general fatigue"
+        }
+      ]
+    },
+    {
+      "id": "med101",
+      "brandName": "Omega-3 Fish Oil",
+      "genericName": "Omega-3 Fatty Acids",
+      "description": "Fish oil supplement for heart and brain health",
+      "usage": "For cardiovascular health and inflammation",
+      "dosageAdult": "1000-2000mg daily with meals",
+      "dosageChild": "Not recommended for children under 3",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Fishy aftertaste, mild digestive upset",
+      "warnings": "May interact with blood thinners. Choose purified brands.",
+      "priceRange": "GHS 30-50",
+      "category": "Supplement",
+      "drugClass": "Omega-3 Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "joint-pain",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "May help with inflammatory joint pain"
+        }
+      ]
+    },
+    {
+      "id": "med102",
+      "brandName": "Probiotics",
+      "genericName": "Lactobacillus Acidophilus",
+      "description": "Probiotic for digestive health",
+      "usage": "For digestive health and immune support",
+      "dosageAdult": "1-2 capsules daily with meals",
+      "dosageChild": "Children's formulation available",
+      "dosageElderly": "1 capsule daily",
+      "sideEffects": "Rare, mild gas or bloating",
+      "warnings": "Refrigerate after opening. May interact with antibiotics.",
+      "priceRange": "GHS 25-45",
+      "category": "Digestive",
+      "drugClass": "Probiotic",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "diarrhea",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "May help restore gut flora"
+        }
+      ]
+    },
+    {
+      "id": "med103",
+      "brandName": "Echinacea",
+      "genericName": "Echinacea Purpurea",
+      "description": "Herbal immune support",
+      "usage": "For immune system support and cold prevention",
+      "dosageAdult": "300-500mg 2-3 times daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, mild stomach upset",
+      "warnings": "Not for long-term use. May interact with immune-suppressing drugs.",
+      "priceRange": "GHS 20-35",
+      "category": "Herbal",
+      "drugClass": "Herbal Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "sore-throat",
+          "effectivenessScore": 5,
+          "isPrimary": false,
+          "evidenceLevel": "Weak",
+          "notes": "May help prevent colds"
+        }
+      ]
+    },
+    {
+      "id": "med104",
+      "brandName": "Ginger",
+      "genericName": "Zingiber Officinale",
+      "description": "Herbal remedy for nausea and digestion",
+      "usage": "For nausea, motion sickness, and digestive support",
+      "dosageAdult": "250-1000mg daily as needed",
+      "dosageChild": "125-500mg for children over 6",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Rare, mild heartburn",
+      "warnings": "Generally safe. May interact with blood thinners.",
+      "priceRange": "GHS 15-25",
+      "category": "Herbal",
+      "drugClass": "Herbal Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "nausea",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Excellent for nausea relief"
+        },
+        {
+          "symptomId": "abdominal-pain",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "May help with digestive discomfort"
+        }
+      ]
+    },
+    {
+      "id": "med105",
+      "brandName": "Garlic",
+      "genericName": "Allium Sativum",
+      "description": "Herbal supplement for cardiovascular health",
+      "usage": "For cardiovascular health and immune support",
+      "dosageAdult": "600-1200mg daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Bad breath, body odor, digestive upset",
+      "warnings": "May increase bleeding risk. Stop before surgery.",
+      "priceRange": "GHS 20-30",
+      "category": "Herbal",
+      "drugClass": "Herbal Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "high-blood-pressure",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "May help with mild hypertension"
+        }
+      ]
+    },
+    {
+      "id": "med106",
+      "brandName": "Turmeric",
+      "genericName": "Curcuma Longa",
+      "description": "Herbal anti-inflammatory",
+      "usage": "For inflammation and joint health",
+      "dosageAdult": "500-2000mg daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Digestive upset, allergic reactions",
+      "warnings": "May interact with blood thinners. Choose with black pepper for absorption.",
+      "priceRange": "GHS 25-40",
+      "category": "Herbal",
+      "drugClass": "Herbal Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "joint-pain",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "Good for inflammatory joint pain"
+        }
+      ]
+    },
+    {
+      "id": "med107",
+      "brandName": "Valerian",
+      "genericName": "Valeriana Officinalis",
+      "description": "Herbal sleep aid",
+      "usage": "For insomnia and anxiety",
+      "dosageAdult": "300-600mg 30-60 minutes before bedtime",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Vivid dreams, headache, dizziness",
+      "warnings": "May cause drowsiness. Avoid with alcohol or sedatives.",
+      "priceRange": "GHS 20-35",
+      "category": "Herbal",
+      "drugClass": "Herbal Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "difficulty-sleeping",
+          "effectivenessScore": 7,
+          "isPrimary": true,
+          "evidenceLevel": "Moderate",
+          "notes": "Natural sleep aid"
+        }
+      ]
+    },
+    {
+      "id": "med108",
+      "brandName": "Melatonin",
+      "genericName": "Melatonin",
+      "description": "Hormone for sleep regulation",
+      "usage": "For sleep disorders and jet lag",
+      "dosageAdult": "1-10mg 30-60 minutes before bedtime",
+      "dosageChild": "0.5-3mg for children over 2",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Drowsiness, headache, dizziness",
+      "warnings": "May cause drowsiness. Start with low dose.",
+      "priceRange": "GHS 25-40",
+      "category": "Supplement",
+      "drugClass": "Hormone",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "difficulty-sleeping",
+          "effectivenessScore": 8,
+          "isPrimary": true,
+          "evidenceLevel": "Strong",
+          "notes": "Effective for sleep onset"
+        }
+      ]
+    },
+    {
+      "id": "med109",
+      "brandName": "5-HTP",
+      "genericName": "5-Hydroxytryptophan",
+      "description": "Precursor to serotonin",
+      "usage": "For mood, sleep, and anxiety",
+      "dosageAdult": "50-300mg daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Nausea, digestive upset, headache",
+      "warnings": "May interact with antidepressants. Not for people with liver disease.",
+      "priceRange": "GHS 30-50",
+      "category": "Supplement",
+      "drugClass": "Amino Acid",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "anxiety",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "May help with mild anxiety"
+        },
+        {
+          "symptomId": "difficulty-sleeping",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "May improve sleep quality"
+        }
+      ]
+    },
+    {
+      "id": "med110",
+      "brandName": "Magnesium",
+      "genericName": "Magnesium Citrate",
+      "description": "Mineral supplement for muscle and nerve function",
+      "usage": "For magnesium deficiency and muscle health",
+      "dosageAdult": "200-400mg daily",
+      "dosageChild": "100-200mg daily for children over 4",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Diarrhea, stomach upset",
+      "warnings": "May cause diarrhea. Start with low dose.",
+      "priceRange": "GHS 20-35",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "muscle-pain",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "May help with muscle cramps"
+        }
+      ]
+    },
+    {
+      "id": "med111",
+      "brandName": "Zinc",
+      "genericName": "Zinc Gluconate",
+      "description": "Mineral for immune function",
+      "usage": "For immune support and wound healing",
+      "dosageAdult": "15-30mg daily",
+      "dosageChild": "5-10mg daily for children over 4",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Nausea, vomiting, metallic taste",
+      "warnings": "May interfere with copper absorption. Don't exceed recommended dose.",
+      "priceRange": "GHS 15-25",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "sore-throat",
+          "effectivenessScore": 5,
+          "isPrimary": false,
+          "evidenceLevel": "Weak",
+          "notes": "May help reduce cold duration"
+        }
+      ]
+    },
+    {
+      "id": "med112",
+      "brandName": "Selenium",
+      "genericName": "Selenium Selenite",
+      "description": "Antioxidant mineral supplement",
+      "usage": "For antioxidant support and thyroid health",
+      "dosageAdult": "55-200mcg daily",
+      "dosageChild": "20-40mcg daily for children over 4",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Garlic breath, hair loss, nail changes",
+      "warnings": "Toxic in high doses. Don't exceed recommended amount.",
+      "priceRange": "GHS 20-30",
+      "category": "Supplement",
+      "drugClass": "Mineral Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 4,
+          "isPrimary": false,
+          "evidenceLevel": "Weak",
+          "notes": "May help with antioxidant status"
+        }
+      ]
+    },
+    {
+      "id": "med113",
+      "brandName": "CoQ10",
+      "genericName": "Coenzyme Q10",
+      "description": "Antioxidant for cellular energy",
+      "usage": "For heart health and energy production",
+      "dosageAdult": "100-300mg daily",
+      "dosageChild": "Not recommended for children under 18",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Mild stomach upset, nausea",
+      "warnings": "May interact with blood pressure medications and warfarin.",
+      "priceRange": "GHS 40-70",
+      "category": "Supplement",
+      "drugClass": "Coenzyme",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "May help with energy levels"
+        }
+      ]
+    },
+    {
+      "id": "med114",
+      "brandName": "Ginkgo Biloba",
+      "genericName": "Ginkgo Biloba",
+      "description": "Herbal supplement for cognitive function",
+      "usage": "For memory, circulation, and cognitive health",
+      "dosageAdult": "120-240mg daily in divided doses",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Headache, dizziness, stomach upset",
+      "warnings": "May increase bleeding risk. Stop before surgery.",
+      "priceRange": "GHS 25-45",
+      "category": "Herbal",
+      "drugClass": "Herbal Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "dizziness",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "May help with vertigo"
+        }
+      ]
+    },
+    {
+      "id": "med115",
+      "brandName": "Ginseng",
+      "genericName": "Panax Ginseng",
+      "description": "Herbal adaptogen for energy and stress",
+      "usage": "For energy, stress, and immune support",
+      "dosageAdult": "200-400mg daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Insomnia, headache, digestive upset",
+      "warnings": "May interact with blood thinners and diabetes medications.",
+      "priceRange": "GHS 30-50",
+      "category": "Herbal",
+      "drugClass": "Herbal Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "May help with energy and stress"
+        }
+      ]
+    },
+    {
+      "id": "med116",
+      "brandName": "Ashwagandha",
+      "genericName": "Withania Somnifera",
+      "description": "Adaptogenic herb for stress and energy",
+      "usage": "For stress reduction, energy, and vitality",
+      "dosageAdult": "300-600mg twice daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Stomach upset, diarrhea, drowsiness",
+      "warnings": "May lower blood sugar and blood pressure. Monitor if on medications.",
+      "priceRange": "GHS 30-50",
+      "category": "Herbal",
+      "drugClass": "Herbal Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "anxiety",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "Good for stress-related anxiety"
+        },
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "May help with stress fatigue"
+        }
+      ]
+    },
+    {
+      "id": "med117",
+      "brandName": "Rhodiola",
+      "genericName": "Rhodiola Rosea",
+      "description": "Adaptogenic herb for mental performance",
+      "usage": "For mental fatigue, stress, and physical performance",
+      "dosageAdult": "200-600mg daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Lower dose recommended",
+      "sideEffects": "Dizziness, dry mouth, insomnia",
+      "warnings": "May be stimulating. Avoid taking late in the day.",
+      "priceRange": "GHS 35-60",
+      "category": "Herbal",
+      "drugClass": "Herbal Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "fatigue",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "Good for mental fatigue"
+        }
+      ]
+    },
+    {
+      "id": "med118",
+      "brandName": "Bacopa",
+      "genericName": "Bacopa Monnieri",
+      "description": "Herbal nootropic for cognitive function",
+      "usage": "For memory, focus, and cognitive health",
+      "dosageAdult": "300-600mg daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Stomach upset, fatigue, dry mouth",
+      "warnings": "May enhance effects of stimulants and sedatives.",
+      "priceRange": "GHS 30-50",
+      "category": "Herbal",
+      "drugClass": "Herbal Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "headache",
+          "effectivenessScore": 5,
+          "isPrimary": false,
+          "evidenceLevel": "Weak",
+          "notes": "May help with tension headaches"
+        }
+      ]
+    },
+    {
+      "id": "med119",
+      "brandName": "L-Theanine",
+      "genericName": "L-Theanine",
+      "description": "Amino acid for relaxation and focus",
+      "usage": "For stress, anxiety, and mental focus",
+      "dosageAdult": "100-400mg daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Generally well tolerated, rare stomach upset",
+      "warnings": "May enhance effects of caffeine and blood pressure medications.",
+      "priceRange": "GHS 25-45",
+      "category": "Supplement",
+      "drugClass": "Amino Acid",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "anxiety",
+          "effectivenessScore": 7,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "Promotes relaxation without drowsiness"
+        }
+      ]
+    },
+    {
+      "id": "med120",
+      "brandName": "Lemon Balm",
+      "genericName": "Melissa Officinalis",
+      "description": "Calming herb for anxiety and sleep",
+      "usage": "For anxiety, stress, and sleep problems",
+      "dosageAdult": "300-600mg daily",
+      "dosageChild": "Not recommended for children under 12",
+      "dosageElderly": "Same as adult",
+      "sideEffects": "Generally well tolerated, rare headache",
+      "warnings": "May interact with sedatives. Use with caution if thyroid issues.",
+      "priceRange": "GHS 20-35",
+      "category": "Herbal",
+      "drugClass": "Herbal Supplement",
+      "prescription": false,
+      "controlled": false,
+      "symptomMappings": [
+        {
+          "symptomId": "anxiety",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "Calming effect for anxiety"
+        },
+        {
+          "symptomId": "difficulty-sleeping",
+          "effectivenessScore": 6,
+          "isPrimary": false,
+          "evidenceLevel": "Moderate",
+          "notes": "May help with sleep onset"
+        }
+      ]
+    }
+  ]
+}
