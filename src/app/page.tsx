@@ -1,6 +1,8 @@
+// src/app/page.tsx
 "use client"
 
 import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"  // Add this import
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -125,6 +127,8 @@ interface SelectedSymptomWithSeverity {
 }
 
 export default function Home() {
+  const router = useRouter()  // Add this hook
+  
   // Helper functions for recommendation system
   const getPriceScore = (priceRange: string | undefined): number => {
     if (!priceRange) return 5 // Default score
@@ -451,8 +455,9 @@ export default function Home() {
     setFilteredMedicines(allMedicines)
   }
 
+  // Update this function to use Next.js router
   const handleMedicineClick = (medicine: any) => {
-    window.location.href = `/medicine/${medicine.id}`
+    router.push(`/medicine/${medicine.id}`)
   }
 
   const getEffectivenessStars = (score: number) => {
