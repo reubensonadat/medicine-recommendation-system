@@ -887,10 +887,24 @@ export default function Home() {
                   <Button 
                     onClick={handleFindMedicines}
                     disabled={(selectedSymptoms.length === 0 && customSymptoms.length === 0) || isLoading}
-                    className="w-full mt-4 h-11 sm:h-10 transition-all duration-200 hover:shadow-md"
+                    className={`w-full mt-4 h-11 sm:h-10 transition-all duration-200 hover:shadow-md ${isLoading ? 'opacity-75' : ''}`}
                     size="lg"
                   >
-                    {isLoading ? "Finding Medicines..." : "Find Medicines"}
+                    {isLoading ? (
+                      <>
+                        <svg className="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
+                          <path className="opacity-75" d="M10 14a2 2 0 100 0 0 100-100h100a2 2 0 100 0 0 100-100"
+                            stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        <span>Finding Medicines...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Search className="w-4 h-4 mr-2" />
+                        <span>Find Medicines</span>
+                      </>
+                    )}
                   </Button>
                 </div>
               </CardContent>
@@ -959,16 +973,28 @@ export default function Home() {
             <TabsContent value="recommendations" className="mt-6">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Recommended Medicines</h3>
-                <MedicineGrid 
-                  medicines={recommendations.map(rec => ({
-                    ...rec,
-                    symptomCount: rec.symptomMatches.length,
-                    coveragePercentage: rec.coveragePercentage,
-                    severityAdjustedScore: rec.severityAdjustedScore,
-                    priceScore: rec.priceScore
-                  }))} 
-                  onMedicineClick={handleMedicineClick}
-                />
+                {recommendations.length > 0 ? (
+                  <MedicineGrid 
+                    medicines={recommendations.map(rec => ({
+                      ...rec,
+                      symptomCount: rec.symptomMatches.length,
+                      coveragePercentage: rec.coveragePercentage,
+                      severityAdjustedScore: rec.severityAdjustedScore,
+                      priceScore: rec.priceScore
+                    }))} 
+                    onMedicineClick={handleMedicineClick}
+                  />
+                ) : (
+                  <div className="text-center py-8">
+                    <p className="text-gray-500">No medicines found for your symptoms</p>
+                    <Button 
+                      onClick={handleFindMedicines}
+                      className="mt-4"
+                    >
+                      Try Again
+                    </Button>
+                  </div>
+                )}
               </div>
             </TabsContent>
 
