@@ -20,7 +20,7 @@ import {
   User,
   Baby,
   Users,
-  DollarSign,
+  // DollarSign removed as it is replaced by the GH₵ symbol
   Thermometer,
   Activity,
   Zap
@@ -88,6 +88,13 @@ export default function MedicineDetailClient({ medicine, symptoms: initialSympto
     
     loadSymptoms()
   }, [initialSymptoms.length])
+  
+  // Utility function to format the price range with the Ghanaian Cedi symbol (GH₵)
+  const formatCediPrice = (priceRange: string | undefined): string => {
+    if (!priceRange) return 'N/A'
+    // The GH₵ symbol is a standard Unicode character.
+    return `GH₵ ${priceRange}`
+  }
 
   const getEffectivenessStars = (score: number) => {
     const fullStars = Math.floor(score / 2)
@@ -218,13 +225,22 @@ export default function MedicineDetailClient({ medicine, symptoms: initialSympto
                 </p>
               </div>
               
+              {/* Currency Display Updated for Ghanaian Cedi */}
               {medicine.priceRange && (
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
-                  <DollarSign className="w-6 h-6 text-green-600 mx-auto mb-1" />
-                  <p className="text-sm text-green-800 font-medium">Price Range</p>
-                  <p className="text-lg font-bold text-green-900">{medicine.priceRange}</p>
+                  {/* Replaced DollarSign with a styled GH₵ symbol for a Cedi-specific icon */}
+                  <span className="w-6 h-6 text-2xl font-extrabold text-green-700 mx-auto mb-1 block leading-none">
+                    GH₵
+                  </span>
+                  <p className="text-sm text-green-800 font-medium">Price Range (GHS)</p>
+                  <p className="text-lg font-bold text-green-900">
+                    {/* Applying the Cedi formatting function */}
+                    {formatCediPrice(medicine.priceRange)}
+                  </p>
                 </div>
               )}
+              {/* End of Currency Display Update */}
+
             </div>
           </div>
         </div>
@@ -458,3 +474,4 @@ export default function MedicineDetailClient({ medicine, symptoms: initialSympto
     </div>
   )
 }
+
